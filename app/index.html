@@ -336,6 +336,7 @@
             margin-top: 6px; padding: 8px 10px; background: rgba(245,158,11,0.1);
             border: 1px solid rgba(245,158,11,0.3); border-left: 3px solid #F59E0B;
             border-radius: 8px; font-size: 12px; color: #FCD34D; line-height: 1.45;
+            white-space: pre-line;
         }
         /* Community-reported relatos. Visually distinct from .hospital-note
            (which is maintainer-verified) — dashed border, dimmer amber, and
@@ -748,8 +749,8 @@
                 <ul>
                     <li><span class="safe">✓ FAÇA:</span> Lave o local apenas com água e sabão. Mantenha a vítima deitada em repouso e com o membro afetado elevado.</li>
                     <li><span class="safe">✓ FAÇA:</span> Tente fotografar ou gravar a cor/tipo do animal caso seja seguro, para que o médico ministre o Soro correto.</li>
-                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS faça torniquete, amarramento ou qualquer pressão no membro. Isso acelera a necrose e causa amputação.</li>
-                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS corte a pele, tente chupar o veneno com a boca ou passe pó de café/receitas caseiras na ferida.</li>
+                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS faça torniquete, NEM amarramento, NEM qualquer pressão no membro. Isso acelera a necrose e causa amputação.</li>
+                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS corte a pele, NEM tente chupar o veneno com a boca, NEM passe pó de café ou receitas caseiras na ferida.</li>
                 </ul>
             </div>
         </details>
@@ -957,6 +958,19 @@
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;');
+    }
+
+    // Render an override `note` (community report) with the standing
+    // "Confirme antes de se deslocar" call-to-action bolded. The note is
+    // escaped first; the <strong> wrapper is a static literal injected
+    // post-escape, so this stays XSS-safe.
+    function formatHospitalNote(note) {
+        if (note == null) return '';
+        var safe = escapeHtml(note);
+        return safe.replace(
+            /Confirme antes de se deslocar/g,
+            '<strong>Confirme antes de se deslocar</strong>'
+        );
     }
 
     function haversine(lat1, lon1, lat2, lon2) {
@@ -1316,7 +1330,7 @@
                 '<div><h3>' + escapeHtml(h.hospital_name) + '</h3>' +
                 '<div class="city">' + escapeHtml(h.city) + ', ' + escapeHtml(h.state) + '</div>' +
                 (h.address ? '<div class="address">' + escapeHtml(h.address) + '</div>' : '') +
-                (h.note ? '<div class="hospital-note">' + escapeHtml(h.note) + '</div>' : '') +
+                (h.note ? '<div class="hospital-note">' + formatHospitalNote(h.note) + '</div>' : '') +
                 renderCommunityRelatos(h.community_notes) +
                 '</div>' + distHtml +
             '</div>' +
@@ -1569,7 +1583,7 @@
             var popup = '<strong>' + escapeHtml(h.hospital_name) + '</strong><br>' +
                 escapeHtml(h.city) + ', ' + escapeHtml(h.state) + distText + '<br>' +
                 popupEmojis +
-                (h.note ? '<em style="color:#B26A00">' + escapeHtml(h.note) + '</em><br>' : '') +
+                (h.note ? '<em style="color:#B26A00">' + formatHospitalNote(h.note) + '</em><br>' : '') +
                 (phonesHtml ? phonesHtml + '<br>' : '') +
                 '<a href="https://www.google.com/maps/dir/?api=1&destination=' + h.lat + ',' + h.lng +
                 '" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Como Chegar</a>';

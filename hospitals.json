@@ -10527,6 +10527,7 @@
     "city": "Teixeira de Freitas",
     "hospital_name": "Unidade de Pronto Atendimento - UPA",
     "address": "Av. Getúlio Vargas, 3197 - Bela Vista",
+    "note": "Relato comunitário (05/05/2026): endereço oficial está desativado há anos. Atendimento agora na UPA Pastor Amazias Barreto de Moraes, Av. Pres. Getúlio Vargas, 6037, Nova Teixeira (CEP 45985-580). Pin atualizado. Confirme antes de se deslocar.",
     "phones": [],
     "cnes": "7964145",
     "antivenoms": [
@@ -10538,8 +10539,8 @@
       "Escorpiônico"
     ],
     "source_date": "2026-01-05",
-    "lat": -17.5391489,
-    "lng": -39.737606,
+    "lat": -17.5299608,
+    "lng": -39.7602183,
     "geocode_tier": 1
   },
   {
@@ -23647,7 +23648,7 @@
     "city": "Conselheiro Lafaiete",
     "hospital_name": "Policlínica Pronto Atendimento",
     "address": "Av. Mario Rodrigues Pereira, 175 - Centro",
-    "note": "Comunidade reportou (29/04/2026): endereço mudou para UPA 24h Dr. Luiz de Souza Dias, Rua Vereador Alfredo Mafuz, 525; novo telefone (31) 3764-9892. Confirme antes de se deslocar.",
+    "note": "Relatos comunitários (29/04 e 03/05/2026): policlínica desativada; serviço transferido para UPA 24h Dr. Luiz de Souza Dias (Rua Vereador Alfredo Mafuz, 525; tel. (31) 3764-9892). Confirme antes de se deslocar.",
     "phones": [
       "(32) 3769-2654"
     ],
@@ -45211,6 +45212,7 @@
     "city": "Ponta Grossa",
     "hospital_name": "Hospital Municipal Dr. Amadeu Puppi",
     "address": "Rua Augusto Ribas, 81 - Centro",
+    "note": "Relato comunitário (03/05/2026): serviço foi transferido. Soro antiveneno agora disponível em:\n• Hospital Universitário Regional (HU-UEPG) — Rua Professor Gabriel de Paula Machado, 601, Uvaranas. Tel. (42) 3219-8888 / (42) 3219-8890 (SAC/WhatsApp). Atende 24h.\n• UPA Santa Paula — Rua Nicolau Kluppel Neto, 1645, Santa Paula. Tel. (42) 3122-3188.\n• UPA Santana — Rua Dr. Paula Xavier, 750, Centro/Vila Estrela. Tel. (42) 3220-1063.\n• UPA Uvaranas — Rua Comandante Paulo P. Schmidt, 15, Uvaranas.\nEm emergência, ligue 192 (SAMU). Confirme antes de se deslocar.",
     "phones": [
       "(42) 3220-7800"
     ],
