@@ -60,5 +60,12 @@
     "reason": "Hospital Municipal Dr. Amadeu Puppi (Ponta Grossa/PR) — relato comunitário (03/05/2026) de que o atendimento para acidentes com animais peçonhentos foi descentralizado para HU-UEPG e UPAs do município; mantido visível com nota até confirmação oficial.",
     "verified_on": "2026-05-03",
     "note": "Relato comunitário (03/05/2026): serviço foi transferido. Soro antiveneno agora disponível em:\n• Hospital Universitário Regional (HU-UEPG) — Rua Professor Gabriel de Paula Machado, 601, Uvaranas. Tel. (42) 3219-8888 / (42) 3219-8890 (SAC/WhatsApp). Atende 24h.\n• UPA Santa Paula — Rua Nicolau Kluppel Neto, 1645, Santa Paula. Tel. (42) 3122-3188.\n• UPA Santana — Rua Dr. Paula Xavier, 750, Centro/Vila Estrela. Tel. (42) 3220-1063.\n• UPA Uvaranas — Rua Comandante Paulo P. Schmidt, 15, Uvaranas.\nEm emergência, ligue 192 (SAMU). Confirme antes de se deslocar."
+  },
+  "7964145": {
+    "reason": "UPA de Teixeira de Freitas/BA — relato comunitário (05/05/2026) de que o endereço oficial (Av. Getúlio Vargas, 3197 - Bela Vista) está desativado há anos. Atendimento agora na UPA Pastor Amazias Barreto de Moraes (Av. Pres. Getúlio Vargas, 6037, Nova Teixeira). Coordenadas atualizadas para a nova unidade; endereço-texto preservado por política.",
+    "verified_on": "2026-05-05",
+    "lat": -17.5299608,
+    "lng": -39.7602183,
+    "note": "Relato comunitário (05/05/2026): endereço oficial está desativado há anos. Atendimento agora na UPA Pastor Amazias Barreto de Moraes, Av. Pres. Getúlio Vargas, 6037, Nova Teixeira (CEP 45985-580). Pin atualizado. Confirme antes de se deslocar."
   }
 }

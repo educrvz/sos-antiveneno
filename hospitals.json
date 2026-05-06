@@ -10527,6 +10527,7 @@
     "city": "Teixeira de Freitas",
     "hospital_name": "Unidade de Pronto Atendimento - UPA",
     "address": "Av. Getúlio Vargas, 3197 - Bela Vista",
+    "note": "Relato comunitário (05/05/2026): endereço oficial está desativado há anos. Atendimento agora na UPA Pastor Amazias Barreto de Moraes, Av. Pres. Getúlio Vargas, 6037, Nova Teixeira (CEP 45985-580). Pin atualizado. Confirme antes de se deslocar.",
     "phones": [],
     "cnes": "7964145",
     "antivenoms": [
@@ -10538,8 +10539,8 @@
       "Escorpiônico"
     ],
     "source_date": "2026-01-05",
-    "lat": -17.5391489,
-    "lng": -39.737606,
+    "lat": -17.5299608,
+    "lng": -39.7602183,
     "geocode_tier": 1
   },
   {
