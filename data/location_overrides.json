@@ -74,10 +74,9 @@
     "note": "Relato comunitário (06/05/2026): segundo a Secretaria Municipal de Saúde de Araraquara, o atendimento com soros antiofídicos e antiescorpiônicos é feito na UPA Central Amelia Bernardino Cutrale, Av. Maria Antônia Camargo de Oliveira, Vila Velosa. Tel. (16) 3334-6900. Confirme antes de se deslocar."
   },
   "2535556": {
-    "reason": "Hospital das Clínicas Dr. Serafim de Carvalho (Jataí/GO) — relato comunitário (09/05/2026) de que o pin apontava para uma escola; coordenadas corrigidas para o hospital real.",
+    "reason": "Hospital das Clínicas Dr. Serafim de Carvalho (Jataí/GO) — pin apontava para uma escola; coordenadas corrigidas e verificadas manualmente no Google Maps (mantenedor, 09/05/2026).",
     "verified_on": "2026-05-09",
     "lat": -17.886555300845416,
-    "lng": -51.733769579368094,
-    "note": "Relato comunitário (09/05/2026): pin anterior apontava para uma escola; coordenadas corrigidas. Confirme antes de se deslocar."
+    "lng": -51.733769579368094
   }
 }
