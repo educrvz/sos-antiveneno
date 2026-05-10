@@ -15927,6 +15927,7 @@
     "city": "Jataí",
     "hospital_name": "Hospital das Clínicas Dr. Serafim de Carvalho",
     "address": "Rua Joaquim Caetano, s/n - Divino Espírito Santo",
+    "note": "Relato comunitário (09/05/2026): pin anterior apontava para uma escola; coordenadas corrigidas. Confirme antes de se deslocar.",
     "phones": [
       "(64) 3632-3700"
     ],
@@ -15948,8 +15949,8 @@
       "Elapídico"
     ],
     "source_date": "2025-10-15",
-    "lat": -17.8851122,
-    "lng": -51.7231548,
+    "lat": -17.886555300845416,
+    "lng": -51.733769579368094,
     "geocode_tier": 1
   },
   {
