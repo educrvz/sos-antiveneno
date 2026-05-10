@@ -36,7 +36,7 @@
     <meta name="twitter:description" content="Encontre os Pontos Estratégicos de Soro Antiveneno (PESA) mais próximos. Pode salvar vidas.">
     <meta name="twitter:image" content="https://soroja.com.br/og-image.png">
 
-    <link rel="manifest" href="manifest.json">
+    <!-- <link rel="manifest" href="manifest.json"> -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230066CC' rx='20' width='100' height='100'/><text x='50' y='72' font-size='55' text-anchor='middle' fill='white'>&#9764;</text></svg>">
     <title>SoroJá</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -235,21 +235,6 @@
         /* ===== Offline PWA banner ===== */
         .offline-banner { align-items: flex-start; }
         .offline-content { display: flex; align-items: flex-start; gap: 12px; flex: 1; line-height: 1.45; }
-
-        /* ===== Network-offline state banner (shown when navigator.onLine === false) ===== */
-        .network-offline-banner {
-            display: none;
-            background: var(--card-secondary);
-            border-bottom: 2px solid var(--danger);
-            color: var(--text-main);
-            padding: 12px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            text-align: center;
-            line-height: 1.4;
-        }
-        .network-offline-banner.visible { display: block; }
-        .network-offline-banner strong { color: var(--danger); font-weight: 900; }
 
         /* ===== Loading screen ===== */
         .screen-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; text-align: center; padding: 32px; }
@@ -661,11 +646,6 @@
                 <button class="btn-map-toggle" id="btn-map-toggle" onclick="toggleMap()">&#128506; Mapa</button>
             </div>
         </div>
-    </div>
-
-    <!-- Network-offline state banner (toggled by navigator.onLine) -->
-    <div class="network-offline-banner" id="network-offline-banner" role="status" aria-live="polite">
-        <strong>Você está offline</strong> — mapas indisponíveis, mas a lista de hospitais funciona.
     </div>
 
     <!-- Offline PWA Banner -->
@@ -1925,23 +1905,9 @@
         });
     }
 
-    // ===== Network-offline banner =====
-    function updateOfflineBanner() {
-        var banner = document.getElementById('network-offline-banner');
-        if (!banner) return;
-        if (navigator.onLine === false) {
-            banner.classList.add('visible');
-        } else {
-            banner.classList.remove('visible');
-        }
-    }
-    window.addEventListener('online', updateOfflineBanner);
-    window.addEventListener('offline', updateOfflineBanner);
-
     // ===== INIT =====
     function init() {
         initThemeToggle();
-        updateOfflineBanner();
         Promise.all([loadHospitals(), requestLocation()])
             .then(function() {
                 if (hospitals.length === 0) {
@@ -1987,9 +1953,10 @@
         document.getElementById('legal-modal-overlay').classList.add('hidden-modal');
     };
 
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(function() {});
-    }
+    // Service worker disabled for local preview
+    // if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker.register('sw.js').catch(function() {});
+    // }
     })();
     </script>
 </body>
