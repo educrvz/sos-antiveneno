@@ -236,6 +236,21 @@
         .offline-banner { align-items: flex-start; }
         .offline-content { display: flex; align-items: flex-start; gap: 12px; flex: 1; line-height: 1.45; }
 
+        /* ===== Network-offline state banner (shown when navigator.onLine === false) ===== */
+        .network-offline-banner {
+            display: none;
+            background: var(--card-secondary);
+            border-bottom: 2px solid var(--danger);
+            color: var(--text-main);
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .network-offline-banner.visible { display: block; }
+        .network-offline-banner strong { color: var(--danger); font-weight: 900; }
+
         /* ===== Loading screen ===== */
         .screen-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; text-align: center; padding: 32px; }
         .screen-loading h2 { font-size: 34px; font-weight: 900; letter-spacing: -1px; background: linear-gradient(90deg, var(--header-title-from), var(--header-title-to)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
@@ -656,6 +671,11 @@
                 <button class="btn-map-toggle" id="btn-map-toggle" onclick="toggleMap()">&#128506; Mapa</button>
             </div>
         </div>
+    </div>
+
+    <!-- Network-offline state banner (toggled by navigator.onLine) -->
+    <div class="network-offline-banner" id="network-offline-banner" role="status" aria-live="polite">
+        <strong>Você está offline</strong> — mapas indisponíveis, mas a lista de hospitais funciona.
     </div>
 
     <!-- Offline PWA Banner -->
@@ -1953,9 +1973,23 @@
         });
     }
 
+    // ===== Network-offline banner =====
+    function updateOfflineBanner() {
+        var banner = document.getElementById('network-offline-banner');
+        if (!banner) return;
+        if (navigator.onLine === false) {
+            banner.classList.add('visible');
+        } else {
+            banner.classList.remove('visible');
+        }
+    }
+    window.addEventListener('online', updateOfflineBanner);
+    window.addEventListener('offline', updateOfflineBanner);
+
     // ===== INIT =====
     function init() {
         initThemeToggle();
+        updateOfflineBanner();
         Promise.all([loadHospitals(), requestLocation()])
             .then(function() {
                 if (hospitals.length === 0) {

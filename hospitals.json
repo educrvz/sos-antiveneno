@@ -15948,8 +15948,8 @@
       "Elapídico"
     ],
     "source_date": "2025-10-15",
-    "lat": -17.8851122,
-    "lng": -51.7231548,
+    "lat": -17.886555300845416,
+    "lng": -51.733769579368094,
     "geocode_tier": 1
   },
   {
@@ -26568,6 +26568,7 @@
     "city": "Montes Claros",
     "hospital_name": "Hospital Universitário Clemente de Faria",
     "address": "Av. Cula Mangabeira, 562 - Santo Expedito",
+    "note": "Relato comunitário (10/05/2026): o telefone listado é da central Unimontes; para contato direto com o HUCF, use (38) 3224-8000. Confirme antes de se deslocar.",
     "phones": [
       "(38) 3229-8200"
     ],
@@ -56211,6 +56212,7 @@
     "city": "Araraquara",
     "hospital_name": "Unidade de Retaguarda do Melhado",
     "address": "Rua Eitor Bim, nº 91, Vila Suconaza, Araraquara",
+    "note": "Relato comunitário (06/05/2026): segundo a Secretaria Municipal de Saúde de Araraquara, o atendimento com soros antiofídicos e antiescorpiônicos é feito na UPA Central Amelia Bernardino Cutrale, Av. Maria Antônia Camargo de Oliveira, Vila Velosa. Tel. (16) 3334-6900. Confirme antes de se deslocar.",
     "phones": [
       "(16) 3305-1500"
     ],
