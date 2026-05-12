@@ -83,5 +83,11 @@
     "reason": "Hospital Universitário Clemente de Faria (Montes Claros/MG) — relato comunitário (10/05/2026) informando que o telefone publicado é da central Unimontes; o ramal direto do HUCF é (38) 3224-8000.",
     "verified_on": "2026-05-10",
     "note": "Relato comunitário (10/05/2026): o telefone listado é da central Unimontes; para contato direto com o HUCF, use (38) 3224-8000. Confirme antes de se deslocar."
+  },
+  "2708078": {
+    "reason": "Hospital Municipal Dr. Nelson dos Santos Gonçalves (Volta Redonda/RJ) — pin do endereço Ministerial apontava para perto da rodoviária; coordenadas corrigidas e verificadas pelo mantenedor (12/05/2026).",
+    "verified_on": "2026-05-12",
+    "lat": -22.508902136615422,
+    "lng": -44.09011867877822
   }
 }
