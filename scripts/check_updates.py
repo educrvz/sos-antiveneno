@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 """
 Check for updated PESA PDFs on the Ministry of Health website.
-Compares online dates against local PDF file dates.
+
+Compares the dates we have (from `data/source_dates.json`) against the
+dates currently shown on the gov.br listing for every state. Persists
+the scraped website state to `data/online_dates.json` and appends any
+day-over-day changes to `data/online_dates_history.jsonl`, so the git
+history becomes the audit trail. Regenerates `data/dates_status.md` as
+a side-by-side dashboard committed alongside.
+
+Exit code is 0 when we're up to date with the website, non-zero when
+the website is ahead — the CI workflow uses that to open an issue.
 
 Usage:
     python3 scripts/check_updates.py
@@ -11,25 +20,33 @@ Source pages:
     Page 2: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia?b_start:int=15
 """
 
+import json
 import os
 import re
 import sys
-from datetime import datetime
+from datetime import date, datetime
 
-try:
-    import requests
-    from bs4 import BeautifulSoup
-    HAS_WEB = True
-except ImportError:
-    HAS_WEB = False
+import requests
+from bs4 import BeautifulSoup
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PDF_DIR = os.path.join(SCRIPT_DIR, "..")
+ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+DATA_DIR = os.path.join(ROOT, "data")
+
+SOURCE_DATES = os.path.join(DATA_DIR, "source_dates.json")
+ONLINE_DATES = os.path.join(DATA_DIR, "online_dates.json")
+ONLINE_HISTORY = os.path.join(DATA_DIR, "online_dates_history.jsonl")
+STATUS_MD = os.path.join(DATA_DIR, "dates_status.md")
 
 PAGES = [
     "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia",
     "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia?b_start:int=15",
 ]
+
+SOURCE_URL = (
+    "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos"
+    "/hospitais-de-referencia"
+)
 
 STATE_CODES = {
     "Acre": "AC", "Alagoas": "AL", "Amapá": "AP", "Amazonas": "AM",
@@ -44,158 +61,198 @@ STATE_CODES = {
 }
 
 
-def get_local_dates():
-    """Read dates from local PDF filenames ({STATE}_{YYYYMMDD}.pdf)."""
-    local = {}
-    for f in os.listdir(PDF_DIR):
-        if not f.endswith(".pdf"):
-            continue
-        # Handle V2_PI_20251110.pdf style
-        parts = f.replace(".pdf", "").split("_")
-        state_code = None
-        date_str = None
-        for p in parts:
-            if len(p) == 2 and p.isalpha() and p.isupper() and p in STATE_CODES.values():
-                state_code = p
-            if len(p) == 8 and p.isdigit():
-                date_str = p
-        if state_code and date_str:
-            try:
-                local[state_code] = datetime.strptime(date_str, "%Y%m%d").date()
-            except ValueError:
-                pass
-    return local
+def load_source_dates() -> dict:
+    """Read what we've ingested from data/source_dates.json (UF → YYYY-MM-DD)."""
+    if not os.path.exists(SOURCE_DATES):
+        return {}
+    with open(SOURCE_DATES, encoding="utf-8") as fh:
+        return json.load(fh)
 
 
-def scrape_online_dates():
-    """Scrape the gov.br pages for current PDF dates."""
+def load_previous_online() -> dict:
+    """Load the prior online snapshot so we can diff."""
+    if not os.path.exists(ONLINE_DATES):
+        return {}
+    with open(ONLINE_DATES, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def scrape_online_dates() -> dict:
+    """Scrape the gov.br pages for the publication date next to each state."""
     online = {}
     for url in PAGES:
         try:
             resp = requests.get(url, timeout=30, headers={
-                "User-Agent": "SoroJa-Update-Checker/1.0"
+                "User-Agent": "SoroJa-Update-Checker/1.0 (contato.soroja@gmail.com)"
             })
             resp.raise_for_status()
         except Exception as e:
-            print(f"  ERROR fetching {url}: {e}")
+            print(f"  ERROR fetching {url}: {e}", file=sys.stderr)
             continue
 
         soup = BeautifulSoup(resp.text, "html.parser")
         text = soup.get_text()
 
-        # The page structure has: StateName ... publicado DD/MM/YYYY
-        # We need the "publicado" date that follows each state name
+        # Page format: "<StateName>...publicado DD/MM/YYYY..." within ~200 chars.
         for state_name, code in STATE_CODES.items():
-            # Match: state name, then "publicado DD/MM/YYYY" (within ~200 chars)
             pattern = re.compile(
                 re.escape(state_name) + r".{1,200}?publicado\s+(\d{2}/\d{2}/\d{4})",
-                re.DOTALL
+                re.DOTALL,
             )
             match = pattern.search(text)
             if match:
                 try:
-                    date = datetime.strptime(match.group(1), "%d/%m/%Y").date()
-                    online[code] = date
+                    d = datetime.strptime(match.group(1), "%d/%m/%Y").date()
+                    online[code] = d.isoformat()
                 except ValueError:
                     pass
 
     return online
 
 
-def main():
+def write_online_dates(online: dict) -> None:
+    """Persist current website state. Sorted keys → stable diff."""
+    payload = {uf: online[uf] for uf in sorted(online)}
+    with open(ONLINE_DATES, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+
+def append_history(prev: dict, curr: dict, detected_at: date) -> int:
+    """Append one row per state whose date changed. Returns number of changes.
+
+    On the very first run, `prev` is empty — we treat that as establishing
+    the baseline rather than logging 27 phantom "null → date" transitions.
+    """
+    if not prev:
+        return 0
+    changes = []
+    all_ufs = set(prev) | set(curr)
+    for uf in sorted(all_ufs):
+        before = prev.get(uf)
+        after = curr.get(uf)
+        if before == after:
+            continue
+        changes.append({
+            "detected_at": detected_at.isoformat(),
+            "uf": uf,
+            "from": before,
+            "to": after,
+        })
+    if changes:
+        with open(ONLINE_HISTORY, "a", encoding="utf-8") as fh:
+            for c in changes:
+                fh.write(json.dumps(c, ensure_ascii=False) + "\n")
+    return len(changes)
+
+
+def write_status_dashboard(local: dict, online: dict) -> None:
+    """Side-by-side dashboard committed to the repo. No timestamps inside —
+    git history is the timeline.
+    """
+    lines = [
+        "# Estado dos dados PESA",
+        "",
+        "Comparação entre o que está publicado no SoroJá (`source_dates.json`)",
+        f"e a [página oficial do Ministério da Saúde]({SOURCE_URL}).",
+        "Atualizado automaticamente por `scripts/check_updates.py` (CI diária).",
+        "",
+        "| UF | Estado | Nossa data | Site MS | Status |",
+        "|----|--------|-----------|---------|--------|",
+    ]
+    rows = []
+    counts = {"match": 0, "ms_newer": 0, "we_newer": 0, "missing_local": 0, "missing_online": 0}
+    for state_name, uf in sorted(STATE_CODES.items(), key=lambda kv: kv[1]):
+        ours = local.get(uf)
+        theirs = online.get(uf)
+        if ours and theirs:
+            if ours == theirs:
+                status, key = "✅ em dia", "match"
+            elif theirs > ours:
+                status, key = "🔴 site mais novo", "ms_newer"
+            else:
+                status, key = "ℹ️ site mais antigo", "we_newer"
+        elif theirs and not ours:
+            status, key = "⚠️ ausente nos nossos", "missing_local"
+        elif ours and not theirs:
+            status, key = "⚠️ ausente no site", "missing_online"
+        else:
+            status, key = "❓ desconhecido", "missing_local"
+        counts[key] += 1
+        rows.append(f"| {uf} | {state_name} | {ours or '—'} | {theirs or '—'} | {status} |")
+
+    lines.extend(rows)
+    lines.extend([
+        "",
+        f"**Resumo:** {counts['match']} em dia · {counts['ms_newer']} site mais novo · "
+        f"{counts['we_newer']} nosso mais novo · {counts['missing_local']} faltam aqui · "
+        f"{counts['missing_online']} faltam no site",
+        "",
+    ])
+    with open(STATUS_MD, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(lines))
+
+
+def print_human_report(local: dict, online: dict) -> int:
+    """Stdout for CI logs + humans. Returns count of states where MS is ahead."""
     print("=" * 60)
     print("  SoroJá — Verificador de Atualizações PESA")
     print("=" * 60)
     print()
-
-    # Get local dates
-    local = get_local_dates()
-    print(f"PDFs locais encontrados: {len(local)}/27")
+    print(f"Estados na nossa base: {len(local)}/27")
+    print(f"Estados encontrados no site MS: {len(online)}/27")
     print()
 
-    # Try to get online dates
-    if HAS_WEB:
-        print("Verificando datas online no gov.br...")
-        online = scrape_online_dates()
-        print(f"Estados encontrados online: {len(online)}/27")
-    else:
-        print("AVISO: 'requests' e 'beautifulsoup4' não instalados.")
-        print("       Instale com: pip3 install requests beautifulsoup4")
-        print()
-        print("Usando datas conhecidas da última verificação (14/04/2026):")
-        # Fallback: hardcoded dates from last live check (14/04/2026)
-        online = {}
-        last_check = {
-            "AC": "15/10/2025", "AL": "09/04/2026", "AP": "10/11/2025",
-            "AM": "10/11/2025", "BA": "05/01/2026", "CE": "10/11/2025",
-            "DF": "05/01/2026", "ES": "05/01/2026", "GO": "15/10/2025",
-            "MA": "05/01/2026", "MS": "05/01/2026", "MT": "05/01/2026",
-            "MG": "18/12/2025", "PA": "18/12/2025", "PB": "05/01/2026",
-            "PR": "05/01/2026", "PE": "05/01/2026", "PI": "10/11/2025",
-            "RJ": "05/01/2026", "RN": "05/01/2026", "RS": "14/11/2025",
-            "RO": "05/01/2026", "RR": "18/12/2025", "SC": "05/01/2026",
-            "SP": "10/02/2026", "SE": "05/01/2026", "TO": "05/01/2026",
-        }
-        for code, d in last_check.items():
-            online[code] = datetime.strptime(d, "%d/%m/%Y").date()
-
-    print()
-
-    # Compare
     updates_needed = []
-    up_to_date = []
-    missing_local = []
-
-    for code in sorted(STATE_CODES.values()):
-        online_date = online.get(code)
-        local_date = local.get(code)
-        state_name = [k for k, v in STATE_CODES.items() if v == code][0]
-
-        if not online_date:
+    we_ahead = []
+    for uf in sorted(STATE_CODES.values()):
+        ours = local.get(uf)
+        theirs = online.get(uf)
+        if not ours or not theirs:
             continue
+        if theirs > ours:
+            updates_needed.append((uf, ours, theirs))
+        elif ours > theirs:
+            we_ahead.append((uf, ours, theirs))
 
-        if not local_date:
-            missing_local.append((code, state_name, online_date))
-        elif online_date > local_date:
-            updates_needed.append((code, state_name, local_date, online_date))
-        else:
-            up_to_date.append((code, state_name, local_date))
-
-    # Report
     if updates_needed:
         print("🔴 ATUALIZAÇÕES DISPONÍVEIS:")
         print("-" * 50)
-        for code, name, local_d, online_d in updates_needed:
-            print(f"  {code} ({name})")
-            print(f"     Local:  {local_d.strftime('%d/%m/%Y')}")
-            print(f"     Online: {online_d.strftime('%d/%m/%Y')} ← NOVO!")
-            print(f"     Baixar: acesse gov.br e baixe o PDF atualizado")
-            print()
+        for uf, ours, theirs in updates_needed:
+            print(f"  {uf}: nossa {ours} → site {theirs} ← NOVO!")
+        print()
     else:
-        print("✅ Nenhuma atualização disponível!")
+        print("✅ Nenhuma atualização disponível.")
         print()
 
-    if missing_local:
-        print("⚠️  PDFs NÃO ENCONTRADOS LOCALMENTE:")
-        for code, name, online_d in missing_local:
-            print(f"  {code} ({name}) — online: {online_d.strftime('%d/%m/%Y')}")
+    if we_ahead:
+        print("ℹ️  Estados onde nossa data é posterior à do site (investigar):")
+        for uf, ours, theirs in we_ahead:
+            print(f"  {uf}: nossa {ours} > site {theirs}")
         print()
 
-    print(f"✅ {len(up_to_date)} estados atualizados")
-    print()
-    print("Fonte: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia")
-    print()
-
-    if updates_needed:
-        print("PRÓXIMOS PASSOS:")
-        print("  1. Baixe os PDFs atualizados do gov.br")
-        print(f"  2. Salve como {{ESTADO}}_{{YYYYMMDD}}.pdf em {os.path.abspath(PDF_DIR)}")
-        print("  3. Execute: python3 scripts/extract.py")
-        print("  4. Execute: python3 scripts/geocode.py")
-        print("  5. Copie app/hospitals.json para o repositório")
-
+    print(f"Fonte: {SOURCE_URL}")
     return len(updates_needed)
 
 
+def main() -> int:
+    os.makedirs(DATA_DIR, exist_ok=True)
+    local = load_source_dates()
+    prev_online = load_previous_online()
+    online = scrape_online_dates()
+    if not online:
+        print("ERROR: failed to scrape any online dates.", file=sys.stderr)
+        return 2
+
+    write_online_dates(online)
+    n_changes = append_history(prev_online, online, date.today())
+    write_status_dashboard(local, online)
+
+    updates_needed = print_human_report(local, online)
+    if n_changes:
+        print(f"\n📝 {n_changes} mudança(s) no site detectada(s) e gravada(s) em data/online_dates_history.jsonl")
+    return 0 if updates_needed == 0 else 1
+
+
 if __name__ == "__main__":
-    sys.exit(0 if main() == 0 else 1)
+    sys.exit(main())
