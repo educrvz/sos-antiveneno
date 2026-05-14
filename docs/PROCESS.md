@@ -15,13 +15,25 @@ security add-generic-password -s google_maps_api_key -a "$USER" -w '<key>'
 python3 scripts/check_updates.py
 
 # 2. if any UF is newer, download the new PDF into `Docs Estado/` and
-#    re-extract that one state to `extracted/{UF}.json` using Claude Code
-#    multimodal (see §3 below).
+#    re-extract that one state to `extracted/{UF}.new.json` (NOT
+#    overwriting the canonical file yet) using Claude Code multimodal
+#    (see §3 below).
 
-# 3. run the rest of the pipeline end-to-end:
+# 3. diff the candidate against the current canonical extraction:
+python3 scripts/refresh_diff.py --uf BA \
+    --candidate extracted/BA.new.json --write
+#    Read reports/refresh_diff_BA_*.md — every CNES added/removed/changed
+#    and every override touching this UF is surfaced for explicit
+#    accept/reject. See §3.5.
+
+# 4. once reviewed, promote the candidate:
+mv extracted/BA.new.json extracted/BA.json
+#    update data/source_dates.json with the new MS date.
+
+# 5. run the rest of the pipeline end-to-end:
 ./scripts/refresh_dataset.sh
 
-# 4. git diff, commit, push.  Vercel auto-deploys.
+# 6. git diff, commit, push.  Vercel auto-deploys.
 ```
 
 If nothing upstream changed, step 3 still works — it's resume-safe, skips
@@ -104,26 +116,82 @@ If you keep the old file around (say for diffing), name it
 `{UF}_{YYYYMMDD}.archive.pdf` — the pipeline only picks up files matching
 the exact `{UF}_{YYYYMMDD}.pdf` pattern.
 
-## 3. Re-extract affected states
+## 3. Re-extract affected states (to a `.new.json` candidate)
 
 The extractor is the only manual stage. It uses Claude Code's multimodal
-read to parse the PDF directly into JSON. For each new/updated UF, prompt
-Claude Code with something like:
+read to parse the PDF directly into JSON. **Extract to `extracted/{UF}.new.json`,
+NOT directly over `extracted/{UF}.json`.** The candidate file lets §3.5
+diff it against the current canonical extraction so we don't silently
+overwrite community-vetted data.
 
-> Re-extract `Docs Estado/BA_20260105.pdf` to `extracted/BA.json`. Follow
-> the schema in `extracted/AC.json`: one object per hospital row with keys
-> `state, municipality, health_unit_name, address, phones_raw, cnes,
-> antivenoms_raw, source_notes`. Preserve source typos, inherited
+For each new/updated UF, prompt Claude Code with something like:
+
+> Re-extract `Docs Estado/BA_20260105.pdf` to `extracted/BA.new.json`.
+> Follow the schema in `extracted/AC.json`: one object per hospital row
+> with keys `state, municipality, health_unit_name, address, phones_raw,
+> cnes, antivenoms_raw, source_notes`. Preserve source typos, inherited
 > municipality cells, and anomalous CNES values; flag each in
 > `source_notes`. Use compact one-line JSON per record.
 
 **Stop and investigate if** the extracted JSON has fewer rows than the
-prior version — the schema or PDF layout may have shifted. Diff against the
-prior file.
+prior version — the schema or PDF layout may have shifted. The §3.5 diff
+will surface this anyway, but it's worth checking early.
 
 Long-term: this stage is the best candidate for automation (pdfplumber or
 Gemini OCR). It's tracked as a separate ticket; for now one UF takes ~1
 minute of wall clock.
+
+## 3.5. Review the diff — `scripts/refresh_diff.py`
+
+The MS PDFs are not the only source of truth in this project. We layer
+community-reported corrections on top — pin fixes, deactivation flags,
+phone updates, address swaps — in `data/location_overrides.json`. A
+blind re-extraction would happily wipe out everything they don't know
+about.
+
+`refresh_diff.py` compares the candidate against the canonical
+`extracted/{UF}.json`, shows every CNES added/removed/changed, and
+cross-references every active override that touches this UF. The report
+goes to `reports/refresh_diff_{UF}_{YYYY-MM-DD}.md` and is **read-only**
+— no source file is modified by this script.
+
+```bash
+python3 scripts/refresh_diff.py --uf BA \
+    --candidate extracted/BA.new.json --write
+```
+
+The report has four sections:
+
+1. **CNES adicionados** — new hospitals on PESA. Usually accept.
+2. **CNES removidos** — hospitals dropped from PESA. If a community
+   override existed for it, the audit flags whether to retire the
+   override or convert it to `hide: true` with an "removido em DD/MM"
+   note.
+3. **CNES alterados** — field-by-field diff per row. Skim every change;
+   accept the MS text only after confirming it doesn't contradict a
+   community report you trust more.
+4. **Auditoria de overrides** — every override for this UF, tagged with
+   one of:
+   - ✅ MS inalterado — override segue válido (no-op, no review needed)
+   - 🔴 CNES removido pelo MS — decide retire vs. hide
+   - 🟡 REVISAR — MS changed a field your override addresses; check
+     whether the note/coord override is now redundant, contradicted, or
+     still needed
+   - ℹ️ MS mudou, mas em campo que não afeta o override (informational)
+
+**Only after you've reviewed every entry**, promote the candidate:
+
+```bash
+mv extracted/BA.new.json extracted/BA.json
+# update data/source_dates.json with the MS date for BA
+```
+
+Then continue with the rest of the pipeline (§4 onward).
+
+If you decide to **retire an override** (MS now matches it, or hospital
+deactivated), remove the entry from `data/location_overrides.json` in a
+separate commit before running `refresh_dataset.sh`. The build script
+will warn if an override references a CNES not in the published set.
 
 ## 4. Merge — `scripts/merge_state_jsons.py`
 
