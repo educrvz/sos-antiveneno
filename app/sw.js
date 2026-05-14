@@ -1,4 +1,4 @@
-var CACHE_NAME = 'sos-antiveneno-v22';
+var CACHE_NAME = 'sos-antiveneno-v23';
 
 // Same-origin assets only. Cross-origin (Leaflet, Google Fonts, OSM) is
 // handled at runtime — never pre-cached with no-cors, because returning
