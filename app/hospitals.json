@@ -27159,6 +27159,7 @@
     "city": "Passos",
     "hospital_name": "Unidade Pronto Atendimento",
     "address": "Rua Santa Casa, 164",
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da UPA Passos e da Santa Casa Misericórdia invertidos. A UPA fica na Rua Barão de Passos; a Santa Casa na Rua Santa Casa. Pin atualizado para o local real. Confirme antes de se deslocar.",
     "phones": [
       "(35) 3522-4214",
       "(35) 9829-1967"
@@ -27182,8 +27183,8 @@
       "Fonêutrico e Lonômico"
     ],
     "source_date": "2025-12-18",
-    "lat": -20.713479,
-    "lng": -46.61267240000001,
+    "lat": -20.711733857456725,
+    "lng": -46.59974614701962,
     "geocode_tier": 1
   },
   {
@@ -27192,6 +27193,7 @@
     "city": "Passos",
     "hospital_name": "Santa Casa Misericórdia",
     "address": "Rua Barão de Passos, s/n",
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da Santa Casa Misericórdia e da UPA Passos invertidos. A Santa Casa fica na Rua Santa Casa; a UPA na Rua Barão de Passos. Pin atualizado para o local real. Confirme antes de se deslocar.",
     "phones": [
       "(35) 3529-1300"
     ],
@@ -27214,8 +27216,8 @@
       "Fonêutrico e Lonômico"
     ],
     "source_date": "2025-12-18",
-    "lat": -20.7135408,
-    "lng": -46.6127045,
+    "lat": -20.713545936100516,
+    "lng": -46.612746993622416,
     "geocode_tier": 1
   },
   {

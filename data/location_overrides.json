@@ -94,5 +94,19 @@
     "reason": "Hospital Imaculada Conceição (Conceição do Mato Dentro/MG) — correção oficial da Secretaria Municipal de Saúde (saude@cmd.mg.gov.br, 13/05/2026) informando que, no município, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). UPA ainda não consta na lista oficial PESA — logado em outreach/ para encaminhamento ao Ministério/Abracit.",
     "verified_on": "2026-05-13",
     "note": "Atualização da Secretaria Municipal de Saúde (13/05/2026): em Conceição do Mato Dentro, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). Confirme antes de se deslocar."
+  },
+  "2775999": {
+    "reason": "Santa Casa Misericórdia (Passos/MG) — a lista oficial PESA do MS lista o endereço como 'Rua Barão de Passos', mas relato comunitário (13/05/2026) e a lógica do bairro 'Santa Casa' indicam que o endereço da Santa Casa e da UPA Passos (CNES 4042751) estão invertidos na fonte. Endereço-texto preservado por política; pin corrigido manualmente pelo mantenedor para a localização real da Santa Casa.",
+    "verified_on": "2026-05-13",
+    "lat": -20.713545936100516,
+    "lng": -46.612746993622416,
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da Santa Casa Misericórdia e da UPA Passos invertidos. A Santa Casa fica na Rua Santa Casa; a UPA na Rua Barão de Passos. Pin atualizado para o local real. Confirme antes de se deslocar."
+  },
+  "4042751": {
+    "reason": "Unidade Pronto Atendimento (Passos/MG) — a lista oficial PESA do MS lista o endereço como 'Rua Santa Casa, 164', mas relato comunitário (13/05/2026) indica que os endereços da UPA e da Santa Casa Misericórdia (CNES 2775999) estão invertidos na fonte. Endereço-texto preservado por política; pin corrigido manualmente pelo mantenedor para a localização real da UPA.",
+    "verified_on": "2026-05-13",
+    "lat": -20.711733857456725,
+    "lng": -46.59974614701962,
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da UPA Passos e da Santa Casa Misericórdia invertidos. A UPA fica na Rua Barão de Passos; a Santa Casa na Rua Santa Casa. Pin atualizado para o local real. Confirme antes de se deslocar."
   }
 }
