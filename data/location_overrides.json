@@ -89,5 +89,10 @@
     "verified_on": "2026-05-12",
     "lat": -22.508902136615422,
     "lng": -44.09011867877822
+  },
+  "2134071": {
+    "reason": "Hospital Imaculada Conceição (Conceição do Mato Dentro/MG) — correção oficial da Secretaria Municipal de Saúde (saude@cmd.mg.gov.br, 13/05/2026) informando que, no município, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). UPA ainda não consta na lista oficial PESA — logado em outreach/ para encaminhamento ao Ministério/Abracit.",
+    "verified_on": "2026-05-13",
+    "note": "Atualização da Secretaria Municipal de Saúde (13/05/2026): em Conceição do Mato Dentro, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). Confirme antes de se deslocar."
   }
 }
