@@ -30,11 +30,18 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Run check_updates.py
+      - name: Run check_updates.py (hash-check on Sundays)
         id: check
         run: |
           set +e
-          python3 scripts/check_updates.py | tee check_output.txt
+          # Sundays (date -u +%u == 7) get the binary SHA check too — catches
+          # silent re-uploads where gov.br swaps PDF bytes without bumping the
+          # publicado-em date. Daily runs stay cheap (HTML scrape only).
+          if [ "$(date -u +%u)" = "7" ]; then
+            python3 scripts/check_updates.py --hash-check | tee check_output.txt
+          else
+            python3 scripts/check_updates.py | tee check_output.txt
+          fi
           echo "exit_code=$?" >> $GITHUB_OUTPUT
 
       - name: Commit dashboard / online-dates changes

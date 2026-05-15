@@ -20,6 +20,8 @@ Source pages:
     Page 2: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia?b_start:int=15
 """
 
+import argparse
+import hashlib
 import json
 import os
 import re
@@ -34,6 +36,7 @@ ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 DATA_DIR = os.path.join(ROOT, "data")
 
 SOURCE_DATES = os.path.join(DATA_DIR, "source_dates.json")
+SOURCE_HASHES = os.path.join(DATA_DIR, "source_hashes.json")
 ONLINE_DATES = os.path.join(DATA_DIR, "online_dates.json")
 ONLINE_HISTORY = os.path.join(DATA_DIR, "online_dates_history.jsonl")
 STATUS_MD = os.path.join(DATA_DIR, "dates_status.md")
@@ -46,6 +49,23 @@ PAGES = [
 SOURCE_URL = (
     "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos"
     "/hospitais-de-referencia"
+)
+
+# Slug per state for the @@download URL (lowercase, dash-separated, no accents).
+STATE_SLUG = {
+    "AC": "acre", "AL": "alagoas", "AM": "amazonas", "AP": "amapa",
+    "BA": "bahia", "CE": "ceara", "DF": "distrito-federal",
+    "ES": "espirito-santo", "GO": "goias", "MA": "maranhao",
+    "MG": "minas-gerais", "MS": "mato-grosso-do-sul", "MT": "mato-grosso",
+    "PA": "para", "PB": "paraiba", "PE": "pernambuco", "PI": "piaui",
+    "PR": "parana", "RJ": "rio-de-janeiro", "RN": "rio-grande-do-norte",
+    "RO": "rondonia", "RR": "roraima", "RS": "rio-grande-do-sul",
+    "SC": "santa-catarina", "SE": "sergipe", "SP": "sao-paulo",
+    "TO": "tocantins",
+}
+PDF_DOWNLOAD = (
+    "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos"
+    "/hospitais-de-referencia/{slug}/@@download/file"
 )
 
 STATE_CODES = {
@@ -67,6 +87,36 @@ def load_source_dates() -> dict:
         return {}
     with open(SOURCE_DATES, encoding="utf-8") as fh:
         return json.load(fh)
+
+
+def load_source_hashes() -> dict:
+    """SHA-1 of every state PDF we've ingested. Used by --hash-check to detect
+    silent re-uploads where gov.br swaps PDF bytes without bumping the
+    'publicado em' date.
+    """
+    if not os.path.exists(SOURCE_HASHES):
+        return {}
+    with open(SOURCE_HASHES, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def fetch_live_pdf_hashes() -> dict:
+    """Download each state PDF from gov.br and return UF → sha1 hex digest.
+    Errors per state are logged to stderr and yield no entry (treated as
+    'unknown' rather than 'changed')."""
+    out = {}
+    for uf, slug in STATE_SLUG.items():
+        url = PDF_DOWNLOAD.format(slug=slug)
+        try:
+            resp = requests.get(url, timeout=60, headers={
+                "User-Agent": "SoroJa-Update-Checker/1.0 (contato.soroja@gmail.com)"
+            })
+            resp.raise_for_status()
+        except Exception as e:
+            print(f"  ERROR fetching {uf} PDF: {e}", file=sys.stderr)
+            continue
+        out[uf] = hashlib.sha1(resp.content).hexdigest()
+    return out
 
 
 def load_previous_online() -> dict:
@@ -235,7 +285,47 @@ def print_human_report(local: dict, online: dict) -> int:
     return len(updates_needed)
 
 
+def check_hashes() -> int:
+    """Download every PDF and SHA-compare against data/source_hashes.json.
+    Returns the count of states whose binary differs from what we ingested.
+    """
+    stored = load_source_hashes()
+    if not stored:
+        print("WARN: data/source_hashes.json is missing; skipping hash check.", file=sys.stderr)
+        return 0
+    print("Verificando SHA dos PDFs ao vivo (pode demorar)…")
+    live = fetch_live_pdf_hashes()
+    drift = []
+    for uf in sorted(STATE_SLUG):
+        s = stored.get(uf)
+        l = live.get(uf)
+        if not s or not l:
+            continue
+        if s != l:
+            drift.append((uf, s, l))
+
+    print()
+    print(f"PDFs verificados: {len(live)}/27")
+    if drift:
+        print("🔴 DRIFT BINÁRIO DETECTADO:")
+        print("-" * 50)
+        for uf, s, l in drift:
+            print(f"  {uf}: local sha {s[:10]} ≠ site sha {l[:10]} — possível reupload silencioso pelo MS")
+    else:
+        print("✅ Todos os PDFs do site são idênticos aos que ingerimos.")
+    print()
+    return len(drift)
+
+
 def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[1] if __doc__ else None)
+    ap.add_argument(
+        "--hash-check", action="store_true",
+        help="Also download every PDF and SHA-compare against data/source_hashes.json "
+             "to catch silent re-uploads. Cheap (~25MB), but slower than the date check.",
+    )
+    args = ap.parse_args()
+
     os.makedirs(DATA_DIR, exist_ok=True)
     local = load_source_dates()
     prev_online = load_previous_online()
@@ -251,7 +341,14 @@ def main() -> int:
     updates_needed = print_human_report(local, online)
     if n_changes:
         print(f"\n📝 {n_changes} mudança(s) no site detectada(s) e gravada(s) em data/online_dates_history.jsonl")
-    return 0 if updates_needed == 0 else 1
+
+    drift_count = 0
+    if args.hash_check:
+        print()
+        drift_count = check_hashes()
+
+    # Exit non-zero if EITHER the website is ahead OR a binary drift was detected.
+    return 0 if (updates_needed == 0 and drift_count == 0) else 1
 
 
 if __name__ == "__main__":
