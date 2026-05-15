@@ -184,7 +184,15 @@ The report has four sections:
 ```bash
 mv extracted/BA.new.json extracted/BA.json
 # update data/source_dates.json with the MS date for BA
+# update data/source_hashes.json with the SHA-1 of the new PDF for BA:
+shasum "Docs Estado/BA_YYYYMMDD.pdf"
+# then edit data/source_hashes.json — set BA to the new hex digest
 ```
+
+`data/source_hashes.json` is the committed reference the weekly hash
+check (`scripts/check_updates.py --hash-check`, Sundays in CI) compares
+against. Forget to update it after ingesting a new PDF and the next
+Sunday check will (correctly) shout "drift detected".
 
 Then continue with the rest of the pipeline (§4 onward).
 
