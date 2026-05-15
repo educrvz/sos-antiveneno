@@ -41,7 +41,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/online_dates.json data/online_dates_history.jsonl data/dates_status.md
+          # Skip files that don't exist yet — online_dates_history.jsonl is
+          # only created the first time a transition is detected, so it may
+          # legitimately be absent on early runs.
+          for f in data/online_dates.json data/online_dates_history.jsonl data/dates_status.md; do
+            if [ -f "$f" ]; then
+              git add "$f"
+            fi
+          done
           if git diff --cached --quiet; then
             echo "No data-file changes to commit."
             exit 0
