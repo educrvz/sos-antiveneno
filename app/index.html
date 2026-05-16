@@ -500,6 +500,11 @@
         /* ===== Mapa fullscreen ===== */
         #map-container { position: fixed; inset: 0; z-index: 1200; background: var(--bg-color); }
         #map { width: 100%; height: 100%; }
+        .map-unavailable {
+            min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 32px; text-align: center; color: var(--text-muted); background: var(--bg-color);
+        }
+        .map-unavailable strong { color: var(--text-main); font-size: 20px; margin-bottom: 8px; }
         .map-back {
             position: absolute; top: 16px; right: 16px; z-index: 1300;
             padding: 12px 16px; border-radius: 14px; cursor: pointer; font-size: 14px;
@@ -539,6 +544,11 @@
             border: 1px solid var(--border-color); background: var(--mini-map-bg);
             position: relative; cursor: pointer;
         }
+        .mini-map-unavailable {
+            display: flex; align-items: center; justify-content: center; padding: 16px;
+            text-align: center; color: var(--text-muted); font-size: 13px; cursor: default;
+        }
+        .mini-map-unavailable::after { display: none; }
         .mini-map .leaflet-container { background: var(--mini-map-tile); cursor: pointer; }
         .mini-map::after {
             content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -673,8 +683,8 @@
         <div class="offline-content">
             <span style="font-size: 26px;">🏕️</span> 
             <div>
-                <strong>Vai fazer trilha? Salve Offline!</strong><br>
-                Toque em "Compartilhar" (iOS) ou Menu (Android) e escolha <strong>"Adicionar à Tela de Início"</strong> para poder usar este app inteiro no mato sem internet.
+                <strong>Vai fazer trilha? Salve para acesso offline.</strong><br>
+                Toque em "Compartilhar" (iOS) ou Menu (Android) e escolha <strong>"Adicionar à Tela de Início"</strong>. A lista e os telefones ficam disponíveis offline após o primeiro acesso; mapas e rotas podem precisar de internet.
             </div>
         </div>
         <button class="btn-close-offline" onclick="document.getElementById('offline-banner').style.display='none'">✕</button>
@@ -1472,6 +1482,28 @@
     }
 
     // ===== MINI-MAPAS (1 por card) =====
+    function leafletAvailable() {
+        return typeof window.L !== 'undefined';
+    }
+
+    function showMiniMapUnavailable(el) {
+        el.classList.add('mini-map-unavailable');
+        el.removeAttribute('onclick');
+        el.textContent = 'Mapa indisponível offline';
+    }
+
+    function showFullMapUnavailable() {
+        var mapEl = document.getElementById('map');
+        if (!mapEl) return;
+        mapEl.innerHTML =
+            '<div class="map-unavailable">' +
+                '<strong>Mapa indisponível</strong>' +
+                '<span>Confira a lista, telefones e botões de rota nos cartões. O mapa depende de conexão para carregar.</span>' +
+            '</div>';
+        var btn = document.getElementById('btn-my-location');
+        if (btn) btn.disabled = true;
+    }
+
     function destroyMiniMaps() {
         miniMaps.forEach(function(m) { try { m.remove(); } catch (e) {} });
         miniMaps = [];
@@ -1482,6 +1514,10 @@
     function initMiniMap(el) {
         if (el._inited) return;
         el._inited = true;
+        if (!leafletAvailable()) {
+            showMiniMapUnavailable(el);
+            return;
+        }
         var lat = parseFloat(el.dataset.lat);
         var lng = parseFloat(el.dataset.lng);
         if (isNaN(lat) || isNaN(lng)) return;
@@ -1498,6 +1534,10 @@
     function initMiniMaps() {
         var nodes = document.querySelectorAll('.mini-map');
         if (!nodes.length) return;
+        if (!leafletAvailable()) {
+            nodes.forEach(showMiniMapUnavailable);
+            return;
+        }
         if ('IntersectionObserver' in window) {
             miniMapObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
@@ -1515,6 +1555,10 @@
 
     // ===== RENDER MAP =====
     function renderMap() {
+        if (!leafletAvailable()) {
+            showFullMapUnavailable();
+            return;
+        }
         var filtered = getFiltered();
         if (!mapInstance) {
             var center = gpsAvailable ? [userLat, userLng] : [-14.235, -51.925];
@@ -1669,6 +1713,10 @@
 
     window.goToMyLocation = function() {
         if (!mapInstance) return;
+        if (!leafletAvailable()) {
+            showFullMapUnavailable();
+            return;
+        }
         var btn = document.getElementById('btn-my-location');
         function panTo(lat, lng) {
             mapInstance.fitBounds(boundsIncludingNearest(lat, lng, 3), { padding: [40, 40] });
@@ -1987,8 +2035,33 @@
         document.getElementById('legal-modal-overlay').classList.add('hidden-modal');
     };
 
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(function() {});
+    // PWA: production/previews get the service worker; localhost stays cache-free
+    // by default to avoid stale app shells during development. Add ?sw=1 locally
+    // when you explicitly want to test install/offline behavior.
+    function isLocalPreviewHost(hostname) {
+        return hostname === 'localhost' ||
+            hostname === '127.0.0.1' ||
+            hostname === '0.0.0.0' ||
+            hostname === '[::1]';
+    }
+
+    function shouldRegisterServiceWorker() {
+        if (!('serviceWorker' in navigator) || !window.isSecureContext) return false;
+        var forceLocal = false;
+        try {
+            forceLocal = new URLSearchParams(window.location.search).get('sw') === '1';
+        } catch (e) {}
+        return forceLocal || !isLocalPreviewHost(window.location.hostname);
+    }
+
+    if (shouldRegisterServiceWorker()) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').catch(function() {});
+        });
+    } else if ('serviceWorker' in navigator && isLocalPreviewHost(window.location.hostname)) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            registrations.forEach(function(registration) { registration.unregister(); });
+        }).catch(function() {});
     }
     })();
     </script>
