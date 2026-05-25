@@ -42,9 +42,9 @@
     "lng": -47.55683487500426
   },
   "8000956": {
-    "reason": "Policlínica Pronto Atendimento (Conselheiro Lafaiete/MG) — relato comunitário (29/04/2026) de mudança para UPA 24h Dr. Luiz de Souza Dias (Rua Vereador Alfredo Mafuz, 525) e novo telefone (31) 3764-9892; mantido visível com nota até confirmação.",
-    "verified_on": "2026-04-29",
-    "note": "Comunidade reportou (29/04/2026): endereço mudou para UPA 24h Dr. Luiz de Souza Dias, Rua Vereador Alfredo Mafuz, 525; novo telefone (31) 3764-9892. Confirme antes de se deslocar."
+    "reason": "Policlínica Pronto Atendimento (Conselheiro Lafaiete/MG) — dois relatos comunitários independentes (29/04/2026 e 03/05/2026) de que a policlínica está desativada há cerca de um ano e o serviço foi transferido para UPA 24h Dr. Luiz de Souza Dias (Rua Vereador Alfredo Mafuz, 525; tel. (31) 3764-9892). Mantido visível com nota até confirmação oficial.",
+    "verified_on": "2026-05-03",
+    "note": "Relatos comunitários (29/04 e 03/05/2026): policlínica desativada; serviço transferido para UPA 24h Dr. Luiz de Souza Dias (Rua Vereador Alfredo Mafuz, 525; tel. (31) 3764-9892). Confirme antes de se deslocar."
   },
   "2569701": {
     "reason": "Hospital Municipal de São Domingos (São Domingos/GO) — relato comunitário (29/04/2026) de possível encerramento; mantido visível com nota até confirmação oficial.",
@@ -55,5 +55,58 @@
     "reason": "Hosp. Macrorregional de Urgência e Emergência de Presidente Dutra/SOCORRÃO (MA) — relato comunitário (29/04/2026) de telefone correto.",
     "verified_on": "2026-04-29",
     "note": "Comunidade reportou (29/04/2026): telefone correto é (98) 99187-0040."
+  },
+  "2683202": {
+    "reason": "Hospital Municipal Dr. Amadeu Puppi (Ponta Grossa/PR) — relato comunitário (03/05/2026) de que o atendimento para acidentes com animais peçonhentos foi descentralizado para HU-UEPG e UPAs do município; mantido visível com nota até confirmação oficial.",
+    "verified_on": "2026-05-03",
+    "note": "Relato comunitário (03/05/2026): serviço foi transferido. Soro antiveneno agora disponível em:\n• Hospital Universitário Regional (HU-UEPG) — Rua Professor Gabriel de Paula Machado, 601, Uvaranas. Tel. (42) 3219-8888 / (42) 3219-8890 (SAC/WhatsApp). Atende 24h.\n• UPA Santa Paula — Rua Nicolau Kluppel Neto, 1645, Santa Paula. Tel. (42) 3122-3188.\n• UPA Santana — Rua Dr. Paula Xavier, 750, Centro/Vila Estrela. Tel. (42) 3220-1063.\n• UPA Uvaranas — Rua Comandante Paulo P. Schmidt, 15, Uvaranas.\nEm emergência, ligue 192 (SAMU). Confirme antes de se deslocar."
+  },
+  "7964145": {
+    "reason": "UPA de Teixeira de Freitas/BA — relato comunitário (05/05/2026) de que o endereço oficial (Av. Getúlio Vargas, 3197 - Bela Vista) está desativado há anos. Atendimento agora na UPA Pastor Amazias Barreto de Moraes (Av. Pres. Getúlio Vargas, 6037, Nova Teixeira). Coordenadas atualizadas para a nova unidade; endereço-texto preservado por política.",
+    "verified_on": "2026-05-05",
+    "lat": -17.5299608,
+    "lng": -39.7602183,
+    "note": "Relato comunitário (05/05/2026): endereço oficial está desativado há anos. Atendimento agora na UPA Pastor Amazias Barreto de Moraes, Av. Pres. Getúlio Vargas, 6037, Nova Teixeira (CEP 45985-580). Pin atualizado. Confirme antes de se deslocar."
+  },
+  "4047184": {
+    "reason": "Unidade de Retaguarda do Melhado (Araraquara/SP) — relato comunitário (06/05/2026) informando que, segundo a Secretaria Municipal de Saúde, o atendimento com soros antiofídicos e antiescorpiônicos é feito na UPA Central Amelia Bernardino Cutrale (Av. Maria Antônia Camargo de Oliveira, Vila Velosa; tel. (16) 3334-6900). Mantido visível com nota até confirmação oficial.",
+    "verified_on": "2026-05-06",
+    "note": "Relato comunitário (06/05/2026): segundo a Secretaria Municipal de Saúde de Araraquara, o atendimento com soros antiofídicos e antiescorpiônicos é feito na UPA Central Amelia Bernardino Cutrale, Av. Maria Antônia Camargo de Oliveira, Vila Velosa. Tel. (16) 3334-6900. Confirme antes de se deslocar."
+  },
+  "2535556": {
+    "reason": "Hospital das Clínicas Dr. Serafim de Carvalho (Jataí/GO) — pin apontava para uma escola; coordenadas corrigidas e verificadas manualmente no Google Maps (mantenedor, 09/05/2026).",
+    "verified_on": "2026-05-09",
+    "lat": -17.886555300845416,
+    "lng": -51.733769579368094
+  },
+  "2219564": {
+    "reason": "Hospital Universitário Clemente de Faria (Montes Claros/MG) — relato comunitário (10/05/2026) informando que o telefone publicado é da central Unimontes; o ramal direto do HUCF é (38) 3224-8000.",
+    "verified_on": "2026-05-10",
+    "note": "Relato comunitário (10/05/2026): o telefone listado é da central Unimontes; para contato direto com o HUCF, use (38) 3224-8000. Confirme antes de se deslocar."
+  },
+  "2708078": {
+    "reason": "Hospital Municipal Dr. Nelson dos Santos Gonçalves (Volta Redonda/RJ) — pin do endereço Ministerial apontava para perto da rodoviária; coordenadas corrigidas e verificadas pelo mantenedor (12/05/2026).",
+    "verified_on": "2026-05-12",
+    "lat": -22.508902136615422,
+    "lng": -44.09011867877822
+  },
+  "2134071": {
+    "reason": "Hospital Imaculada Conceição (Conceição do Mato Dentro/MG) — correção oficial da Secretaria Municipal de Saúde (saude@cmd.mg.gov.br, 13/05/2026) informando que, no município, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). UPA ainda não consta na lista oficial PESA — logado em outreach/ para encaminhamento ao Ministério/Abracit.",
+    "verified_on": "2026-05-13",
+    "note": "Atualização da Secretaria Municipal de Saúde (13/05/2026): em Conceição do Mato Dentro, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). Confirme antes de se deslocar."
+  },
+  "2775999": {
+    "reason": "Santa Casa Misericórdia (Passos/MG) — a lista oficial PESA do MS lista o endereço como 'Rua Barão de Passos', mas relato comunitário (13/05/2026) e a lógica do bairro 'Santa Casa' indicam que o endereço da Santa Casa e da UPA Passos (CNES 4042751) estão invertidos na fonte. Endereço-texto preservado por política; pin corrigido manualmente pelo mantenedor para a localização real da Santa Casa.",
+    "verified_on": "2026-05-13",
+    "lat": -20.713545936100516,
+    "lng": -46.612746993622416,
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da Santa Casa Misericórdia e da UPA Passos invertidos. A Santa Casa fica na Rua Santa Casa; a UPA na Rua Barão de Passos. Pin atualizado para o local real. Confirme antes de se deslocar."
+  },
+  "4042751": {
+    "reason": "Unidade Pronto Atendimento (Passos/MG) — a lista oficial PESA do MS lista o endereço como 'Rua Santa Casa, 164', mas relato comunitário (13/05/2026) indica que os endereços da UPA e da Santa Casa Misericórdia (CNES 2775999) estão invertidos na fonte. Endereço-texto preservado por política; pin corrigido manualmente pelo mantenedor para a localização real da UPA.",
+    "verified_on": "2026-05-13",
+    "lat": -20.711733857456725,
+    "lng": -46.59974614701962,
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da UPA Passos e da Santa Casa Misericórdia invertidos. A UPA fica na Rua Barão de Passos; a Santa Casa na Rua Santa Casa. Pin atualizado para o local real. Confirme antes de se deslocar."
   }
 }

@@ -36,7 +36,7 @@
     <meta name="twitter:description" content="Encontre os Pontos Estratégicos de Soro Antiveneno (PESA) mais próximos. Pode salvar vidas.">
     <meta name="twitter:image" content="https://soroja.com.br/og-image.png">
 
-    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="manifest" href="manifest.json">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230066CC' rx='20' width='100' height='100'/><text x='50' y='72' font-size='55' text-anchor='middle' fill='white'>&#9764;</text></svg>">
     <title>SoroJá</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -236,6 +236,21 @@
         .offline-banner { align-items: flex-start; }
         .offline-content { display: flex; align-items: flex-start; gap: 12px; flex: 1; line-height: 1.45; }
 
+        /* ===== Network-offline state banner (shown when navigator.onLine === false) ===== */
+        .network-offline-banner {
+            display: none;
+            background: var(--card-secondary);
+            border-bottom: 2px solid var(--danger);
+            color: var(--text-main);
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .network-offline-banner.visible { display: block; }
+        .network-offline-banner strong { color: var(--danger); font-weight: 900; }
+
         /* ===== Loading screen ===== */
         .screen-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; text-align: center; padding: 32px; }
         .screen-loading h2 { font-size: 34px; font-weight: 900; letter-spacing: -1px; background: linear-gradient(90deg, var(--header-title-from), var(--header-title-to)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
@@ -336,6 +351,7 @@
             margin-top: 6px; padding: 8px 10px; background: rgba(245,158,11,0.1);
             border: 1px solid rgba(245,158,11,0.3); border-left: 3px solid #F59E0B;
             border-radius: 8px; font-size: 12px; color: #FCD34D; line-height: 1.45;
+            white-space: pre-line;
         }
         /* Community-reported relatos. Visually distinct from .hospital-note
            (which is maintainer-verified) — dashed border, dimmer amber, and
@@ -647,6 +663,11 @@
         </div>
     </div>
 
+    <!-- Network-offline state banner (toggled by navigator.onLine) -->
+    <div class="network-offline-banner" id="network-offline-banner" role="status" aria-live="polite">
+        <strong>Você está offline</strong> — mapas indisponíveis, mas a lista de hospitais funciona.
+    </div>
+
     <!-- Offline PWA Banner -->
     <div class="offline-banner" id="offline-banner">
         <div class="offline-content">
@@ -738,8 +759,8 @@
                 <ul>
                     <li><span class="safe">✓ FAÇA:</span> Lave o local apenas com água e sabão. Mantenha a vítima deitada em repouso e com o membro afetado elevado.</li>
                     <li><span class="safe">✓ FAÇA:</span> Tente fotografar ou gravar a cor/tipo do animal caso seja seguro, para que o médico ministre o Soro correto.</li>
-                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS faça torniquete, amarramento ou qualquer pressão no membro. Isso acelera a necrose e causa amputação.</li>
-                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS corte a pele, tente chupar o veneno com a boca ou passe pó de café/receitas caseiras na ferida.</li>
+                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS faça torniquete, NEM amarramento, NEM qualquer pressão no membro. Isso acelera a necrose e causa amputação.</li>
+                    <li><span class="danger">✗ NÃO FAÇA:</span> JAMAIS corte a pele, NEM tente chupar o veneno com a boca, NEM passe pó de café ou receitas caseiras na ferida.</li>
                 </ul>
             </div>
         </details>
@@ -947,6 +968,19 @@
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;');
+    }
+
+    // Render an override `note` (community report) with the standing
+    // "Confirme antes de se deslocar" call-to-action bolded. The note is
+    // escaped first; the <strong> wrapper is a static literal injected
+    // post-escape, so this stays XSS-safe.
+    function formatHospitalNote(note) {
+        if (note == null) return '';
+        var safe = escapeHtml(note);
+        return safe.replace(
+            /Confirme antes de se deslocar/g,
+            '<strong>Confirme antes de se deslocar</strong>'
+        );
     }
 
     function haversine(lat1, lon1, lat2, lon2) {
@@ -1306,7 +1340,7 @@
                 '<div><h3>' + escapeHtml(h.hospital_name) + '</h3>' +
                 '<div class="city">' + escapeHtml(h.city) + ', ' + escapeHtml(h.state) + '</div>' +
                 (h.address ? '<div class="address">' + escapeHtml(h.address) + '</div>' : '') +
-                (h.note ? '<div class="hospital-note">' + escapeHtml(h.note) + '</div>' : '') +
+                (h.note ? '<div class="hospital-note">' + formatHospitalNote(h.note) + '</div>' : '') +
                 renderCommunityRelatos(h.community_notes) +
                 '</div>' + distHtml +
             '</div>' +
@@ -1525,7 +1559,7 @@
             var popup = '<strong>' + escapeHtml(h.hospital_name) + '</strong><br>' +
                 escapeHtml(h.city) + ', ' + escapeHtml(h.state) + distText + '<br>' +
                 popupEmojis +
-                (h.note ? '<em style="color:#B26A00">' + escapeHtml(h.note) + '</em><br>' : '') +
+                (h.note ? '<em style="color:#B26A00">' + formatHospitalNote(h.note) + '</em><br>' : '') +
                 (phonesHtml ? phonesHtml + '<br>' : '') +
                 '<a href="https://www.google.com/maps/dir/?api=1&destination=' + h.lat + ',' + h.lng +
                 '" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Como Chegar</a>';
@@ -1891,9 +1925,23 @@
         });
     }
 
+    // ===== Network-offline banner =====
+    function updateOfflineBanner() {
+        var banner = document.getElementById('network-offline-banner');
+        if (!banner) return;
+        if (navigator.onLine === false) {
+            banner.classList.add('visible');
+        } else {
+            banner.classList.remove('visible');
+        }
+    }
+    window.addEventListener('online', updateOfflineBanner);
+    window.addEventListener('offline', updateOfflineBanner);
+
     // ===== INIT =====
     function init() {
         initThemeToggle();
+        updateOfflineBanner();
         Promise.all([loadHospitals(), requestLocation()])
             .then(function() {
                 if (hospitals.length === 0) {
@@ -1939,10 +1987,9 @@
         document.getElementById('legal-modal-overlay').classList.add('hidden-modal');
     };
 
-    // Service worker disabled for local preview
-    // if ('serviceWorker' in navigator) {
-    //     navigator.serviceWorker.register('sw.js').catch(function() {});
-    // }
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(function() {});
+    }
     })();
     </script>
 </body>

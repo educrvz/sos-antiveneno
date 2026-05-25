@@ -10527,6 +10527,7 @@
     "city": "Teixeira de Freitas",
     "hospital_name": "Unidade de Pronto Atendimento - UPA",
     "address": "Av. Getúlio Vargas, 3197 - Bela Vista",
+    "note": "Relato comunitário (05/05/2026): endereço oficial está desativado há anos. Atendimento agora na UPA Pastor Amazias Barreto de Moraes, Av. Pres. Getúlio Vargas, 6037, Nova Teixeira (CEP 45985-580). Pin atualizado. Confirme antes de se deslocar.",
     "phones": [],
     "cnes": "7964145",
     "antivenoms": [
@@ -10538,8 +10539,8 @@
       "Escorpiônico"
     ],
     "source_date": "2026-01-05",
-    "lat": -17.5391489,
-    "lng": -39.737606,
+    "lat": -17.5299608,
+    "lng": -39.7602183,
     "geocode_tier": 1
   },
   {
@@ -15947,8 +15948,8 @@
       "Elapídico"
     ],
     "source_date": "2025-10-15",
-    "lat": -17.8851122,
-    "lng": -51.7231548,
+    "lat": -17.886555300845416,
+    "lng": -51.733769579368094,
     "geocode_tier": 1
   },
   {
@@ -23575,6 +23576,7 @@
     "city": "Conceição do Mato Dentro",
     "hospital_name": "Hospital Imaculada Conceição",
     "address": "R. José Sena, 214 - Centro",
+    "note": "Atualização da Secretaria Municipal de Saúde (13/05/2026): em Conceição do Mato Dentro, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). Confirme antes de se deslocar.",
     "phones": [
       "(31) 3868-1583"
     ],
@@ -23647,7 +23649,7 @@
     "city": "Conselheiro Lafaiete",
     "hospital_name": "Policlínica Pronto Atendimento",
     "address": "Av. Mario Rodrigues Pereira, 175 - Centro",
-    "note": "Comunidade reportou (29/04/2026): endereço mudou para UPA 24h Dr. Luiz de Souza Dias, Rua Vereador Alfredo Mafuz, 525; novo telefone (31) 3764-9892. Confirme antes de se deslocar.",
+    "note": "Relatos comunitários (29/04 e 03/05/2026): policlínica desativada; serviço transferido para UPA 24h Dr. Luiz de Souza Dias (Rua Vereador Alfredo Mafuz, 525; tel. (31) 3764-9892). Confirme antes de se deslocar.",
     "phones": [
       "(32) 3769-2654"
     ],
@@ -26567,6 +26569,7 @@
     "city": "Montes Claros",
     "hospital_name": "Hospital Universitário Clemente de Faria",
     "address": "Av. Cula Mangabeira, 562 - Santo Expedito",
+    "note": "Relato comunitário (10/05/2026): o telefone listado é da central Unimontes; para contato direto com o HUCF, use (38) 3224-8000. Confirme antes de se deslocar.",
     "phones": [
       "(38) 3229-8200"
     ],
@@ -27156,6 +27159,7 @@
     "city": "Passos",
     "hospital_name": "Unidade Pronto Atendimento",
     "address": "Rua Santa Casa, 164",
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da UPA Passos e da Santa Casa Misericórdia invertidos. A UPA fica na Rua Barão de Passos; a Santa Casa na Rua Santa Casa. Pin atualizado para o local real. Confirme antes de se deslocar.",
     "phones": [
       "(35) 3522-4214",
       "(35) 9829-1967"
@@ -27179,8 +27183,8 @@
       "Fonêutrico e Lonômico"
     ],
     "source_date": "2025-12-18",
-    "lat": -20.713479,
-    "lng": -46.61267240000001,
+    "lat": -20.711733857456725,
+    "lng": -46.59974614701962,
     "geocode_tier": 1
   },
   {
@@ -27189,6 +27193,7 @@
     "city": "Passos",
     "hospital_name": "Santa Casa Misericórdia",
     "address": "Rua Barão de Passos, s/n",
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da Santa Casa Misericórdia e da UPA Passos invertidos. A Santa Casa fica na Rua Santa Casa; a UPA na Rua Barão de Passos. Pin atualizado para o local real. Confirme antes de se deslocar.",
     "phones": [
       "(35) 3529-1300"
     ],
@@ -27211,8 +27216,8 @@
       "Fonêutrico e Lonômico"
     ],
     "source_date": "2025-12-18",
-    "lat": -20.7135408,
-    "lng": -46.6127045,
+    "lat": -20.713545936100516,
+    "lng": -46.612746993622416,
     "geocode_tier": 1
   },
   {
@@ -34842,7 +34847,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.7221575,
     "lng": -48.8826913,
     "geocode_tier": 3
@@ -34869,7 +34874,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.9526788,
     "lng": -48.3946448,
     "geocode_tier": 3
@@ -34894,7 +34899,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.9618402,
     "lng": -48.2066072,
     "geocode_tier": 1
@@ -34923,7 +34928,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.1549378,
     "lng": -50.3910702,
     "geocode_tier": 1
@@ -34954,7 +34959,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.9540886,
     "lng": -54.7395878,
     "geocode_tier": 1
@@ -34985,7 +34990,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.8621363999999999,
     "lng": -52.5412039,
     "geocode_tier": 3
@@ -35014,7 +35019,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.528841608033536,
     "lng": -52.58191434112879,
     "geocode_tier": 1
@@ -35043,7 +35048,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.1865383,
     "lng": -52.2085446,
     "geocode_tier": 2
@@ -35071,7 +35076,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.327574,
     "lng": -55.1034482,
     "geocode_tier": 3
@@ -35096,7 +35101,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.2090207,
     "lng": -52.2243506,
     "geocode_tier": 3
@@ -35123,7 +35128,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.8025755,
     "lng": -50.4850554,
     "geocode_tier": 1
@@ -35150,7 +35155,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.8033664,
     "lng": -50.4862605,
     "geocode_tier": 3
@@ -35175,7 +35180,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.8033664,
     "lng": -50.4862605,
     "geocode_tier": 3
@@ -35200,7 +35205,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.8033664,
     "lng": -50.4862605,
     "geocode_tier": 3
@@ -35226,7 +35231,7 @@
       "Soro Anti Rabico",
       "DT"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3923155,
     "lng": -48.42000950000001,
     "geocode_tier": 1
@@ -35255,7 +35260,7 @@
     "other_soros": [
       "Antitetâtico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3328688,
     "lng": -48.4111702,
     "geocode_tier": 1
@@ -35284,7 +35289,7 @@
     "other_soros": [
       "Antitetâtico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3821484,
     "lng": -48.36928469999999,
     "geocode_tier": 3
@@ -35313,7 +35318,7 @@
     "other_soros": [
       "Antitetâtico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3445558,
     "lng": -48.3664287,
     "geocode_tier": 3
@@ -35344,7 +35349,7 @@
     "other_soros": [
       "Antitetâtico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.364191,
     "lng": -48.4057681,
     "geocode_tier": 1
@@ -35368,7 +35373,7 @@
       "Soro Anti Rabico",
       "DT"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3875898,
     "lng": -48.39854829999999,
     "geocode_tier": 1
@@ -35392,7 +35397,7 @@
       "Soro Anti Rabico",
       "DT"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3374764,
     "lng": -48.3875421,
     "geocode_tier": 1
@@ -35421,7 +35426,7 @@
     "other_soros": [
       "Antitetâtico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3876291,
     "lng": -48.4273087,
     "geocode_tier": 3
@@ -35448,7 +35453,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.9848777999999999,
     "lng": -49.9376823,
     "geocode_tier": 2
@@ -35475,7 +35480,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.4713678,
     "lng": -51.2067001,
     "geocode_tier": 1
@@ -35500,7 +35505,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.137734,
     "lng": -47.5565307,
     "geocode_tier": 1
@@ -35527,7 +35532,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.0235945,
     "lng": -46.64308740000001,
     "geocode_tier": 1
@@ -35554,7 +35559,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.6056829,
     "lng": -55.3281725,
     "geocode_tier": 3
@@ -35581,7 +35586,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.8995846,
     "lng": -50.2091838,
     "geocode_tier": 3
@@ -35608,7 +35613,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.7966780007393974,
     "lng": -49.66975618813233,
     "geocode_tier": 1
@@ -35635,7 +35640,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -7.3464472,
     "lng": -50.4089108,
     "geocode_tier": 3
@@ -35664,7 +35669,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.5048488,
     "lng": -48.6228268,
     "geocode_tier": 3
@@ -35693,7 +35698,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.5666136,
     "lng": -48.7657992,
     "geocode_tier": 1
@@ -35722,7 +35727,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.5108187,
     "lng": -48.613299,
     "geocode_tier": 1
@@ -35753,7 +35758,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.4681981,
     "lng": -48.467464,
     "geocode_tier": 1
@@ -35784,7 +35789,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.4396877,
     "lng": -48.4808635,
     "geocode_tier": 1
@@ -35815,7 +35820,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3028582,
     "lng": -48.4879926,
     "geocode_tier": 1
@@ -35846,7 +35851,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.1586716,
     "lng": -48.4691066,
     "geocode_tier": 3
@@ -35873,7 +35878,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.6366322,
     "lng": -54.9045,
     "geocode_tier": 1
@@ -35901,7 +35906,7 @@
       "Laquético Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3633652,
     "lng": -48.2480005,
     "geocode_tier": 1
@@ -35931,7 +35936,7 @@
       "Laquético Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.2908032,
     "lng": -48.3190892,
     "geocode_tier": 2
@@ -35958,7 +35963,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -5.0486168,
     "lng": -48.5984488,
     "geocode_tier": 3
@@ -35985,7 +35990,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.0537407,
     "lng": -46.7673872,
     "geocode_tier": 1
@@ -36012,7 +36017,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.05044,
     "lng": -46.7683289,
     "geocode_tier": 1
@@ -36037,7 +36042,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.3016198,
     "lng": -52.5389395,
     "geocode_tier": 1
@@ -36064,7 +36069,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -5.7011192,
     "lng": -48.4042875,
     "geocode_tier": 1
@@ -36091,7 +36096,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.6740426,
     "lng": -50.4788578,
     "geocode_tier": 1
@@ -36118,7 +36123,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.5128529,
     "lng": -48.0447257,
     "geocode_tier": 1
@@ -36143,7 +36148,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.0160533,
     "lng": -48.9649486,
     "geocode_tier": 3
@@ -36158,7 +36163,7 @@
     "cnes": "",
     "antivenoms": [],
     "source_antivenoms_raw": [],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.2450534,
     "lng": -49.5021482,
     "geocode_tier": 3
@@ -36185,7 +36190,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.2417095,
     "lng": -49.5130802,
     "geocode_tier": 2
@@ -36212,7 +36217,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.2479705,
     "lng": -49.4996299,
     "geocode_tier": 3
@@ -36239,7 +36244,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.5293345,
     "lng": -49.8537295,
     "geocode_tier": 1
@@ -36264,7 +36269,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.2089979,
     "lng": -47.1778921,
     "geocode_tier": 3
@@ -36283,7 +36288,7 @@
     "source_antivenoms_raw": [
       "Botropico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.7521351927070103,
     "lng": -47.06342582038933,
     "geocode_tier": 1
@@ -36312,7 +36317,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.2960217344032845,
     "lng": -47.95032875338581,
     "geocode_tier": 1
@@ -36339,7 +36344,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.2948716,
     "lng": -47.9431119,
     "geocode_tier": 1
@@ -36366,7 +36371,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.1654285,
     "lng": -49.9809774,
     "geocode_tier": 2
@@ -36391,7 +36396,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.9334089,
     "lng": -48.2826927,
     "geocode_tier": 3
@@ -36418,7 +36423,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.2659387,
     "lng": -49.26717739999999,
     "geocode_tier": 1
@@ -36443,7 +36448,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.9919647,
     "lng": -47.9493249,
     "geocode_tier": 1
@@ -36470,7 +36475,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.0922079,
     "lng": -49.6031988,
     "geocode_tier": 1
@@ -36497,7 +36502,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.8118614,
     "lng": -49.7982309,
     "geocode_tier": 3
@@ -36524,7 +36529,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -7.8131946,
     "lng": -50.7711355,
     "geocode_tier": 1
@@ -36551,7 +36556,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.8883826,
     "lng": -55.118321,
     "geocode_tier": 3
@@ -36578,7 +36583,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.7333584999999999,
     "lng": -47.8536893,
     "geocode_tier": 3
@@ -36605,7 +36610,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.2889648,
     "lng": -47.5596762,
     "geocode_tier": 3
@@ -36632,7 +36637,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.105929300358932,
     "lng": -49.34936143017513,
     "geocode_tier": 1
@@ -36659,7 +36664,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.1727263,
     "lng": -56.7423372,
     "geocode_tier": 3
@@ -36686,7 +36691,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -7.562747600000001,
     "lng": -49.7017353,
     "geocode_tier": 1
@@ -36711,7 +36716,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.939331,
     "lng": -47.0494961,
     "geocode_tier": 3
@@ -36738,7 +36743,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.84137721784901,
     "lng": -49.1019882023157,
     "geocode_tier": 1
@@ -36765,7 +36770,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.4078508,
     "lng": -51.6476276,
     "geocode_tier": 3
@@ -36792,7 +36797,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.1287181,
     "lng": -47.618546,
     "geocode_tier": 3
@@ -36819,7 +36824,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.9706702,
     "lng": -48.9506203,
     "geocode_tier": 3
@@ -36846,7 +36851,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.4315827,
     "lng": -47.9153677,
     "geocode_tier": 1
@@ -36873,7 +36878,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.5569908,
     "lng": -47.5043893,
     "geocode_tier": 1
@@ -36900,7 +36905,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.7716446,
     "lng": -47.4415177,
     "geocode_tier": 1
@@ -36927,7 +36932,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.2746856,
     "lng": -55.9890653,
     "geocode_tier": 1
@@ -36952,7 +36957,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -5.1312021,
     "lng": -49.3297957,
     "geocode_tier": 3
@@ -36979,7 +36984,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.2238826,
     "lng": -57.75787080000001,
     "geocode_tier": 3
@@ -37006,7 +37011,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.449714699999999,
     "lng": -49.11156949999999,
     "geocode_tier": 1
@@ -37033,7 +37038,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.1578052,
     "lng": -56.0954048,
     "geocode_tier": 1
@@ -37060,7 +37065,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.8954287,
     "lng": -49.3800085,
     "geocode_tier": 2
@@ -37082,7 +37087,7 @@
     "source_antivenoms_raw": [
       "Botrópico e Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.365052,
     "lng": -48.3477971,
     "geocode_tier": 1
@@ -37104,7 +37109,7 @@
     "source_antivenoms_raw": [
       "Botrópico e Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3653636,
     "lng": -48.30981140000001,
     "geocode_tier": 3
@@ -37131,7 +37136,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.046466,
     "lng": -47.5404555,
     "geocode_tier": 3
@@ -37158,7 +37163,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.7982722,
     "lng": -47.6043718,
     "geocode_tier": 3
@@ -37189,7 +37194,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -5.340949699999999,
     "lng": -49.086921,
     "geocode_tier": 1
@@ -37216,7 +37221,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.762971,
     "lng": -47.4571385,
     "geocode_tier": 1
@@ -37243,7 +37248,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.7063702,
     "lng": -47.6969215,
     "geocode_tier": 3
@@ -37270,7 +37275,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.4448548,
     "lng": -52.8885353,
     "geocode_tier": 1
@@ -37297,7 +37302,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.8030498,
     "lng": -50.7137106,
     "geocode_tier": 3
@@ -37324,7 +37329,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.584219,
     "lng": -49.50783610000001,
     "geocode_tier": 1
@@ -37351,7 +37356,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.8867581,
     "lng": -48.7657371,
     "geocode_tier": 3
@@ -37379,7 +37384,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.0068421,
     "lng": -54.0753713,
     "geocode_tier": 3
@@ -37404,7 +37409,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.6822018,
     "lng": -54.64248389999999,
     "geocode_tier": 3
@@ -37431,7 +37436,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.5288102,
     "lng": -49.2162473,
     "geocode_tier": 2
@@ -37456,7 +37461,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.2672901,
     "lng": -46.97356260000001,
     "geocode_tier": 1
@@ -37481,7 +37486,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.9183277,
     "lng": -49.0768398,
     "geocode_tier": 3
@@ -37508,7 +37513,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -7.036801199999999,
     "lng": -55.4183996,
     "geocode_tier": 3
@@ -37533,7 +37538,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.2504091,
     "lng": -49.948618,
     "geocode_tier": 3
@@ -37560,7 +37565,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.9160516,
     "lng": -55.5144276,
     "geocode_tier": 1
@@ -37589,7 +37594,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.0066349,
     "lng": -49.8615054,
     "geocode_tier": 3
@@ -37616,7 +37621,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.776669,
     "lng": -55.8619534,
     "geocode_tier": 1
@@ -37643,7 +37648,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.467135,
     "lng": -56.3773109,
     "geocode_tier": 3
@@ -37670,7 +37675,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.7513706,
     "lng": -51.0718835,
     "geocode_tier": 3
@@ -37697,7 +37702,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.7512504,
     "lng": -51.08101809999999,
     "geocode_tier": 1
@@ -37724,7 +37729,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.5472901,
     "lng": -47.1162415,
     "geocode_tier": 1
@@ -37751,7 +37756,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.8405945,
     "lng": -50.6372767,
     "geocode_tier": 3
@@ -37778,7 +37783,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -5.7446465,
     "lng": -48.3183643,
     "geocode_tier": 1
@@ -37809,7 +37814,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.9948804,
     "lng": -47.3653714,
     "geocode_tier": 1
@@ -37836,7 +37841,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.0629332,
     "lng": -49.9090254,
     "geocode_tier": 1
@@ -37863,7 +37868,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.0722285,
     "lng": -49.8551108,
     "geocode_tier": 3
@@ -37890,7 +37895,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.0721587,
     "lng": -50.06652380000001,
     "geocode_tier": 1
@@ -37917,7 +37922,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -7.8322956,
     "lng": -50.0401129,
     "geocode_tier": 3
@@ -37944,7 +37949,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.8679099,
     "lng": -54.2216235,
     "geocode_tier": 1
@@ -37969,7 +37974,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.8045386,
     "lng": -53.4813461,
     "geocode_tier": 3
@@ -37996,7 +38001,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.4424226,
     "lng": -48.8614969,
     "geocode_tier": 1
@@ -38023,7 +38028,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3902335,
     "lng": -48.8698891,
     "geocode_tier": 1
@@ -38050,7 +38055,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.7554456,
     "lng": -52.2377273,
     "geocode_tier": 2
@@ -38077,7 +38082,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.9339747,
     "lng": -50.8153827,
     "geocode_tier": 3
@@ -38104,7 +38109,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.8964809,
     "lng": -47.0069924,
     "geocode_tier": 3
@@ -38131,7 +38136,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.0282616,
     "lng": -50.0263279,
     "geocode_tier": 1
@@ -38158,7 +38163,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.0225338,
     "lng": -50.0429077,
     "geocode_tier": 1
@@ -38185,7 +38190,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.0402322,
     "lng": -49.997896,
     "geocode_tier": 1
@@ -38212,7 +38217,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.035984,
     "lng": -50.0353888,
     "geocode_tier": 1
@@ -38239,7 +38244,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.0418211,
     "lng": -50.0307176,
     "geocode_tier": 1
@@ -38266,7 +38271,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -7.3103957,
     "lng": -50.0429714,
     "geocode_tier": 2
@@ -38293,7 +38298,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.777572699999999,
     "lng": -48.0758051,
     "geocode_tier": 1
@@ -38320,7 +38325,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.0988047,
     "lng": -54.9094182,
     "geocode_tier": 1
@@ -38347,7 +38352,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.6269636,
     "lng": -47.35480219999999,
     "geocode_tier": 1
@@ -38374,7 +38379,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.7552660999999999,
     "lng": -48.51385639999999,
     "geocode_tier": 1
@@ -38401,7 +38406,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.6645966999999999,
     "lng": -49.1729676,
     "geocode_tier": 3
@@ -38428,7 +38433,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.2962148,
     "lng": -48.1641458,
     "geocode_tier": 1
@@ -38455,7 +38460,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.9388625,
     "lng": -49.7002997,
     "geocode_tier": 1
@@ -38476,7 +38481,7 @@
     "source_antivenoms_raw": [
       "Botrópico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.228487,
     "lng": -48.2948816,
     "geocode_tier": 3
@@ -38503,7 +38508,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.8717368,
     "lng": -49.7157068,
     "geocode_tier": 3
@@ -38530,7 +38535,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -8.870501299999999,
     "lng": -49.7168256,
     "geocode_tier": 3
@@ -38561,7 +38566,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.3536024,
     "lng": -47.5822971,
     "geocode_tier": 2
@@ -38588,7 +38593,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -9.336633299999999,
     "lng": -50.3413872,
     "geocode_tier": 3
@@ -38619,7 +38624,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.4476478,
     "lng": -54.7022087,
     "geocode_tier": 1
@@ -38646,7 +38651,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.4251475,
     "lng": -54.7144829,
     "geocode_tier": 1
@@ -38673,7 +38678,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.1536957,
     "lng": -48.1339564,
     "geocode_tier": 1
@@ -38698,7 +38703,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.7505179000000001,
     "lng": -48.0246606,
     "geocode_tier": 1
@@ -38725,7 +38730,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -5.5461949,
     "lng": -48.7323509,
     "geocode_tier": 1
@@ -38752,7 +38757,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.641506,
     "lng": -51.97224730000001,
     "geocode_tier": 1
@@ -38779,7 +38784,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.6411924,
     "lng": -51.99062259999999,
     "geocode_tier": 3
@@ -38804,7 +38809,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.1013011,
     "lng": -52.2454697,
     "geocode_tier": 1
@@ -38831,7 +38836,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.640483,
     "lng": -51.9906354,
     "geocode_tier": 1
@@ -38858,7 +38863,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.677166,
     "lng": -47.7705586,
     "geocode_tier": 1
@@ -38885,7 +38890,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.395715,
     "lng": -48.5680933,
     "geocode_tier": 1
@@ -38912,7 +38917,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.8535828000000001,
     "lng": -47.9231642,
     "geocode_tier": 1
@@ -38939,7 +38944,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.7752754,
     "lng": -47.1780699,
     "geocode_tier": 1
@@ -38966,7 +38971,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -5.3616448,
     "lng": -48.7909234,
     "geocode_tier": 3
@@ -38993,7 +38998,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.6142426,
     "lng": -47.481566,
     "geocode_tier": 1
@@ -39020,7 +39025,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.7210524,
     "lng": -49.5301226,
     "geocode_tier": 3
@@ -39047,7 +39052,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.5905658,
     "lng": -51.9520537,
     "geocode_tier": 1
@@ -39074,7 +39079,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.7288401,
     "lng": -48.5122618,
     "geocode_tier": 3
@@ -39101,7 +39106,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.9360251,
     "lng": -48.9486472,
     "geocode_tier": 3
@@ -39126,7 +39131,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.1052046746520694,
     "lng": -56.49135574083636,
     "geocode_tier": 1
@@ -39153,7 +39158,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.4218182,
     "lng": -48.2581745,
     "geocode_tier": 1
@@ -39180,7 +39185,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -4.7064442,
     "lng": -55.991263,
     "geocode_tier": 1
@@ -39207,7 +39212,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.0793144,
     "lng": -46.8990318,
     "geocode_tier": 3
@@ -39234,7 +39239,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.761159999999999,
     "lng": -51.16978599999999,
     "geocode_tier": 1
@@ -39261,7 +39266,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -6.749712,
     "lng": -51.1581943,
     "geocode_tier": 1
@@ -39288,7 +39293,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.8964809,
     "lng": -47.0069924,
     "geocode_tier": 3
@@ -39315,7 +39320,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.7444209,
     "lng": -47.4986002,
     "geocode_tier": 3
@@ -39342,7 +39347,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -3.7184136,
     "lng": -53.7347025,
     "geocode_tier": 2
@@ -39369,7 +39374,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -0.8581435,
     "lng": -48.1405095,
     "geocode_tier": 3
@@ -39394,7 +39399,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -2.8906469,
     "lng": -52.0127932,
     "geocode_tier": 1
@@ -39421,7 +39426,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -1.1986154683343015,
     "lng": -46.14375538564532,
     "geocode_tier": 1
@@ -39452,7 +39457,7 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2025-12-18",
     "lat": -7.1042579,
     "lng": -49.9369105,
     "geocode_tier": 3
@@ -45211,6 +45216,7 @@
     "city": "Ponta Grossa",
     "hospital_name": "Hospital Municipal Dr. Amadeu Puppi",
     "address": "Rua Augusto Ribas, 81 - Centro",
+    "note": "Relato comunitário (03/05/2026): serviço foi transferido. Soro antiveneno agora disponível em:\n• Hospital Universitário Regional (HU-UEPG) — Rua Professor Gabriel de Paula Machado, 601, Uvaranas. Tel. (42) 3219-8888 / (42) 3219-8890 (SAC/WhatsApp). Atende 24h.\n• UPA Santa Paula — Rua Nicolau Kluppel Neto, 1645, Santa Paula. Tel. (42) 3122-3188.\n• UPA Santana — Rua Dr. Paula Xavier, 750, Centro/Vila Estrela. Tel. (42) 3220-1063.\n• UPA Uvaranas — Rua Comandante Paulo P. Schmidt, 15, Uvaranas.\nEm emergência, ligue 192 (SAMU). Confirme antes de se deslocar.",
     "phones": [
       "(42) 3220-7800"
     ],
@@ -47960,9 +47966,9 @@
       "Elapídico"
     ],
     "source_date": "2026-01-05",
-    "lat": -22.5141725,
-    "lng": -44.0981319,
-    "geocode_tier": 3
+    "lat": -22.508902136615422,
+    "lng": -44.09011867877822,
+    "geocode_tier": 1
   },
   {
     "state": "RN",
@@ -56209,6 +56215,7 @@
     "city": "Araraquara",
     "hospital_name": "Unidade de Retaguarda do Melhado",
     "address": "Rua Eitor Bim, nº 91, Vila Suconaza, Araraquara",
+    "note": "Relato comunitário (06/05/2026): segundo a Secretaria Municipal de Saúde de Araraquara, o atendimento com soros antiofídicos e antiescorpiônicos é feito na UPA Central Amelia Bernardino Cutrale, Av. Maria Antônia Camargo de Oliveira, Vila Velosa. Tel. (16) 3334-6900. Confirme antes de se deslocar.",
     "phones": [
       "(16) 3305-1500"
     ],
