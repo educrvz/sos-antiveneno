@@ -95,6 +95,12 @@
     "verified_on": "2026-05-13",
     "note": "Atualização da Secretaria Municipal de Saúde (13/05/2026): em Conceição do Mato Dentro, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). Confirme antes de se deslocar."
   },
+  "7802951": {
+    "reason": "UPA Adolpho Pereira Resende (Carmo do Paranaíba/MG) — endereço Ministerial geocodifica para local errado (~1.8 km do prédio real); coordenadas verificadas manualmente pelo mantenedor (30/05/2026, confirmado também por OSM como amenity=hospital). Endereço-texto preservado por política.",
+    "verified_on": "2026-05-30",
+    "lat": -19.00823883670876,
+    "lng": -46.31610659284604
+  },
   "2775999": {
     "reason": "Santa Casa Misericórdia (Passos/MG) — a lista oficial PESA do MS lista o endereço como 'Rua Barão de Passos', mas relato comunitário (13/05/2026) e a lógica do bairro 'Santa Casa' indicam que o endereço da Santa Casa e da UPA Passos (CNES 4042751) estão invertidos na fonte. Endereço-texto preservado por política; pin corrigido manualmente pelo mantenedor para a localização real da Santa Casa.",
     "verified_on": "2026-05-13",
