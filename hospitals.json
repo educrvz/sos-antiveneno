@@ -50346,6 +50346,11 @@
     "community_notes": [
       {
         "category": "closed",
+        "reported_at": "2026-06-15",
+        "public_summary": "Relato da comunidade: confirmação (15/06/2026) de que o HPS continua fechado."
+      },
+      {
+        "category": "closed",
         "reported_at": "2026-04-23",
         "public_summary": "Relato da comunidade: HPS desativado pela enchente de maio de 2024 e ainda não foi reaberto."
       }
@@ -60194,6 +60199,13 @@
     "city": "Paraguaçu Paulista",
     "hospital_name": "Santa Casa de Paraguaçu Paulista",
     "address": "Rua Caramuru, 568 - Centro",
+    "community_notes": [
+      {
+        "category": "contact_fix",
+        "reported_at": "2026-06-09",
+        "public_summary": "Relato da comunidade: telefone atualizado para (18) 3247-1133."
+      }
+    ],
     "phones": [
       "(18) 3361-1133"
     ],
