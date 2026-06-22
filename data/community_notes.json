@@ -26,7 +26,7 @@
       {
         "category": "closed",
         "reported_at": "2026-04-23",
-        "public_summary": "Relato da comunidade: HPS desativado pela enchente de maio de 2024 e ainda não foi reaberto."
+        "public_summary": "Relato da comunidade (2 relatos): confirmação de que o HPS continua fechado."
       }
     ],
     "2801566": [
@@ -55,6 +55,13 @@
         "category": "contact_fix",
         "reported_at": "2026-04-25",
         "public_summary": "Relato da comunidade: telefone atualizado para (32) 99995-2476."
+      }
+    ],
+    "2082519": [
+      {
+        "category": "contact_fix",
+        "reported_at": "2026-06-09",
+        "public_summary": "Relato da comunidade: telefone atualizado para (18) 3247-1133."
       }
     ]
   }

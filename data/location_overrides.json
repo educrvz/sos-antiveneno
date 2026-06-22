@@ -31,9 +31,9 @@
     "hide": true
   },
   "2738252": {
-    "reason": "Hospital do Coração (Cascavel/PR) — dois relatos comunitários (27/04/2026 e 01/05/2026) de que o hospital não está mais em funcionamento; mantido visível com nota até confirmação oficial.",
-    "verified_on": "2026-05-01",
-    "note": "Relatos comunitários (27/04 e 01/05/2026): hospital não está mais em funcionamento. Confirme antes de se deslocar."
+    "reason": "Hospital do Coração (Cascavel/PR) — três relatos comunitários (27/04, 01/05 e 21/05/2026) afirmando que o hospital foi desativado e o último (21/05, arquiteto) confirma demolição do prédio. Mantido visível com nota explícita até confirmação oficial.",
+    "verified_on": "2026-05-21",
+    "note": "Relatos comunitários (27/04, 01/05 e 21/05/2026): foi desativado e demolido. Confirme antes de se deslocar."
   },
   "2034441": {
     "reason": "Correção de coordenadas via reporte do usuário (Pronto Socorro Municipal, Rio Claro/SP).",
@@ -83,5 +83,36 @@
     "reason": "Hospital Universitário Clemente de Faria (Montes Claros/MG) — relato comunitário (10/05/2026) informando que o telefone publicado é da central Unimontes; o ramal direto do HUCF é (38) 3224-8000.",
     "verified_on": "2026-05-10",
     "note": "Relato comunitário (10/05/2026): o telefone listado é da central Unimontes; para contato direto com o HUCF, use (38) 3224-8000. Confirme antes de se deslocar."
+  },
+  "2708078": {
+    "reason": "Hospital Municipal Dr. Nelson dos Santos Gonçalves (Volta Redonda/RJ) — pin do endereço Ministerial apontava para perto da rodoviária; coordenadas corrigidas e verificadas pelo mantenedor (12/05/2026).",
+    "verified_on": "2026-05-12",
+    "lat": -22.508902136615422,
+    "lng": -44.09011867877822
+  },
+  "2134071": {
+    "reason": "Hospital Imaculada Conceição (Conceição do Mato Dentro/MG) — correção oficial da Secretaria Municipal de Saúde (saude@cmd.mg.gov.br, 13/05/2026) informando que, no município, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). UPA ainda não consta na lista oficial PESA — logado em outreach/ para encaminhamento ao Ministério/Abracit.",
+    "verified_on": "2026-05-13",
+    "note": "Atualização da Secretaria Municipal de Saúde (13/05/2026): em Conceição do Mato Dentro, os soros antiveneno são disponibilizados exclusivamente na UPA Dr. Juvêncio Guimarães (Antibotrópico, Anticrotálico e Antiescorpiônico). Confirme antes de se deslocar."
+  },
+  "7802951": {
+    "reason": "UPA Adolpho Pereira Resende (Carmo do Paranaíba/MG) — endereço Ministerial geocodifica para local errado (~1.8 km do prédio real); coordenadas verificadas manualmente pelo mantenedor (30/05/2026, confirmado também por OSM como amenity=hospital). Endereço-texto preservado por política.",
+    "verified_on": "2026-05-30",
+    "lat": -19.00823883670876,
+    "lng": -46.31610659284604
+  },
+  "2775999": {
+    "reason": "Santa Casa Misericórdia (Passos/MG) — a lista oficial PESA do MS lista o endereço como 'Rua Barão de Passos', mas relato comunitário (13/05/2026) e a lógica do bairro 'Santa Casa' indicam que o endereço da Santa Casa e da UPA Passos (CNES 4042751) estão invertidos na fonte. Endereço-texto preservado por política; pin corrigido manualmente pelo mantenedor para a localização real da Santa Casa.",
+    "verified_on": "2026-05-13",
+    "lat": -20.713545936100516,
+    "lng": -46.612746993622416,
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da Santa Casa Misericórdia e da UPA Passos invertidos. A Santa Casa fica na Rua Santa Casa; a UPA na Rua Barão de Passos. Pin atualizado para o local real. Confirme antes de se deslocar."
+  },
+  "4042751": {
+    "reason": "Unidade Pronto Atendimento (Passos/MG) — a lista oficial PESA do MS lista o endereço como 'Rua Santa Casa, 164', mas relato comunitário (13/05/2026) indica que os endereços da UPA e da Santa Casa Misericórdia (CNES 2775999) estão invertidos na fonte. Endereço-texto preservado por política; pin corrigido manualmente pelo mantenedor para a localização real da UPA.",
+    "verified_on": "2026-05-13",
+    "lat": -20.711733857456725,
+    "lng": -46.59974614701962,
+    "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da UPA Passos e da Santa Casa Misericórdia invertidos. A UPA fica na Rua Barão de Passos; a Santa Casa na Rua Santa Casa. Pin atualizado para o local real. Confirme antes de se deslocar."
   }
 }
