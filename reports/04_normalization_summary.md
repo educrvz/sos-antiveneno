@@ -3,7 +3,7 @@
 **Input:**  `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/build/master_raw.csv`
 **Output:** `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/build/master_normalized.csv`
 
-**Total rows processed:** 2,271
+**Total rows processed:** 2,274
 **Rows flagged `needs_review_pre_geocode = true`:** 4
 **Flag rate:** 0.18%
 
@@ -24,7 +24,7 @@ A row can match multiple reasons; each reason counts once per matching row.
 |-------|----------------:|
 | PA | 2 / 172 |
 | RO | 1 / 39 |
-| SP | 1 / 242 |
+| SP | 1 / 245 |
 
 ## All normalization notes (informational)
 

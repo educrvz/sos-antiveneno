@@ -6,7 +6,7 @@ Generated from the final patched master after committed manual-triage decisions.
 
 | Tab | CSV path | Rows |
 |-----|----------|-----:|
-| `publish_ready` | [`build/google_sheets_publish_ready_v1.csv`](../build/google_sheets_publish_ready_v1.csv) | 1,587 |
+| `publish_ready` | [`build/google_sheets_publish_ready_v1.csv`](../build/google_sheets_publish_ready_v1.csv) | 1,590 |
 | `review_queue`  | [`build/google_sheets_review_queue_v1.csv`](../build/google_sheets_review_queue_v1.csv)   | 684 |
 
 Both files:

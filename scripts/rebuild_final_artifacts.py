@@ -132,7 +132,7 @@ def row_has_coords(row: dict[str, str]) -> bool:
         return False
 
 
-def validate_artifacts(master_rows: list[dict[str, str]]) -> list[str]:
+def validate_artifacts(master_rows: list[dict[str, str]], include_app_json: bool = True) -> list[str]:
     errors: list[str] = []
     expected_publish, expected_review = partition_rows(master_rows)
     required_csvs = [OUT_PUBLISH, OUT_REVIEW, OUT_SHEETS_PUBLISH, OUT_SHEETS_REVIEW]
@@ -161,7 +161,7 @@ def validate_artifacts(master_rows: list[dict[str, str]]) -> list[str]:
     if unknown:
         errors.append(f"{len(unknown)} master row(s) have unexpected final_status")
 
-    if OUT_APP.exists() and OUT_ROOT.exists():
+    if include_app_json and OUT_APP.exists() and OUT_ROOT.exists():
         app_data = json.loads(OUT_APP.read_text(encoding="utf-8"))
         root_data = json.loads(OUT_ROOT.read_text(encoding="utf-8"))
         if app_data != root_data:
@@ -264,7 +264,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         master_rows, publish_rows, review_rows = rebuild()
 
-    errors = validate_artifacts(master_rows)
+    errors = validate_artifacts(master_rows, include_app_json=args.check)
     if errors:
         for error in errors:
             print(f"ERROR: {error}", file=sys.stderr)
