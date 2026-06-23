@@ -1,14 +1,14 @@
 # Merge Run Summary
 
-**Source folder:** `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/extracted`
-**Output JSONL:** `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/build/master_raw.jsonl`
-**Output CSV:**   `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/build/master_raw.csv`
+**Source folder:** `/private/tmp/sos-antiveneno-sp-refresh/extracted`
+**Output JSONL:** `/private/tmp/sos-antiveneno-sp-refresh/build/master_raw.jsonl`
+**Output CSV:**   `/private/tmp/sos-antiveneno-sp-refresh/build/master_raw.csv`
 
 **Files merged:** 27
 **Files skipped:** 0
 **Files with parse errors:** 0
-**Total rows merged:** 2,271
-**Unique row_ids:** 2,271 (all rows have distinct IDs)
+**Total rows merged:** 2,274
+**Unique row_ids:** 2,274 (all rows have distinct IDs)
 
 ## Rows per state
 
@@ -39,9 +39,9 @@
 | RS | 65 |
 | SC | 143 |
 | SE | 17 |
-| SP | 242 |
+| SP | 245 |
 | TO | 37 |
-| **Total** | **2,271** |
+| **Total** | **2,274** |
 
 ## Missing UF codes
 

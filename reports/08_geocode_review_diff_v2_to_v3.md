@@ -4,7 +4,7 @@
 
 | Bucket | v2 | v3 | Δ |
 |--------|---:|---:|--:|
-| `auto_accept` | 1,400 | 1,441 | +41 |
+| `auto_accept` | 1,400 | 1,444 | +44 |
 | `watchlist` | 29 | 29 | 0 |
 | `retry_queue` | 812 | 787 | -25 |
 | `manual_review_high_risk` | 30 | 14 | -16 |
@@ -19,7 +19,7 @@ Rows = v2 bucket; columns = v3 bucket.
 | `watchlist` | 0 | 29 | 0 | 0 |
 | `retry_queue` | 34 | 0 | 778 | 0 |
 | `manual_review_high_risk` | 8 | 0 | 8 | 14 |
-| `unseen` | 0 | 0 | 0 | 0 |
+| `unseen` | 3 | 0 | 0 | 0 |
 
 ## Rows removed from high-risk — false-positive UF parsing (14)
 

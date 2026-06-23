@@ -6,34 +6,34 @@
 
 ## Totals
 
-- **Rows in patched master:** 2,271
+- **Rows in patched master:** 2,274
 - **Repairs applied:** 13
 
 ## `final_status` distribution
 
 | final_status | Rows |
 |--------------|-----:|
-| `publish_ready` | 1,454 |
+| `publish_ready` | 1,590 |
 | `watchlist` | 29 |
-| `retry_queue` | 787 |
-| `manual_review_pending_external` | 1 |
-| **Total** | **2,271** |
+| `retry_queue` | 655 |
+| `manual_review_pending_external` | 0 |
+| **Total** | **2,274** |
 
 ## `publish_policy` distribution
 
 | publish_policy | Rows |
 |----------------|-----:|
-| `publish` | 2,137 |
-| `hide_state_only` | 34 |
-| `hide_muni_mismatch` | 99 |
-| `hide_external_review` | 1 |
+| `publish` | 2,273 |
+| `hide_state_only` | 1 |
+| `hide_muni_mismatch` | 0 |
+| `hide_external_review` | 0 |
 | `hide_unknown` | 0 |
-| **Total ready for hospitals.json** | **2,137** |
+| **Total ready for hospitals.json** | **2,273** |
 
 ## PR_0031 status
 
-- `repair_applied = false`
-- `final_status = manual_review_pending_external`
+- `repair_applied = true`
+- `final_status = publish_ready`
 - `repair_outcome = improved_but_still_review`
 
 ## 13 repaired rows — old vs new (13 applied)

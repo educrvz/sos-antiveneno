@@ -1,7 +1,7 @@
 # Geocode Review Classification (v3)
 
-**Input:** `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/build/master_geocoded.csv`
-**Total rows classified:** 2,271
+**Input:** `/private/tmp/sos-antiveneno-sp-refresh/build/master_geocoded.csv`
+**Total rows classified:** 2,274
 
 ### Changes from v2
 
@@ -13,17 +13,17 @@
 
 | Bucket | Count | % | Output file |
 |--------|------:|--:|-------------|
-| `auto_accept` | 1,441 | 63.5% | `build/geocode_auto_accept_v3.csv` |
+| `auto_accept` | 1,444 | 63.5% | `build/geocode_auto_accept_v3.csv` |
 | `watchlist` | 29 | 1.3% | `build/geocode_watchlist_v3.csv` |
-| `retry_queue` | 787 | 34.7% | `build/geocode_retry_queue_v3.csv` |
+| `retry_queue` | 787 | 34.6% | `build/geocode_retry_queue_v3.csv` |
 | `manual_review_high_risk` | 14 | 0.6% | `build/geocode_manual_review_high_risk_v3.csv` |
-| **Total** | **2,271** | **100.0%** |  |
+| **Total** | **2,274** | **100.0%** |  |
 
 ## Location type breakdown per bucket
 
 | Bucket | `APPROXIMATE` | `GEOMETRIC_CENTER` | `RANGE_INTERPOLATED` | `ROOFTOP` |
 |--------|-----:|-----:|-----:|-----:|
-| `auto_accept` | 0 | 0 | 0 | 1441 |
+| `auto_accept` | 0 | 0 | 0 | 1444 |
 | `watchlist` | 0 | 29 | 0 | 0 |
 | `retry_queue` | 167 | 453 | 107 | 60 |
 | `manual_review_high_risk` | 12 | 0 | 0 | 2 |
