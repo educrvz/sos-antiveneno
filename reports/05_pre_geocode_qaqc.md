@@ -1,7 +1,7 @@
 # Pre-Geocode QA/QC Report
 
 **Input:** `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/build/master_normalized.csv`
-**Total rows inspected:** 2,271
+**Total rows inspected:** 2,274
 
 **Review files written (no rows deleted or modified):**
 - `/Users/educruz/Documents/Claude/Projects/Hospitais_de_referencia/build/review_missing_fields.csv`

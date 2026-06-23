@@ -7,8 +7,8 @@
 **Files merged:** 27
 **Files skipped:** 0
 **Files with parse errors:** 0
-**Total rows merged:** 2,271
-**Unique row_ids:** 2,271 (all rows have distinct IDs)
+**Total rows merged:** 2,274
+**Unique row_ids:** 2,274 (all rows have distinct IDs)
 
 ## Rows per state
 
@@ -39,9 +39,9 @@
 | RS | 65 |
 | SC | 143 |
 | SE | 17 |
-| SP | 242 |
+| SP | 245 |
 | TO | 37 |
-| **Total** | **2,271** |
+| **Total** | **2,274** |
 
 ## Missing UF codes
 
