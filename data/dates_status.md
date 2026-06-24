@@ -31,7 +31,7 @@ Atualizado automaticamente por `scripts/check_updates.py` (CI diária).
 | RS | Rio Grande do Sul | 2025-11-14 | 2025-11-14 | ✅ em dia |
 | SC | Santa Catarina | 2026-01-05 | 2026-01-05 | ✅ em dia |
 | SE | Sergipe | 2026-01-05 | 2026-01-05 | ✅ em dia |
-| SP | São Paulo | 2026-02-10 | 2026-05-25 | 🔴 site mais novo |
+| SP | São Paulo | 2026-05-25 | 2026-05-25 | ✅ em dia |
 | TO | Tocantins | 2026-01-05 | 2026-01-05 | ✅ em dia |
 
-**Resumo:** 26 em dia · 1 site mais novo · 0 nosso mais novo · 0 faltam aqui · 0 faltam no site
+**Resumo:** 27 em dia · 0 site mais novo · 0 nosso mais novo · 0 faltam aqui · 0 faltam no site
