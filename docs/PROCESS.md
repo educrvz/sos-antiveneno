@@ -131,7 +131,7 @@ For each new/updated UF, prompt Claude Code with something like:
 > Re-extract `Docs Estado/BA_20260105.pdf` to `extracted/BA.new.json`.
 > Follow the schema in `extracted/AC.json`: one object per hospital row
 > with keys `state, municipality, health_unit_name, address, phones_raw,
-> cnes, antivenoms_raw, source_notes`. Preserve source typos, inherited
+cnes, antivenoms_raw, source_notes`. Preserve source typos, inherited
 > municipality cells, and anomalous CNES values; flag each in
 > `source_notes`. Use compact one-line JSON per record.
 
@@ -366,19 +366,19 @@ JSON still agree on row identity/counts and published CNES values.
 
 Field mapping:
 
-| App field       | Source column              | Transform                                                                 |
-|-----------------|---------------------------|---------------------------------------------------------------------------|
-| `hospital_name` | `health_unit_name`        | trim/collapse whitespace                                                  |
-| `state`         | `source_state_abbr`       | 2-letter UF                                                               |
-| `state_name`    | `state`                   | title-cased from upper-case source (`ACRE` → `Acre`, `SÃO PAULO` → `São Paulo`) |
-| `city`          | `municipality`            | raw                                                                       |
-| `lat`, `lng`    | `lat`, `lng`              | `float()`; row dropped if either is blank                                 |
-| `address`       | `address`                 | raw                                                                       |
-| `antivenoms`    | `antivenoms_raw`          | split on `\|`, drop blanks → string array                                 |
-| `phones`        | `phones_raw`              | split on `/` or `,`; drop placeholders (`não disponível`, `sem contato`, `****`, `-`, <4 chars) → string array |
-| `source_date`   | `source_state_file`       | ISO `YYYY-MM-DD` parsed from `Docs Estado/{UF}_YYYYMMDD.pdf`              |
-| `cnes`          | `cnes`                    | string                                                                    |
-| `geocode_tier`  | `location_type`           | `ROOFTOP`→1, `RANGE_INTERPOLATED`→2, `GEOMETRIC_CENTER`→3, `APPROXIMATE`→3; the app renders tier 3 with a leading `~` on the distance |
+| App field       | Source column       | Transform                                                                                                                             |
+| --------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `hospital_name` | `health_unit_name`  | trim/collapse whitespace                                                                                                              |
+| `state`         | `source_state_abbr` | 2-letter UF                                                                                                                           |
+| `state_name`    | `state`             | title-cased from upper-case source (`ACRE` → `Acre`, `SÃO PAULO` → `São Paulo`)                                                       |
+| `city`          | `municipality`      | raw                                                                                                                                   |
+| `lat`, `lng`    | `lat`, `lng`        | `float()`; row dropped if either is blank                                                                                             |
+| `address`       | `address`           | raw                                                                                                                                   |
+| `antivenoms`    | `antivenoms_raw`    | split on `\|`, drop blanks → string array                                                                                             |
+| `phones`        | `phones_raw`        | split on `/` or `,`; drop placeholders (`não disponível`, `sem contato`, `****`, `-`, <4 chars) → string array                        |
+| `source_date`   | `source_state_file` | ISO `YYYY-MM-DD` parsed from `Docs Estado/{UF}_YYYYMMDD.pdf`                                                                          |
+| `cnes`          | `cnes`              | string                                                                                                                                |
+| `geocode_tier`  | `location_type`     | `ROOFTOP`→1, `RANGE_INTERPOLATED`→2, `GEOMETRIC_CENTER`→3, `APPROXIMATE`→3; the app renders tier 3 with a leading `~` on the distance |
 
 **Stop and investigate if** the output row count deviates substantially
 from the `publish_ready_v1.csv` row count — the only legitimate reason to
@@ -411,7 +411,7 @@ Verify:
 
 ## Fixing a reported bad pin or address
 
-For one-off user reports (wrong pin *or* wrong address on a specific
+For one-off user reports (wrong pin _or_ wrong address on a specific
 hospital), you don't need the PDF pipeline. The **SoroJá Overrides** Google
 Sheet layers per-`cnes` corrections on top of `hospitals.json`. The override
 file at [`data/location_overrides.json`](../data/location_overrides.json) is
@@ -468,7 +468,7 @@ paste-in plus setup instructions (required script properties:
 Community-sourced relatos that surface "the official Ministry of Health
 data is wrong" without mutating any official field. They render as a
 distinct amber callout on each hospital card, dated, with the standing
-disclaimer *"Informação não confirmada pelo Ministério da Saúde."*
+disclaimer _"Informação não confirmada pelo Ministério da Saúde."_
 
 **Source:** the **Community Notes** tab in the same overrides Google Sheet.
 One row per relato; multiple rows for the same CNES become an array of
@@ -488,7 +488,7 @@ validator enforces the length cap; the no-PII discipline is enforced by
 convention.
 
 **Publishing flow:** add rows in the Community Notes tab → menu
-*SoroJá → Publicar relatos da comunidade* → Apps Script writes
+_SoroJá → Publicar relatos da comunidade_ → Apps Script writes
 `data/community_notes.json` to GitHub → the rebuild workflow regenerates
 `hospitals.json` with notes attached inline → Vercel deploys.
 
@@ -530,17 +530,17 @@ then re-run stage 11. (A dedicated promotion script is a future ticket.)
 
 ## Appendix C — the 10-stage report map
 
-| Stage | Report                                                                            |
-|-------|-----------------------------------------------------------------------------------|
-| 01    | [`reports/01_inventory.md`](../reports/01_inventory.md)                            |
-| 02    | [`reports/02_schema_audit.md`](../reports/02_schema_audit.md)                      |
-| 03    | [`reports/03_merge_summary.md`](../reports/03_merge_summary.md)                    |
-| 04    | [`reports/04_normalization_summary.md`](../reports/04_normalization_summary.md)    |
-| 05    | [`reports/05_pre_geocode_qaqc.md`](../reports/05_pre_geocode_qaqc.md)              |
-| 06    | [`reports/06_geocode_smoke_test.md`](../reports/06_geocode_smoke_test.md)          |
-| 07    | [`reports/07_geocode_full_run.md`](../reports/07_geocode_full_run.md)              |
-| 08    | [`reports/08_geocode_review_summary_v3.md`](../reports/08_geocode_review_summary_v3.md) + [`v2 → v3 diff`](../reports/08_geocode_review_diff_v2_to_v3.md) |
+| Stage | Report                                                                                                                                                                          |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 01    | [`reports/01_inventory.md`](../reports/01_inventory.md)                                                                                                                         |
+| 02    | [`reports/02_schema_audit.md`](../reports/02_schema_audit.md)                                                                                                                   |
+| 03    | [`reports/03_merge_summary.md`](../reports/03_merge_summary.md)                                                                                                                 |
+| 04    | [`reports/04_normalization_summary.md`](../reports/04_normalization_summary.md)                                                                                                 |
+| 05    | [`reports/05_pre_geocode_qaqc.md`](../reports/05_pre_geocode_qaqc.md)                                                                                                           |
+| 06    | [`reports/06_geocode_smoke_test.md`](../reports/06_geocode_smoke_test.md)                                                                                                       |
+| 07    | [`reports/07_geocode_full_run.md`](../reports/07_geocode_full_run.md)                                                                                                           |
+| 08    | [`reports/08_geocode_review_summary_v3.md`](../reports/08_geocode_review_summary_v3.md) + [`v2 → v3 diff`](../reports/08_geocode_review_diff_v2_to_v3.md)                       |
 | 09a   | [`reports/09a_high_risk_exception_summary.md`](../reports/09a_high_risk_exception_summary.md) + [`09a_high_risk_source_context.md`](../reports/09a_high_risk_source_context.md) |
-| 09b   | [`reports/09b_high_risk_repair_summary.md`](../reports/09b_high_risk_repair_summary.md) |
-| 09c   | [`reports/09c_apply_repairs_summary.md`](../reports/09c_apply_repairs_summary.md)  |
-| 10    | [`reports/10_google_sheets_export_summary.md`](../reports/10_google_sheets_export_summary.md) + [`import guide`](../reports/10_google_sheets_import_guide.md) |
+| 09b   | [`reports/09b_high_risk_repair_summary.md`](../reports/09b_high_risk_repair_summary.md)                                                                                         |
+| 09c   | [`reports/09c_apply_repairs_summary.md`](../reports/09c_apply_repairs_summary.md)                                                                                               |
+| 10    | [`reports/10_google_sheets_export_summary.md`](../reports/10_google_sheets_export_summary.md) + [`import guide`](../reports/10_google_sheets_import_guide.md)                   |

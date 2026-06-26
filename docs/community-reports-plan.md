@@ -57,7 +57,7 @@ Reviewing the full Bug Reports database (resolved + open) and the Improvements p
 
 **Feature suggestions** (multiple convergent signals on UX gaps):
 
-- Emergency-order popup (community-sourced medical guidance): *"1) Ligar SAMU/bombeiros. 2) Ligar CIATox. 3) Só depois ir ao local com soro."* — this is medically more correct than the generic "ligue antes de ir" phrasing.
+- Emergency-order popup (community-sourced medical guidance): _"1) Ligar SAMU/bombeiros. 2) Ligar CIATox. 3) Só depois ir ao local com soro."_ — this is medically more correct than the generic "ligue antes de ir" phrasing.
 - CIATox (Centros de Informação e Assistência Toxicológica) integration / reference.
 - Larger soro-type icons on hospital cards (Allan Martinho, Flavia — convergent).
 - "Como chegar" button should use Google Maps icon for instant recognition (Allan).
@@ -75,25 +75,25 @@ Implications for the plan:
 1. Data-correction volume is real and present, not speculative. Per-hospital reports already outnumber open UX complaints. The community-reports layer is justified by current signal, not future guesses.
 2. **Multiple users converging on the same UX issues** (icon size, map radius, search flow) is a strong signal that those specific fixes should ship soon — they're not opinions, they're consensus.
 3. "Data source contributions" is its own category that needs a destination. Enrico's ES sources aren't a "relato da comunidade" on one hospital — they're a pointer to an alternative state-of-truth. Handle this as a separate intake path (see below).
-4. The community-authored emergency-order popup is more correct than the generic disclaimer I earlier proposed. Use *their* wording, not mine.
+4. The community-authored emergency-order popup is more correct than the generic disclaimer I earlier proposed. Use _their_ wording, not mine.
 5. CIATox is the medical-expertise layer for envenomation in Brazil. Adding CIATox state phone numbers to every hospital card may be higher-leverage than any of the above.
 
 ## Report taxonomy
 
 Intake form routes each submission into one of these categories. Each category has a different downstream path.
 
-| # | Category (PT-BR user-facing) | Internal type | Downstream |
-|---|---|---|---|
-| 1 | Telefone, endereço ou horário errado | `data:contact_fix` | Community report → verified override |
-| 2 | Localização no mapa parece errada | `data:pin_fix` | Community report → verified override |
-| 3 | Este hospital/UPA está fechado ou não atende | `data:closed` | Community report (volatile, expires) |
-| 4 | Hospital listado é o errado (unidade trocada) | `data:wrong_unit` | Community report → escalated manual review |
-| 5 | Hospital faltando na lista | `data:missing_hospital` | Community report (new entry) |
-| 6 | Tenho uma fonte oficial melhor (link/PDF) | `data:source_contribution` | Maintainer queue (not public) |
-| 7 | Confirmado que este local atende normalmente | `data:confirmation` | Positive signal aggregator |
-| 8 | Problema no site / sugestão / bug | `product:ux` | GitHub Issues `type:ux` |
-| 9 | Sugestão de nova funcionalidade | `product:feature` | GitHub Issues `type:feature` |
-| 10 | Outro | `other` | Triage queue |
+| #   | Category (PT-BR user-facing)                  | Internal type              | Downstream                                 |
+| --- | --------------------------------------------- | -------------------------- | ------------------------------------------ |
+| 1   | Telefone, endereço ou horário errado          | `data:contact_fix`         | Community report → verified override       |
+| 2   | Localização no mapa parece errada             | `data:pin_fix`             | Community report → verified override       |
+| 3   | Este hospital/UPA está fechado ou não atende  | `data:closed`              | Community report (volatile, expires)       |
+| 4   | Hospital listado é o errado (unidade trocada) | `data:wrong_unit`          | Community report → escalated manual review |
+| 5   | Hospital faltando na lista                    | `data:missing_hospital`    | Community report (new entry)               |
+| 6   | Tenho uma fonte oficial melhor (link/PDF)     | `data:source_contribution` | Maintainer queue (not public)              |
+| 7   | Confirmado que este local atende normalmente  | `data:confirmation`        | Positive signal aggregator                 |
+| 8   | Problema no site / sugestão / bug             | `product:ux`               | GitHub Issues `type:ux`                    |
+| 9   | Sugestão de nova funcionalidade               | `product:feature`          | GitHub Issues `type:feature`               |
+| 10  | Outro                                         | `other`                    | Triage queue                               |
 
 Category 7 (user confirms "this place really does have what the site says") is a useful signal not in today's inbox, but worth collecting to build positive freshness signals, not just negative ones.
 
@@ -116,7 +116,7 @@ Category 6 (**data source contributions**) is special: it's not a per-hospital r
 
 ## Product principle
 
-Use the word **"relato"**, not "comentário" or "correção." *Relato* = useful field signal, not necessarily an official correction. Suggested label: **"Relatos da comunidade."**
+Use the word **"relato"**, not "comentário" or "correção." _Relato_ = useful field signal, not necessarily an official correction. Suggested label: **"Relatos da comunidade."**
 
 Avoid in V1:
 
@@ -165,7 +165,7 @@ Shared fields:
 - Quando você percebeu isso? (Hoje / Últimos 7 dias / Mais antigo / Não sei)
 - Short structured observation (category-specific short text — not a free-text paragraph in V1)
 - Google Maps link for location evidence (optional, for `data:pin_fix` and `data:missing_hospital`)
-- Checkbox: *"Não inclui dados pessoais ou informações de paciente."*
+- Checkbox: _"Não inclui dados pessoais ou informações de paciente."_
 
 Category-specific follow-up fields for missing hospitals (category 5):
 
@@ -196,7 +196,7 @@ Not legal advice. The product intentionally avoids collecting personal data.
 - Do not ask for name, phone, email, or professional role by default.
 - Do not publish raw free text.
 - Do not allow image uploads in V1.
-- Visible note: *"Não envie dados pessoais, informações de paciente, telefone, e-mail ou nomes."*
+- Visible note: _"Não envie dados pessoais, informações de paciente, telefone, e-mail ou nomes."_
 - Store only: structured category, target, report date, optional non-personal location evidence (Maps link), opt-in contact (only if provided and separately consented).
 
 Caveat: backend tooling can create technical logs (IP, user agent). Pick infrastructure and retention with that in mind. GitHub Issues retains submitter metadata for the bot account only; anonymous submissions leave no direct PII trail on the issue body itself, provided the bot posts on behalf of the user.
@@ -208,11 +208,11 @@ References:
 
 ## Freshness and expiration
 
-*Volatile* (change quickly):
+_Volatile_ (change quickly):
 
 - hospital may be closed today; phone didn't answer; staff redirected elsewhere; unit may not have serum right now.
 
-*Stable*:
+_Stable_:
 
 - wrong pin; wrong DDD; wrong address; missing hospital; wrong unit; duplicate/wrong name.
 
@@ -220,8 +220,8 @@ Freshness rules:
 
 - **Stable categories**: keep visible until resolved or superseded.
 - **Hospital closed / may not attend**: prominent for 30 days; downgrade to "relato antigo" after 30; hide from default view after 90 unless repeated.
-- **Phone did not answer**: 14–30 days; phrase *"recomenda-se confirmar por telefone"*, never as proof.
-- **Serum availability**: avoid "sem soro"; safer wording *"relato recente recomenda confirmar disponibilidade antes de se deslocar."*
+- **Phone did not answer**: 14–30 days; phrase _"recomenda-se confirmar por telefone"_, never as proof.
+- **Serum availability**: avoid "sem soro"; safer wording _"relato recente recomenda confirmar disponibilidade antes de se deslocar."_
 - **Positive confirmations**: surface the latest confirmation date per hospital; decays at 90 days.
 
 ## Architecture (GitHub-native, depersonalized)
@@ -231,7 +231,7 @@ Keep the app static-first. Route intake and triage through the project-owned `so
 **Public-site files:**
 
 - `app/hospitals.json` — official + verified data. Current production contract, unchanged.
-- `app/community_reports.json` — sanitized, public, anonymous report summaries (Pipeline A output). Loaded client-side *after* `hospitals.json`. If it fails to load, the app still works as today.
+- `app/community_reports.json` — sanitized, public, anonymous report summaries (Pipeline A output). Loaded client-side _after_ `hospitals.json`. If it fails to load, the app still works as today.
 
 **Intake pipeline:**
 
@@ -250,8 +250,8 @@ Keep the app static-first. Route intake and triage through the project-owned `so
 
 Two paths, choose one:
 
-- *Path A — auto-generated*: a GitHub Action reads closed/labeled Issues, emits sanitized `community_reports.json`, commits, Vercel redeploys. Low-touch.
-- *Path B — manual curation*: the maintainer edits `community_reports.json` during weekly review, same pattern as `location_overrides.json`. Higher trust gate, slower.
+- _Path A — auto-generated_: a GitHub Action reads closed/labeled Issues, emits sanitized `community_reports.json`, commits, Vercel redeploys. Low-touch.
+- _Path B — manual curation_: the maintainer edits `community_reports.json` during weekly review, same pattern as `location_overrides.json`. Higher trust gate, slower.
 
 Start with Path B; upgrade to Path A once there are >~20 active reports and stable category wording.
 
@@ -303,6 +303,7 @@ The public site consumes only the sanitized JSON, never the raw intake store.
 - Community-sourced emergency-order popup/callout on every hospital card, using the medically-vetted wording:
 
   > **Antes de ir ao hospital:**
+  >
   > 1. Ligue para o SAMU (192) ou Bombeiros (193)
   > 2. Ligue para o CIATox do seu estado
   > 3. Só depois dirija-se a um local com soro
@@ -317,7 +318,7 @@ Each of these fixes comes directly from community input and should ship regardle
 
 - Small "Reportar erro" action.
 - If reports exist, a compact "Relatos da comunidade" row below the address/source area. Details collapsed by default.
-- Latest positive confirmation (if any): *"Última confirmação da comunidade: 20/04/2026."*
+- Latest positive confirmation (if any): _"Última confirmação da comunidade: 20/04/2026."_
 
 **On empty or weak search results:**
 

@@ -67,4 +67,4 @@ Para eventuais questões judiciais, fica eleito o foro da Comarca de São Paulo,
 
 ---
 
-*Dúvidas ou problemas? Abra uma issue em https://github.com/educrvz/sos-antiveneno/issues.*
+_Dúvidas ou problemas? Abra uma issue em https://github.com/educrvz/sos-antiveneno/issues._

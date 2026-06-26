@@ -66,4 +66,4 @@ O site é servido exclusivamente via HTTPS. O código-fonte é aberto e auditáv
 
 ---
 
-*Para sugestões ou reporte de problemas nesta Política, abra uma issue no repositório ou escreva para o contato do item 1.*
+_Para sugestões ou reporte de problemas nesta Política, abra uma issue no repositório ou escreva para o contato do item 1._
