@@ -1,6 +1,6 @@
 name: Rebuild hospitals.json from overrides
 
-# When overrides or community notes change on main (e.g. the SoroJá sheet
+# When overrides or community notes change on main (e.g. the SoroJa sheet
 # publishes a fix or a new relato), re-run the production build script and
 # commit the regenerated hospitals.json so Vercel picks it up on the next
 # deploy.
@@ -29,6 +29,9 @@ jobs:
       - name: Validate community notes
         run: python3 scripts/validate_community_notes.py
 
+      - name: Validate location overrides
+        run: python3 scripts/validate_location_overrides.py
+
       - name: Rebuild hospitals.json
         run: python3 scripts/build_app_hospitals_json.py
 
@@ -37,7 +40,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet -- hospitals.json app/hospitals.json; then
-            echo "No change to hospitals.json — skipping commit."
+            echo "No change to hospitals.json - skipping commit."
             exit 0
           fi
           git add hospitals.json app/hospitals.json
