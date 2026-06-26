@@ -5,6 +5,50 @@ source PDFs to the file served by the live app. One pass, ~15 minutes of
 click-and-verify work plus Google geocoding time (roughly 8 minutes for a
 full 2,271-row cold run; seconds on a warm resume).
 
+## External contributor path
+
+External contributors do not need access to the private Google Maps
+geocoding key to open a useful data-refresh PR. The maintainer-owned secret
+stays private; contributors can stop at the candidate extraction and diff
+review handoff.
+
+Contributor-owned steps:
+
+1. Run `python3 scripts/check_updates.py` or use the automated
+   `data-refresh` issue to identify the stale UF.
+2. Download the updated Ministry of Health PDF into `Docs Estado/` using the
+   `{UF}_{YYYYMMDD}.pdf` naming convention.
+3. Re-extract only the affected state to `extracted/{UF}.new.json`. Do not
+   overwrite `extracted/{UF}.json` in a contributor PR.
+4. Run the candidate diff:
+
+   ```bash
+   python3 scripts/refresh_diff.py --uf BA \
+       --candidate extracted/BA.new.json --write
+   ```
+
+5. Open a PR with the candidate extraction, the generated
+   `reports/refresh_diff_{UF}_*.md` report, and the source-date/hash metadata
+   when it can be verified from the downloaded PDF.
+
+Use a non-closing reference such as `Refs #17` or `Refs #<data-refresh-issue>`
+for this kind of partial handoff. Do not use `Fixes` or `Closes` unless the
+PR also completes maintainer geocoding, promotion, artifact rebuild, and
+validation.
+
+Maintainer-owned follow-up:
+
+1. Review every added, removed, changed, and override-audited CNES in the
+   refresh diff.
+2. Promote the candidate to `extracted/{UF}.json` only after review.
+3. Update `data/source_dates.json` and `data/source_hashes.json`.
+4. Run the full refresh with `GOOGLE_MAPS_API_KEY` or the maintainer's
+   Keychain entry.
+5. Validate and publish the regenerated app artifacts.
+
+This split keeps the Google Maps key out of forks and untrusted PR execution
+while still letting contributors prepare reviewable refresh work.
+
 ## TL;DR
 
 ```bash
