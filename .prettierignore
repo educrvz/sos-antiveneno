@@ -1,0 +1,14 @@
+.git/
+.venv/
+.venvs/
+.pytest_cache/
+node_modules/
+
+build/
+reports/
+extracted/
+data/manual_triage/
+data/dates_status.md
+
+hospitals.json
+app/hospitals.json

@@ -9,7 +9,7 @@ on:
   schedule:
     # Todo dia às 09:00 UTC (06:00 BRT).
     - cron: "0 9 * * *"
-  workflow_dispatch: {}  # permite rodar manualmente pela aba Actions
+  workflow_dispatch: {} # permite rodar manualmente pela aba Actions
 
 permissions:
   issues: write
@@ -25,7 +25,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         run: pip install requests beautifulsoup4
