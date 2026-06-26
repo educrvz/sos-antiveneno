@@ -33,5 +33,8 @@ jobs:
       - name: Validate community notes
         run: python3 scripts/validate_community_notes.py
 
+      - name: Validate location overrides
+        run: python3 scripts/validate_location_overrides.py
+
       - name: Validate app/hospitals.json schema
         run: python3 scripts/validate_hospitals_json.py app/hospitals.json
