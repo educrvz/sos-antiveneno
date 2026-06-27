@@ -31993,6 +31993,13 @@
     "city": "Bom Jesus do Araguaia",
     "hospital_name": "Unidade de Pronto Atendimento",
     "address": "R. Garcez-centro",
+    "community_notes": [
+      {
+        "category": "contact_fix",
+        "reported_at": "2026-06-18",
+        "public_summary": "Relato da comunidade: telefone atualizado para (66) 98146-0216."
+      }
+    ],
     "phones": [
       "(66) 98127-7601"
     ],
