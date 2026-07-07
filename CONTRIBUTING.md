@@ -113,16 +113,21 @@ When there is no more specific template, use:
 
 ```md
 ## Summary
+
 - ...
 
 ## Context
+
 Briefly explain the bug/root cause or documentation gap and why this approach is narrow.
 
 ## Scope
+
 This intentionally does not change:
+
 - ...
 
 ## Testing
+
 - ...
 
 Fixes #NNN

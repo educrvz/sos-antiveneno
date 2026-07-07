@@ -69,16 +69,22 @@ jobs:
 
       - name: Parse results
         id: parse
+        shell: bash
         run: |
+          if [ "${{ steps.check.outputs.exit_code }}" != "0" ] && [ -s check_output.txt ]; then
+            has_updates=true
+          else
+            has_updates=false
+          fi
           {
-            echo "has_updates=${{ steps.check.outputs.exit_code != '0' }}"
+            echo "has_updates=${has_updates}"
             echo "body<<EOF"
             cat check_output.txt
             echo "EOF"
           } >> $GITHUB_OUTPUT
 
       - name: Open or update tracking issue
-        if: steps.check.outputs.exit_code != '0'
+        if: steps.parse.outputs.has_updates == 'true'
         uses: actions/github-script@v9
         with:
           script: |
@@ -113,5 +119,5 @@ jobs:
           REPORT_BODY: ${{ steps.parse.outputs.body }}
 
       - name: Summary (sem atualizações)
-        if: steps.check.outputs.exit_code == '0'
+        if: steps.parse.outputs.has_updates != 'true'
         run: echo "Nenhuma atualização pendente do MS encontrada."
