@@ -114,5 +114,10 @@
     "lat": -20.711733857456725,
     "lng": -46.59974614701962,
     "note": "Aviso: a lista oficial PESA do Ministério da Saúde lista os endereços da UPA Passos e da Santa Casa Misericórdia invertidos. A UPA fica na Rua Barão de Passos; a Santa Casa na Rua Santa Casa. Pin atualizado para o local real. Confirme antes de se deslocar."
+  },
+  "2342073": {
+    "reason": "Hospital Municipal Gumercino Barbosa (Alto Paraíso de Goiás/GO) — relato comunitário informando que a unidade está no momento sem soro em estoque. Sem data específica na fonte; nota mantida sem data para não sugerir uma precisão que não temos.",
+    "verified_on": "2026-06-18",
+    "note": "Relato comunitário recente: no momento o hospital está sem soro em estoque. Confirme por telefone antes de se deslocar."
   }
 }
