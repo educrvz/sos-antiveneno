@@ -1,6 +1,6 @@
 {
-  "name": "SOS Antiveneno - Hospitais com Soro",
-  "short_name": "SOS Antiveneno",
+  "name": "SoroJá - Hospitais com Soro",
+  "short_name": "SoroJá",
   "description": "Encontre hospitais com soro antiveneno mais próximos de você",
   "start_url": ".",
   "scope": ".",
