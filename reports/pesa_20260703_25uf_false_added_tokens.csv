@@ -1,0 +1,6 @@
+uf,token,why
+AP,68980,"CEP fragment from existing Companhia Especial de Fronteira row, old CNES was blank in source."
+PE,7226001,Part of 0800-7226001 phone for Hospital da Restauração; old CNES remains 655.
+RO,36613,"CEP fragment from old malformed CNES/CEP value 36613-9464 for Rio Crespo, not a new CNES."
+RO,99232,"Phone fragment from Nova União row, old CNES was blank in source."
+MA,98/99-prefixed tokens,Parser false positives from phone numbers and wrapped address fragments; all old valid MA CNES are present in new PDF text.

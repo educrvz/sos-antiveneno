@@ -1,0 +1,5 @@
+uf,cnes,old_city,old_name,new_city,new_name,notes
+RJ,2287919,,,Barra do Piraí,Hospital Nova Santa Casa de Barra do Piraí,Present in 2026-07-03 RJ PDF; absent from old RJ extraction.
+RJ,2287927,,,Barra do Piraí,Hospital e Maternidade Maria de Nazaré,Present in 2026-07-03 RJ PDF; absent from old RJ extraction.
+RJ,2276186,,,Paraíba do Sul,Hospital Nossa Senhora da Piedade,Present in 2026-07-03 RJ PDF; absent from old RJ extraction.
+RJ,4751140,,,Petrópolis / Pedro do Rio,UPH Pedro do Rio,"Present in 2026-07-03 RJ PDF; absent from old RJ extraction. Candidate parser put unit/address into shifted columns, but PDF context is clear."
