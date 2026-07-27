@@ -6,7 +6,14 @@
     "address": "Estrada Alvarães Nogueira, s/n - Centro",
     "phones_raw": "(97) 3345-1204/1255",
     "cnes": "2017768",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -16,7 +23,14 @@
     "address": "Rua Antonieta Zao, s/n - Centro",
     "phones_raw": "(97) 3463-1128",
     "cnes": "2016648",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -26,7 +40,14 @@
     "address": "Rua Alvaro Maia, 106 - Centro",
     "phones_raw": "(97) 3356-1239",
     "cnes": "2017679",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -36,7 +57,14 @@
     "address": "Avenida N. Sra. do Perpétuo Socorro, s/n - São Sebastião",
     "phones_raw": "(97) 3352-1260",
     "cnes": "2017379",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -46,7 +74,15 @@
     "address": "Avenida Engº Talles Monte Razo, s/n - Vila Nova",
     "phones_raw": "(97) 3389-1219",
     "cnes": "2013282",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Crotálico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Crotálico"
+    ],
     "source_notes": null
   },
   {
@@ -56,7 +92,14 @@
     "address": "Rua Augusto Luzeiro, s/n - Centro",
     "phones_raw": "(97) 3417-1115/1152",
     "cnes": "2016672",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -66,7 +109,14 @@
     "address": "Comunidade de Palmeira do Javari",
     "phones_raw": null,
     "cnes": null,
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": "military border post; municipality inherited (blank in source)"
   },
   {
@@ -76,7 +126,14 @@
     "address": "Comunidade de Estirão do Equador",
     "phones_raw": null,
     "cnes": null,
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": "military border post; municipality inherited (blank in source)"
   },
   {
@@ -86,7 +143,13 @@
     "address": "Comunidade Vida Nova",
     "phones_raw": null,
     "cnes": "7159277",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -96,7 +159,13 @@
     "address": "Comunidade São Sebastião",
     "phones_raw": null,
     "cnes": "7159293",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -106,7 +175,14 @@
     "address": "Rua Francisco Barroncas, s/n - Centro",
     "phones_raw": "(92) 3317-1231/1335",
     "cnes": "2013045",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -116,7 +192,14 @@
     "address": "Rua Dorval Porto, 1136 - Centro",
     "phones_raw": "(97) 3321-1122",
     "cnes": "2015242",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -126,7 +209,14 @@
     "address": "Rua Terra Preta do Castanhal, s/n - São Judas Tadeu",
     "phones_raw": "(92) 3531-8125/7059",
     "cnes": "2012022",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -136,7 +226,13 @@
     "address": "Rio Andirá",
     "phones_raw": null,
     "cnes": "7406150",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -146,7 +242,14 @@
     "address": "Rua 13 de Maio, 1492 - Coimbra",
     "phones_raw": "(97) 3415-5246/6240",
     "cnes": "2016974",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -156,7 +259,14 @@
     "address": "Avenida Costa e Silva, s/n - São Francisco",
     "phones_raw": "(97) 3351-1142",
     "cnes": "2016605",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -166,7 +276,14 @@
     "address": "Estrada Presidente Figueiredo, s/n - Centro",
     "phones_raw": "(97) 3545-5158/7179",
     "cnes": "2016354",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -176,7 +293,14 @@
     "address": "Rua Coronel José Assunção, s/n - Plator do Piquiá",
     "phones_raw": "(97) 3451-2157",
     "cnes": "2012499",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -186,7 +310,14 @@
     "address": "Rua Silverino Nery, s/n - Centro",
     "phones_raw": "(92) 3512-1526/1104",
     "cnes": "2012383",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -196,7 +327,14 @@
     "address": "Rua Félix Amorim, s/n - Santa Luzia",
     "phones_raw": "(92) 3364-1040",
     "cnes": "2016656",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -206,7 +344,14 @@
     "address": "Avenida Botinelly, 213 - Centro",
     "phones_raw": "(97) 3334-1337/1068",
     "cnes": "2016419",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -216,7 +361,14 @@
     "address": "Rua Celino de Menezes, 1672 - Nova República",
     "phones_raw": "(97) 3491-1116/1350",
     "cnes": "2017555",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -226,7 +378,14 @@
     "address": "BR 319 Km 102 - Centro",
     "phones_raw": "(92) 3362-1092/1137",
     "cnes": "2017652",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -236,7 +395,14 @@
     "address": "Rua Walmir Bezerra, Centro",
     "phones_raw": null,
     "cnes": "2016915",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": "phone not provided"
   },
   {
@@ -246,7 +412,14 @@
     "address": "Estrada Coari-Mamiá, 490 - Espírito Santo",
     "phones_raw": "(97) 3561-4141",
     "cnes": "2018136",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -256,7 +429,14 @@
     "address": "Rua Padre Domingos, s/n - Santa Luzia",
     "phones_raw": "(97) 3353-0090",
     "cnes": "2019523",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -266,7 +446,14 @@
     "address": "Rua Padre Hosphel, 1181 - Nossa Senhora Aparecida",
     "phones_raw": "(97) 3481-1428/3198",
     "cnes": "2016397",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -276,7 +463,14 @@
     "address": "Rua 27 de julho, 306 - São Francisco",
     "phones_raw": "(97) 3483-1045",
     "cnes": "2708892",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -286,7 +480,14 @@
     "address": "Rua Ajuricaba, s/n - Centro",
     "phones_raw": "(97) 3423-1690",
     "cnes": "2017717",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -296,7 +497,14 @@
     "address": "Rua Presidente Vargas, s/n - Centro",
     "phones_raw": "(97) 3485-1148",
     "cnes": "2017997",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -306,7 +514,15 @@
     "address": "Rua 05 de setembro, 522 - Centro",
     "phones_raw": "(97) 3373-2190/1104",
     "cnes": "2017016",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Crotálico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Crotálico"
+    ],
     "source_notes": null
   },
   {
@@ -316,7 +532,14 @@
     "address": "Avenida João Hercules Primo, s/n - Torre",
     "phones_raw": "(97) 3482-1073/1067",
     "cnes": "2013614",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -326,7 +549,14 @@
     "address": "Travessa Juruá, s/n - Centro",
     "phones_raw": "(92) 3367-2302/2107",
     "cnes": "2012839",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -336,7 +566,14 @@
     "address": "Rua Castro Leite, 2593 - Iraci",
     "phones_raw": "(92) 3521-4215/4220",
     "cnes": "2016923",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -346,7 +583,14 @@
     "address": "Rua Major Maia, s/n - Centro",
     "phones_raw": "(97) 3484-1072",
     "cnes": "2013568",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -356,7 +600,14 @@
     "address": "Rua Bárbara Miranda, s/n - Centro",
     "phones_raw": "(92) 3575-2112",
     "cnes": "2708906",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -366,7 +617,14 @@
     "address": "Avenida Juscelino Kubtscheck, s/n - Centro",
     "phones_raw": "(97) 3426-1195",
     "cnes": "2013495",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -376,7 +634,14 @@
     "address": "Comunidade Vila Bitencourt",
     "phones_raw": null,
     "cnes": null,
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": "military border post; municipality inherited (blank in source)"
   },
   {
@@ -386,7 +651,14 @@
     "address": "Rua Samuel Amaral, 13 - Centro",
     "phones_raw": "(97) 3427-1109",
     "cnes": "2708914",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -396,7 +668,14 @@
     "address": "Rua 7 de março, s/n - Centro",
     "phones_raw": "(97) 3425-1132",
     "cnes": "2011875",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -406,7 +685,13 @@
     "address": "Comunidade Boca do Biá",
     "phones_raw": null,
     "cnes": "7340923",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -416,7 +701,15 @@
     "address": "Rua Coronel Luiz Gomes, s/n - Centro",
     "phones_raw": "(97) 3331-1465",
     "cnes": "2012618",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Crotálico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Crotálico"
+    ],
     "source_notes": null
   },
   {
@@ -426,7 +719,13 @@
     "address": "Terra Indígena Lago Mahara",
     "phones_raw": null,
     "cnes": "9425578",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -436,7 +735,13 @@
     "address": "Aldeia Marrecão T I Deni",
     "phones_raw": null,
     "cnes": "9472878",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -446,7 +751,15 @@
     "address": "Estrada Manoel Urbano - KM 83 - São José",
     "phones_raw": "(92) 3361-1907",
     "cnes": "2013258",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Lonômico"
+    ],
     "source_notes": null
   },
   {
@@ -456,7 +769,14 @@
     "address": "Rua Bom Pastor, s/n - Centro",
     "phones_raw": "(92) 3363-1323",
     "cnes": "2011891",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -466,7 +786,16 @@
     "address": "Avenida Pedro Teixeira, 25 - Dom Pedro I",
     "phones_raw": "(92) 2127-3471",
     "cnes": "2013606",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Lonômico", "Crotálico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Lonômico",
+      "Crotálico"
+    ],
     "source_notes": null
   },
   {
@@ -476,7 +805,14 @@
     "address": "Travessa 24 de outubro, s/n - Centro",
     "phones_raw": "(97) 3385-1043/1040",
     "cnes": "2014688",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -486,7 +822,13 @@
     "address": "Rio Madeira Aldeia Boca do Jauari",
     "phones_raw": null,
     "cnes": "7800339",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -496,7 +838,14 @@
     "address": "Avenida 25 de março, s/n - Centro",
     "phones_raw": "(97) 3428-1099",
     "cnes": "2017660",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -506,7 +855,13 @@
     "address": "Comunidade São Pedro do Cuiu Cuiu",
     "phones_raw": null,
     "cnes": "5625300",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": null
   },
   {
@@ -516,7 +871,14 @@
     "address": "Estrada dos Moraes, 898 - Maresia",
     "phones_raw": "(92) 3542-1112/3222",
     "cnes": "2018144",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -526,7 +888,13 @@
     "address": "Aldeia Nova Esperança",
     "phones_raw": null,
     "cnes": "7651708",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -536,7 +904,14 @@
     "address": "Rua Senador Álvaro Maia, 23 - Centro",
     "phones_raw": "(92) 3534-7624/7300",
     "cnes": "2016540",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -546,7 +921,14 @@
     "address": "Rua 7 de setembro, 364 - Santa Luzia",
     "phones_raw": "(92) 3318-1207/1227",
     "cnes": "2011905",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -556,7 +938,13 @@
     "address": "Rio Canuma",
     "phones_raw": null,
     "cnes": "5359198",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -566,7 +954,14 @@
     "address": "Avenida João Tiburtino da Silva, s/n - Centro",
     "phones_raw": "(92) 3365-1535",
     "cnes": "2708922",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -576,7 +971,14 @@
     "address": "Rua Raimundo Oliveira, s/n - Tucumã",
     "phones_raw": "(97) 3379-1481/1101",
     "cnes": "2019604",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -586,7 +988,15 @@
     "address": "Rua Herberth Azevedo, 985 - Santa Clara",
     "phones_raw": "(92) 3533-4158",
     "cnes": "3210243",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Lonômico"
+    ],
     "source_notes": null
   },
   {
@@ -596,7 +1006,9 @@
     "address": "Rua João Pereira, s/n - Agrovila do Cabori",
     "phones_raw": "(92) 3532-1069",
     "cnes": "3112845",
-    "antivenoms_raw": ["Botrópico"],
+    "antivenoms_raw": [
+      "Botrópico"
+    ],
     "source_notes": null
   },
   {
@@ -606,7 +1018,14 @@
     "address": "Rua 19 de março, 536 - Cidade Alta",
     "phones_raw": "(97) 3458-1253/1132",
     "cnes": "2018381",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -616,7 +1035,14 @@
     "address": "BR 174 Km 107 - Centro",
     "phones_raw": "(92) 3324-1005",
     "cnes": "2013320",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -626,7 +1052,14 @@
     "address": "Rua Rio Negro, s/n - Vila de Balbina",
     "phones_raw": "(92) 3312-1200",
     "cnes": "7132026",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -636,7 +1069,9 @@
     "address": "Avenida Cassiterita, s/n - Vila do Pitinga",
     "phones_raw": "(92) 3323-1225",
     "cnes": "5928761",
-    "antivenoms_raw": ["Botrópico"],
+    "antivenoms_raw": [
+      "Botrópico"
+    ],
     "source_notes": null
   },
   {
@@ -646,7 +1081,14 @@
     "address": "Rua Gov. Angelo do Amaral, s/n - Centro",
     "phones_raw": "(92) 3358-1135",
     "cnes": "2708930",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -656,7 +1098,14 @@
     "address": "Rua Danilo Correa, s/n - Centro",
     "phones_raw": "(97) 3441-1944/1138",
     "cnes": "2016478",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -666,7 +1115,9 @@
     "address": "Missão Marauia",
     "phones_raw": null,
     "cnes": "9681760",
-    "antivenoms_raw": ["Botrópico"],
+    "antivenoms_raw": [
+      "Botrópico"
+    ],
     "source_notes": "indigenous mission post; municipality inherited (blank in source)"
   },
   {
@@ -676,7 +1127,14 @@
     "address": "Rua Hugo Ribeiro, s/n - Santa Etelvina",
     "phones_raw": "(97) 3461-1959/1182",
     "cnes": "3220966",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -686,7 +1144,14 @@
     "address": "Comunidade Ipiranga",
     "phones_raw": null,
     "cnes": null,
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": "military border post; municipality inherited (blank in source)"
   },
   {
@@ -696,7 +1161,14 @@
     "address": "Rua Quitino de Sá Cavalcante, s/n - Dabarú",
     "phones_raw": "(97) 3471-1413/1475",
     "cnes": "4004787",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -706,7 +1178,14 @@
     "address": "Rua da Missão - Vila de Iauaretê - Área Indígena Iauaretê",
     "phones_raw": null,
     "cnes": "2717387",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -716,7 +1195,9 @@
     "address": "Inambu",
     "phones_raw": null,
     "cnes": "7149735",
-    "antivenoms_raw": ["Botrópico"],
+    "antivenoms_raw": [
+      "Botrópico"
+    ],
     "source_notes": null
   },
   {
@@ -726,7 +1207,9 @@
     "address": "Maiá",
     "phones_raw": null,
     "cnes": "7149751",
-    "antivenoms_raw": ["Botrópico"],
+    "antivenoms_raw": [
+      "Botrópico"
+    ],
     "source_notes": null
   },
   {
@@ -736,7 +1219,9 @@
     "address": "Comunidade Indígena de Maturacá",
     "phones_raw": null,
     "cnes": "7149743",
-    "antivenoms_raw": ["Botrópico"],
+    "antivenoms_raw": [
+      "Botrópico"
+    ],
     "source_notes": null
   },
   {
@@ -746,7 +1231,10 @@
     "address": "Comunidade Querari",
     "phones_raw": null,
     "cnes": "4004752",
-    "antivenoms_raw": ["Botrópico", "Laquético"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético"
+    ],
     "source_notes": "military border post"
   },
   {
@@ -756,7 +1244,10 @@
     "address": "Comunidade São Joaquim",
     "phones_raw": null,
     "cnes": "4004744",
-    "antivenoms_raw": ["Botrópico", "Laquético"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético"
+    ],
     "source_notes": "military border post"
   },
   {
@@ -766,7 +1257,10 @@
     "address": "Comunidade Cucui",
     "phones_raw": null,
     "cnes": "4004736",
-    "antivenoms_raw": ["Botrópico", "Laquético"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético"
+    ],
     "source_notes": "military border post"
   },
   {
@@ -776,7 +1270,10 @@
     "address": "Comunidade Maturacá",
     "phones_raw": null,
     "cnes": "4004760",
-    "antivenoms_raw": ["Botrópico", "Laquético"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético"
+    ],
     "source_notes": "military border post"
   },
   {
@@ -786,7 +1283,10 @@
     "address": "Comunidade Pari-Cachoeira - Área Indígena Pari-Cachoeira",
     "phones_raw": null,
     "cnes": "5982146",
-    "antivenoms_raw": ["Botrópico", "Laquético"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético"
+    ],
     "source_notes": "military border post; address wraps across pages 8-9"
   },
   {
@@ -796,7 +1296,10 @@
     "address": "Comunidade Tunuí - Área Indígena Tunuí-Cachoeira",
     "phones_raw": null,
     "cnes": "7620187",
-    "antivenoms_raw": ["Botrópico", "Laquético"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético"
+    ],
     "source_notes": "military border post"
   },
   {
@@ -806,7 +1309,13 @@
     "address": "Vila São Miguel",
     "phones_raw": null,
     "cnes": "9493190",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base"
   },
   {
@@ -816,7 +1325,13 @@
     "address": "Rio Tiquie",
     "phones_raw": null,
     "cnes": "9493433",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base"
   },
   {
@@ -826,7 +1341,14 @@
     "address": "Rua Monsenhor Evangelista, 309 - Centro",
     "phones_raw": "(97)3431-1482/1043",
     "cnes": "2018128",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -836,7 +1358,13 @@
     "address": "Comunidade Vendaval",
     "phones_raw": null,
     "cnes": "6771513",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -846,7 +1374,14 @@
     "address": "Rua Álvaro Maia, s/n - Santa Maria",
     "phones_raw": "(92) 3572-1391/1107",
     "cnes": "2011859",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -856,7 +1391,14 @@
     "address": "Rua Eduardo Garcia, 26 - Centro",
     "phones_raw": "(92) 3528-2156/2115",
     "cnes": "2016249",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -866,7 +1408,14 @@
     "address": "Avenida da Amizade, s/n - Centro",
     "phones_raw": "(97) 3412-2403",
     "cnes": "2016125",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -876,7 +1425,15 @@
     "address": "Rua Primeiro de Fevereiro, 271",
     "phones_raw": "(97) 3412-4881",
     "cnes": "7459750",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Lonômico"
+    ],
     "source_notes": null
   },
   {
@@ -886,7 +1443,13 @@
     "address": "Cimunidade de Belém do Solimões",
     "phones_raw": null,
     "cnes": "6992803",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico"
+    ],
     "source_notes": "indigenous health polo base; municipality inherited (blank in source)"
   },
   {
@@ -896,7 +1459,14 @@
     "address": "Avenida Castelo Branco, s/n - Centro",
     "phones_raw": "(97) 3391-1128/1249",
     "cnes": "2012553",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -906,7 +1476,15 @@
     "address": "Estrada do Bexiga, s/n - Fonte Boa",
     "phones_raw": "(97) 3343-2446/2469",
     "cnes": "2016141",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico",
+      "Lonômico"
+    ],
     "source_notes": null
   },
   {
@@ -916,7 +1494,14 @@
     "address": "Rua Valentina Santos, s/n - Centro",
     "phones_raw": "(97) 3464-1222",
     "cnes": "2012804",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -926,7 +1511,14 @@
     "address": "Avenida Franco Lopes, s/n - Centro",
     "phones_raw": "(97) 3346-1411",
     "cnes": "2016443",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -936,7 +1528,14 @@
     "address": "Rua Major Lobato Mendes, s/n - Santa Luzia",
     "phones_raw": "(92) 3571-1657",
     "cnes": "2717395",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   },
   {
@@ -946,7 +1545,14 @@
     "address": "Rua Armandinho Fernandes, 15 - Centro",
     "phones_raw": "(92) 3524-7137",
     "cnes": "2016567",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Fonêutrico", "Loxoscélico", "Escorpiônico", "Elapídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Fonêutrico",
+      "Loxoscélico",
+      "Escorpiônico",
+      "Elapídico"
+    ],
     "source_notes": null
   }
 ]

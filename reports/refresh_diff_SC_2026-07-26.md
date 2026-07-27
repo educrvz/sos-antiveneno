@@ -1,12 +1,12 @@
 # Refresh diff — SC — 2026-07-26
 
-- **Candidato:** `extracted/SC.new.json`
+- **Candidato:** `extracted/SC.candidate.json`
 - **Atual:** `extracted/SC.json`
 - **Linhas atuais:** 143
-- **Linhas no candidato:** 142
+- **Linhas no candidato:** 143
 - **CNES adicionados:** 0
-- **CNES removidos:** 1
-- **CNES alterados:** 1
+- **CNES removidos:** 0
+- **CNES alterados:** 0
 - **Overrides desta UF afetados:** 0
 
 > Este relatório não modifica nenhum arquivo. Use-o para decidir o que aceitar antes de promover o candidato a `extracted/{UF}.json`.
@@ -17,18 +17,11 @@ Nenhum.
 
 ## CNES removidos
 
-| CNES | Município | Nome | Endereço | Soros |
-|---|---|---|---|---|
-| 2491095 | Canoinhas | Unidade de Pronto Atendimento Orestes Golanovski | R. Benjamin Constant, s/n, Boa Vista | Aracnídico, Escorpiônico, Lonômico |
+Nenhum.
 
 ## CNES alterados
 
-### 2665107 — Hospital Santo Antônio de Itaiópolis (Itaiópolis)
-
-| Campo | Antes | Depois |
-|---|---|---|
-| `phones_raw` | (47) 99762-1405 | (47) 99762- 1405 |
-
+Nenhum.
 ## Auditoria de overrides
 
 Para cada override desta UF, comparação com o MS atualizado.
@@ -41,7 +34,7 @@ Próximos passos sugeridos:
 
 1. Revisar cada seção acima. Decidir aceitar/rejeitar/modificar.
 2. Aplicar ajustes manuais no candidato se necessário.
-3. Substituir: `cp extracted/SC.new.json extracted/SC.json`
+3. Substituir: `cp extracted/SC.candidate.json extracted/SC.json`
 4. Atualizar `data/source_dates.json` com a nova data do MS.
 5. Rodar `./scripts/refresh_dataset.sh`.
 6. Validar contagem (`python3 scripts/validate_hospitals_json.py app/hospitals.json`).

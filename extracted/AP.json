@@ -6,7 +6,13 @@
     "address": "Avenida Guarani, 742 - Nova Esperança",
     "phones_raw": null,
     "cnes": "2019701",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Aracnídico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Aracnídico",
+      "Escorpiônico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -16,7 +22,13 @@
     "address": "Avenida FAB, 726 - Liberdade",
     "phones_raw": null,
     "cnes": "2019728",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico"
+    ],
     "source_notes": "phone shown as **** in source; 'Aracnídico Escorpiônico' appears without separator in source"
   },
   {
@@ -26,7 +38,11 @@
     "address": "Avenida Isaias de Jesus Leite, 151 - Centro",
     "phones_raw": null,
     "cnes": "2021021",
-    "antivenoms_raw": ["Botrópico", "Aracnídico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Aracnídico",
+      "Escorpiônico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -36,7 +52,11 @@
     "address": "Avenida Luzia Serra Cavalcante, 774",
     "phones_raw": null,
     "cnes": "2019663",
-    "antivenoms_raw": ["Botrópico", "Escorpiônico", "Aracnídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Escorpiônico",
+      "Aracnídico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -46,7 +66,14 @@
     "address": "Rua João Palma dos Reis, s/n",
     "phones_raw": null,
     "cnes": "2021293",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "phone shown as **** in source; 'Aracnídico Escorpiônico' appears without separator in source"
   },
   {
@@ -56,7 +83,14 @@
     "address": "Avenida Tancredo Neves, 2435 - Agreste",
     "phones_raw": "(96) 3621-2719",
     "cnes": "2020076",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "'Aracnídico Escorpiônico' appears without separator in source"
   },
   {
@@ -66,7 +100,14 @@
     "address": "Rua Hamilton Silva, 139 - Central",
     "phones_raw": null,
     "cnes": "2020653",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "phone cell blank in source; 'Aracnídico Escorpiônico' appears without separator"
   },
   {
@@ -76,7 +117,13 @@
     "address": "Rua: Francisco Alves Corrêa, 1527 - Novo Horizonte",
     "phones_raw": null,
     "cnes": "770916",
-    "antivenoms_raw": ["Botrópico", "Crotálico", "Elapídico", "Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -86,7 +133,10 @@
     "address": "Ponte Rio Marinheiro, S/N, Cidade Nova, Vila Progresso",
     "phones_raw": null,
     "cnes": "2019876",
-    "antivenoms_raw": ["Botrópico", "Laquético."],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético."
+    ],
     "source_notes": "phone shown as **** in source; trailing period preserved from source"
   },
   {
@@ -96,7 +146,14 @@
     "address": "Rua Presidente Vargas, 1274 - Centro",
     "phones_raw": null,
     "cnes": "2020165",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Escorpiônico", "Aracnídico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico",
+      "Aracnídico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -106,7 +163,14 @@
     "address": "Rua Presidente Kennedy, 700 - Centro",
     "phones_raw": null,
     "cnes": "2021463",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "phone shown as **** in source; 'Aracnídico Escorpiônico' appears without separator"
   },
   {
@@ -116,7 +180,14 @@
     "address": "Clevelândia do Norte, Oiapoque - AP, 68980-000",
     "phones_raw": null,
     "cnes": null,
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "military border post; phone shown as **** and CNES blank in source"
   },
   {
@@ -126,7 +197,13 @@
     "address": "Rua Francisco Dutra, 517 - Centro",
     "phones_raw": null,
     "cnes": "2021218",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -136,7 +213,15 @@
     "address": "Avenida 8 de Agosto, 336 - Centro",
     "phones_raw": null,
     "cnes": "2019736",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico", "Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico",
+      "Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -146,7 +231,11 @@
     "address": "Rua Eloagio Ferreira S/N bairro - Centro",
     "phones_raw": null,
     "cnes": "2020726",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Aracnídico Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Aracnídico Escorpiônico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -156,7 +245,14 @@
     "address": "Rua Salvador Diniz, 187 - Remédios",
     "phones_raw": null,
     "cnes": "2021064",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -166,7 +262,12 @@
     "address": "Travessa A1, 529 - Vila Intermediaria",
     "phones_raw": null,
     "cnes": "2021382",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Aracnídico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Aracnídico",
+      "Escorpiônico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -176,7 +277,14 @@
     "address": "Rua Mãe Veronica, 768 - Centro",
     "phones_raw": null,
     "cnes": "2019671",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico", "Lonômico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico",
+      "Lonômico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -186,7 +294,13 @@
     "address": "Avenida Ayrton Senna, 1180 - Comercial",
     "phones_raw": null,
     "cnes": "2020149",
-    "antivenoms_raw": ["Botrópico", "Crotálico", "Elapídico", "Aracnídico", "Escorpiônico"],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico",
+      "Escorpiônico"
+    ],
     "source_notes": "phone shown as **** in source"
   },
   {
@@ -196,7 +310,13 @@
     "address": "DSEI AP POLO BASE DE SAUDE INDIGENA MANGA",
     "phones_raw": null,
     "cnes": "2021137",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico."],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico."
+    ],
     "source_notes": "indigenous health polo base (UBSI); phone shown as **** in source"
   },
   {
@@ -206,7 +326,13 @@
     "address": "DSEI AP POLO BASE DE SAUDE INDIGENA KUMENÊ",
     "phones_raw": null,
     "cnes": "2021102",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico."],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico."
+    ],
     "source_notes": "indigenous health polo base (UBSI); address wraps across pages 4-5"
   },
   {
@@ -216,7 +342,9 @@
     "address": "DSEI AP POLO BASE DE SAUDE INDIGENA KUMARUMÃ",
     "phones_raw": null,
     "cnes": "2021110",
-    "antivenoms_raw": ["Botrópico"],
+    "antivenoms_raw": [
+      "Botrópico"
+    ],
     "source_notes": "indigenous health polo base (UBSI); phone shown as **** in source"
   },
   {
@@ -226,7 +354,13 @@
     "address": "DSEI AP POLO BASE DE SAUDE INDIGENA ARAMIRÃ",
     "phones_raw": null,
     "cnes": "2021412",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico."],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico."
+    ],
     "source_notes": "indigenous health polo base (UBSI); phone shown as **** in source"
   },
   {
@@ -236,7 +370,13 @@
     "address": "DSEI POLO BASE BONA APALAI",
     "phones_raw": null,
     "cnes": "494747",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elpoloídico", "Pracnídico Escorpiônico."],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elpoloídico",
+      "Pracnídico Escorpiônico."
+    ],
     "source_notes": "indigenous health polo base (UBSI) physically located in Óbidos/PA but referenced by AP document; antivenom names have typos preserved from source ('Elpoloídico'/'Pracnídico')"
   },
   {
@@ -246,7 +386,13 @@
     "address": "POLO-BASE TIPO I - MISSÃO TIRIYO",
     "phones_raw": null,
     "cnes": "494402",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico."],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico."
+    ],
     "source_notes": "indigenous health polo base (UBSI) physically located in Almerim/PA but referenced by AP document"
   },
   {
@@ -256,7 +402,13 @@
     "address": "POLO-BASE TIPO I - MISSÃO TIRIYO",
     "phones_raw": null,
     "cnes": "2916118",
-    "antivenoms_raw": ["Botrópico", "Laquético", "Crotálico", "Elapídico", "Aracnídico Escorpiônico."],
+    "antivenoms_raw": [
+      "Botrópico",
+      "Laquético",
+      "Crotálico",
+      "Elapídico",
+      "Aracnídico Escorpiônico."
+    ],
     "source_notes": "indigenous health polo base (UBSI); address wraps across pages 5-6"
   }
 ]
