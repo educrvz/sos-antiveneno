@@ -24,7 +24,7 @@ Atualizado automaticamente por `scripts/check_updates.py` (CI diária).
 | PE | Pernambuco | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 | PI | Piauí | 2025-11-10 | 2026-07-03 | 🔴 site mais novo |
 | PR | Paraná | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
-| RJ | Rio de Janeiro | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
+| RJ | Rio de Janeiro | 2026-07-03 | 2026-07-03 | ✅ em dia |
 | RN | Rio Grande do Norte | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 | RO | Rondônia | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 | RR | Roraima | 2025-12-18 | 2026-07-03 | 🔴 site mais novo |
@@ -34,4 +34,4 @@ Atualizado automaticamente por `scripts/check_updates.py` (CI diária).
 | SP | São Paulo | 2026-05-25 | — | ⚠️ ausente no site |
 | TO | Tocantins | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 
-**Resumo:** 0 em dia · 25 site mais novo · 0 nosso mais novo · 0 faltam aqui · 2 faltam no site
+**Resumo:** 1 em dia · 24 site mais novo · 0 nosso mais novo · 0 faltam aqui · 2 faltam no site
