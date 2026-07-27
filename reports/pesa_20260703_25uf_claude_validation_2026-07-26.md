@@ -77,6 +77,18 @@ Independent of Codex's tmp extractors. For each of the 25 candidate UFs:
 - `reports/refresh_diff_RJ_2026-07-26.md` — regenerated from the corrected candidate, matches this report.
 - `app/hospitals.json`, `hospitals.json`, `build/*` — untouched, identical to `main`.
 
-**Next step once Eduardo restores geocoding access:** re-run `scripts/geocode_hospitals.py` (it will resume from cache and only need to fetch the 5 new addresses plus the 3 rows whose cache got busted), then `./scripts/refresh_dataset.sh` end-to-end, verify the published count is exactly 2,272 + 4 = 2,276 with zero drops elsewhere, then this branch is ready for Eduardo's production go/no-go.
+**Resolved without API geocoding.** Eduardo confirmed the 5 addresses were correct and asked to skip the API and provide coordinates manually. Looked each of the 5 up individually on Google Maps (address text cross-checked against the PESA PDF for every one), captured verified lat/lng, and hand-patched `app/hospitals.json` + `hospitals.json` directly — bypassing the broken Google Geocoding API entirely rather than waiting on the billing fix:
+
+| CNES | Unidade | Coordinates |
+|---|---|---|
+| 2276186 | Hospital Nossa Senhora da Piedade | -22.1639849, -43.2942472 |
+| 2279274 | Posto de Urgência de Itaperuna | -21.203276, -41.892226 |
+| 2287919 | Hospital Nova Santa Casa de Barra do Piraí | -22.4700253, -43.8225565 |
+| 2287927 | Hospital e Maternidade Maria de Nazaré | -22.4613711, -43.8260489 |
+| 4751140 | UPH Pedro do Rio | -22.3318535, -43.1315447 |
+
+Built the 5 new records with `scripts/phone_utils.expand_phones` and `scripts/canonicalize_antivenoms.canonicalize_list` (the same library functions `build_app_hospitals_json.py` uses) so the schema matches exactly — not a hand-typed shortcut. `geocode_tier: 1` (manually verified, equivalent to ROOFTOP). Removed CNES 6855334, applied the 2 address corrections. Confirmed via `scripts/validate_hospitals_json.py` (2,276 records, OK) and a CNES-level diff against `main`: **added {2276186, 2279274, 2287919, 2287927, 4751140}, removed {6855334}, changed {6200702, 6922597} — nothing else touched.** Verified live in a local preview (`python3 -m http.server` on `app/`): searched "Itaperuna", the new Posto de Urgência de Itaperuna card renders correctly with the right address, phone, antivenom icons, and "Atualizado 03/07/2026 — Fonte: MS".
+
+The Google Cloud billing blocker documented above is still real and still blocks the *automated* pipeline (`scripts/geocode_hospitals.py` / `refresh_dataset.sh`) for any future full refresh — but is no longer blocking this specific RJ change, which is now complete and ready for Eduardo's go/no-go on PR #37.
 
 **Remaining 24 UFs: not attempted this session.** Given the RJ case just demonstrated that automated table extraction can silently drop rows even in a small, clean 3-page PDF, and that a blind full-text strict-match field check produces too many false positives on larger/messier states (line-wrap reading-order issues), promoting any of the other 24 states' data safely requires the same hand-verification approach used for RJ here — realistically hours of dedicated work per larger state (MG 295 rows, PR 204, PA 172, AM 95). Not attempted in this pass to avoid rushing state-by-state verification for a safety-critical dataset. The `refresh_diff_{UF}_2026-07-26.md` reports for all 25 states are committed for reference; none of the other 24 `extracted/{UF}.json` files were modified.
