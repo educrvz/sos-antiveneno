@@ -66,3 +66,12 @@ def test_inline_script_and_style_allowances_are_explicit_exceptions():
     # based CSP.
     assert "'unsafe-inline'" in directives["style-src"]
     assert "'unsafe-inline'" in directives["script-src"]
+
+
+def test_goatcounter_is_limited_to_its_script_and_collection_origins():
+    directives = parse_csp(load_headers()["Content-Security-Policy"])
+
+    assert "https://gc.zgo.at" in directives["script-src"]
+    assert "https://gc.zgo.at" not in directives["connect-src"]
+    assert "https://soroja.goatcounter.com/count" in directives["connect-src"]
+    assert "https://soroja.goatcounter.com/count" not in directives["script-src"]
