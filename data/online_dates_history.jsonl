@@ -26,3 +26,5 @@
 {"detected_at": "2026-07-25", "uf": "SE", "from": "2026-01-05", "to": "2026-07-03"}
 {"detected_at": "2026-07-25", "uf": "SP", "from": "2026-05-25", "to": null}
 {"detected_at": "2026-07-25", "uf": "TO", "from": "2026-01-05", "to": "2026-07-03"}
+{"detected_at": "2026-07-28", "uf": "BA", "from": null, "to": "2026-07-03"}
+{"detected_at": "2026-07-28", "uf": "SP", "from": null, "to": "2026-07-03"}

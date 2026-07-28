@@ -10,7 +10,7 @@ Atualizado automaticamente por `scripts/check_updates.py` (CI diária).
 | AL | Alagoas | 2026-04-09 | 2026-07-03 | 🔴 site mais novo |
 | AM | Amazonas | 2025-11-10 | 2026-07-03 | 🔴 site mais novo |
 | AP | Amapá | 2025-11-10 | 2026-07-03 | 🔴 site mais novo |
-| BA | Bahia | 2026-01-05 | — | ⚠️ ausente no site |
+| BA | Bahia | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 | CE | Ceará | 2025-11-10 | 2026-07-03 | 🔴 site mais novo |
 | DF | Distrito Federal | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 | ES | Espírito Santo | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
@@ -31,7 +31,7 @@ Atualizado automaticamente por `scripts/check_updates.py` (CI diária).
 | RS | Rio Grande do Sul | 2025-11-14 | 2026-07-03 | 🔴 site mais novo |
 | SC | Santa Catarina | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 | SE | Sergipe | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
-| SP | São Paulo | 2026-05-25 | — | ⚠️ ausente no site |
+| SP | São Paulo | 2026-05-25 | 2026-07-03 | 🔴 site mais novo |
 | TO | Tocantins | 2026-01-05 | 2026-07-03 | 🔴 site mais novo |
 
-**Resumo:** 1 em dia · 24 site mais novo · 0 nosso mais novo · 0 faltam aqui · 2 faltam no site
+**Resumo:** 1 em dia · 26 site mais novo · 0 nosso mais novo · 0 faltam aqui · 0 faltam no site
