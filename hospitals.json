@@ -47152,7 +47152,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -23.0039583,
     "lng": -44.4795585,
     "geocode_tier": 1
@@ -47183,7 +47183,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.9680134,
     "lng": -44.2996059,
     "geocode_tier": 1
@@ -47215,7 +47215,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.9286773,
     "lng": -42.2993801,
     "geocode_tier": 3
@@ -47225,7 +47225,7 @@
     "state_name": "Rio de Janeiro",
     "city": "Armação dos Búzios",
     "hospital_name": "Hospital Municipal Dr. Rodolpho Perissé",
-    "address": "Avenida 12 de novembro - São José",
+    "address": "Avenida 12 de novembro (São José)",
     "phones": [
       "(22) 2623-6051",
       "(22) 2623-7622"
@@ -47247,7 +47247,7 @@
       "Escorpiônico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.7797615,
     "lng": -41.9351435,
     "geocode_tier": 1
@@ -47278,7 +47278,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -21.7438691,
     "lng": -41.3334689,
     "geocode_tier": 1
@@ -47300,7 +47300,7 @@
     "source_antivenoms_raw": [
       "Botrópico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.4919821,
     "lng": -42.2009137,
     "geocode_tier": 1
@@ -47331,7 +47331,7 @@
       "Escorpiônico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.6733309,
     "lng": -43.2837265,
     "geocode_tier": 1
@@ -47354,7 +47354,7 @@
       "Botrópico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.7375781,
     "lng": -42.8491266,
     "geocode_tier": 1
@@ -47385,10 +47385,41 @@
       "Escorpiônico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -21.6656424,
     "lng": -42.0780019,
     "geocode_tier": 1
+  },
+  {
+    "state": "RJ",
+    "state_name": "Rio de Janeiro",
+    "city": "Itaperuna",
+    "hospital_name": "UPA Itaperuna",
+    "address": "RUA E, 1 Cidade Nova",
+    "phones": [
+      "(22) 3822-4657"
+    ],
+    "cnes": "6855334",
+    "antivenoms": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_date": "2026-07-03",
+    "lat": -21.1997534,
+    "lng": -41.9122044,
+    "geocode_tier": 3
   },
   {
     "state": "RJ",
@@ -47416,7 +47447,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.3550713,
     "lng": -41.8190039,
     "geocode_tier": 3
@@ -47447,7 +47478,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.2322472,
     "lng": -42.0202763,
     "geocode_tier": 3
@@ -47474,7 +47505,7 @@
       "Botrópico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.9609804,
     "lng": -44.0404688,
     "geocode_tier": 3
@@ -47505,7 +47536,7 @@
       "Escorpiônico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.4506953,
     "lng": -43.4608705,
     "geocode_tier": 3
@@ -47538,7 +47569,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.8952862,
     "lng": -43.1126351,
     "geocode_tier": 1
@@ -47567,7 +47598,7 @@
       "Crotálico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.2717371,
     "lng": -42.53380569999999,
     "geocode_tier": 1
@@ -47592,7 +47623,7 @@
       "Loxoscélico",
       "Botrópico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.7312055,
     "lng": -43.4623735,
     "geocode_tier": 3
@@ -47624,7 +47655,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -23.215618,
     "lng": -44.712947,
     "geocode_tier": 1
@@ -47634,7 +47665,7 @@
     "state_name": "Rio de Janeiro",
     "city": "Petrópolis",
     "hospital_name": "UPA Cascatinha",
-    "address": "R. Bernardo Proença, 500 - Cascatinha",
+    "address": "R. Bernardo Proença, 500 - Itamarati",
     "phones": [
       "(24) 2246-8931",
       "(24) 2280-0702",
@@ -47657,7 +47688,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.4842836,
     "lng": -43.1524036,
     "geocode_tier": 1
@@ -47689,7 +47720,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.4634969,
     "lng": -44.4597679,
     "geocode_tier": 3
@@ -47713,7 +47744,7 @@
       "Botrópico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.7107781,
     "lng": -42.6266588,
     "geocode_tier": 1
@@ -47745,7 +47776,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.9949787,
     "lng": -43.3638741,
     "geocode_tier": 1
@@ -47772,7 +47803,7 @@
       "Botrópico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.9126666,
     "lng": -43.6877048,
     "geocode_tier": 1
@@ -47793,7 +47824,7 @@
     "source_antivenoms_raw": [
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -21.4113201,
     "lng": -41.1404309,
     "geocode_tier": 1
@@ -47825,7 +47856,7 @@
       "Elapídico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.3985321,
     "lng": -42.9607557,
     "geocode_tier": 1
@@ -47855,7 +47886,7 @@
       "Crotálico",
       "Escorpiônico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.1245463,
     "lng": -43.1750185,
     "geocode_tier": 2
@@ -47886,7 +47917,7 @@
       "Escorpiônico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.2468082,
     "lng": -43.6974476,
     "geocode_tier": 1
@@ -47917,7 +47948,7 @@
       "Escorpiônico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.397596,
     "lng": -43.6532585,
     "geocode_tier": 1
@@ -47948,152 +47979,9 @@
       "Escorpiônico",
       "Elapídico"
     ],
-    "source_date": "2026-01-05",
+    "source_date": "2026-07-03",
     "lat": -22.508902136615422,
     "lng": -44.09011867877822,
-    "geocode_tier": 1
-  },
-  {
-    "state": "RJ",
-    "state_name": "Rio de Janeiro",
-    "city": "Paraíba do Sul",
-    "hospital_name": "Hospital Nossa Senhora da Piedade",
-    "address": "Av. Provedor Randolpho Penna Júnior, 320 - Vila Nicolau Melick",
-    "phones": [
-      "(24) 98167-0027"
-    ],
-    "cnes": "2276186",
-    "antivenoms": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_antivenoms_raw": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_date": "2026-07-03",
-    "lat": -22.1639849,
-    "lng": -43.2942472,
-    "geocode_tier": 1
-  },
-  {
-    "state": "RJ",
-    "state_name": "Rio de Janeiro",
-    "city": "Itaperuna",
-    "hospital_name": "Posto de Urgência de Itaperuna",
-    "address": "Rua Cardoso Moreira, 897",
-    "phones": [
-      "(22) 3822-4657"
-    ],
-    "cnes": "2279274",
-    "antivenoms": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_antivenoms_raw": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_date": "2026-07-03",
-    "lat": -21.203276,
-    "lng": -41.892226,
-    "geocode_tier": 1
-  },
-  {
-    "state": "RJ",
-    "state_name": "Rio de Janeiro",
-    "city": "Barra do Piraí",
-    "hospital_name": "Hospital Nova Santa Casa de Barra do Piraí",
-    "address": "Rua Franklin de Moraes, 67, Centro",
-    "phones": [
-      "(24) 2447-2750"
-    ],
-    "cnes": "2287919",
-    "antivenoms": [
-      "Botrópico",
-      "Crotálico",
-      "Escorpiônico"
-    ],
-    "source_antivenoms_raw": [
-      "Botrópico",
-      "Crotálico",
-      "Escorpiônico"
-    ],
-    "source_date": "2026-07-03",
-    "lat": -22.4700253,
-    "lng": -43.8225565,
-    "geocode_tier": 1
-  },
-  {
-    "state": "RJ",
-    "state_name": "Rio de Janeiro",
-    "city": "Barra do Piraí",
-    "hospital_name": "Hospital e Maternidade Maria de Nazaré",
-    "address": "Rua Frutuoso Gil Gonçalves,115, Matadouro",
-    "phones": [
-      "(24) 3512-6100"
-    ],
-    "cnes": "2287927",
-    "antivenoms": [
-      "Botrópico",
-      "Crotálico",
-      "Escorpiônico"
-    ],
-    "source_antivenoms_raw": [
-      "Botrópico",
-      "Crotálico",
-      "Escorpiônico"
-    ],
-    "source_date": "2026-07-03",
-    "lat": -22.4613711,
-    "lng": -43.8260489,
-    "geocode_tier": 1
-  },
-  {
-    "state": "RJ",
-    "state_name": "Rio de Janeiro",
-    "city": "Petrópolis",
-    "hospital_name": "UPH Pedro do Rio",
-    "address": "Estr. União Indústria, 19691",
-    "phones": [
-      "(24) 2223-2035"
-    ],
-    "cnes": "4751140",
-    "antivenoms": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_antivenoms_raw": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_date": "2026-07-03",
-    "lat": -22.3318535,
-    "lng": -43.1315447,
     "geocode_tier": 1
   },
   {
