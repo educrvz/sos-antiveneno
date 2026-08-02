@@ -47393,37 +47393,6 @@
   {
     "state": "RJ",
     "state_name": "Rio de Janeiro",
-    "city": "Itaperuna",
-    "hospital_name": "UPA Itaperuna",
-    "address": "RUA E, 1 Cidade Nova",
-    "phones": [
-      "(22) 3822-4657"
-    ],
-    "cnes": "6855334",
-    "antivenoms": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_antivenoms_raw": [
-      "Fonêutrico",
-      "Loxoscélico",
-      "Botrópico",
-      "Crotálico",
-      "Elapídico",
-      "Escorpiônico"
-    ],
-    "source_date": "2026-07-03",
-    "lat": -21.1997534,
-    "lng": -41.9122044,
-    "geocode_tier": 3
-  },
-  {
-    "state": "RJ",
-    "state_name": "Rio de Janeiro",
     "city": "Macaé",
     "hospital_name": "Hospital Municipal. Dr. Fernando Pereira da Silva",
     "address": "Rodovia RJ-168, Km 4, s/n - Virgem Santa",
@@ -47982,6 +47951,149 @@
     "source_date": "2026-07-03",
     "lat": -22.508902136615422,
     "lng": -44.09011867877822,
+    "geocode_tier": 1
+  },
+  {
+    "state": "RJ",
+    "state_name": "Rio de Janeiro",
+    "city": "Paraíba do Sul",
+    "hospital_name": "Hospital Nossa Senhora da Piedade",
+    "address": "Av. Provedor Randolpho Penna Júnior, 320 - Vila Nicolau Melick",
+    "phones": [
+      "(24) 98167-0027"
+    ],
+    "cnes": "2276186",
+    "antivenoms": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_date": "2026-07-03",
+    "lat": -22.1639849,
+    "lng": -43.2942472,
+    "geocode_tier": 1
+  },
+  {
+    "state": "RJ",
+    "state_name": "Rio de Janeiro",
+    "city": "Itaperuna",
+    "hospital_name": "Posto de Urgência de Itaperuna",
+    "address": "Rua Cardoso Moreira, 897",
+    "phones": [
+      "(22) 3822-4657"
+    ],
+    "cnes": "2279274",
+    "antivenoms": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_date": "2026-07-03",
+    "lat": -21.203276,
+    "lng": -41.892226,
+    "geocode_tier": 1
+  },
+  {
+    "state": "RJ",
+    "state_name": "Rio de Janeiro",
+    "city": "Barra do Piraí",
+    "hospital_name": "Hospital Nova Santa Casa de Barra do Piraí",
+    "address": "Rua Franklin de Moraes, 67, Centro",
+    "phones": [
+      "(24) 2447-2750"
+    ],
+    "cnes": "2287919",
+    "antivenoms": [
+      "Botrópico",
+      "Crotálico",
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Botrópico",
+      "Crotálico",
+      "Escorpiônico"
+    ],
+    "source_date": "2026-07-03",
+    "lat": -22.4700253,
+    "lng": -43.8225565,
+    "geocode_tier": 1
+  },
+  {
+    "state": "RJ",
+    "state_name": "Rio de Janeiro",
+    "city": "Barra do Piraí",
+    "hospital_name": "Hospital e Maternidade Maria de Nazaré",
+    "address": "Rua Frutuoso Gil Gonçalves,115, Matadouro",
+    "phones": [
+      "(24) 3512-6100"
+    ],
+    "cnes": "2287927",
+    "antivenoms": [
+      "Botrópico",
+      "Crotálico",
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Botrópico",
+      "Crotálico",
+      "Escorpiônico"
+    ],
+    "source_date": "2026-07-03",
+    "lat": -22.4613711,
+    "lng": -43.8260489,
+    "geocode_tier": 1
+  },
+  {
+    "state": "RJ",
+    "state_name": "Rio de Janeiro",
+    "city": "Petrópolis",
+    "hospital_name": "UPH Pedro do Rio",
+    "address": "Estr. União Indústria, 19691",
+    "phones": [
+      "(24) 2223-2035"
+    ],
+    "cnes": "4751140",
+    "antivenoms": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Fonêutrico",
+      "Loxoscélico",
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico"
+    ],
+    "source_date": "2026-07-03",
+    "lat": -22.3318535,
+    "lng": -43.1315447,
     "geocode_tier": 1
   },
   {
