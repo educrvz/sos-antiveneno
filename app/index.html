@@ -1024,10 +1024,8 @@
             .replace(/'/g, '&#39;');
     }
 
-    // Render an override `note` (community report) with the standing
-    // "Confirme antes de se deslocar" call-to-action bolded. The note is
-    // escaped first; the <strong> wrapper is a static literal injected
-    // post-escape, so this stays XSS-safe.
+    // Render a maintainer/official override note. Legacy community-sourced
+    // override notes are routed through the always-visible alert below.
     function formatHospitalNote(note) {
         if (note == null) return '';
         var safe = escapeHtml(note);
@@ -1035,6 +1033,43 @@
             /Confirme antes de se deslocar/g,
             '<strong>Confirme antes de se deslocar</strong>'
         );
+    }
+
+    function isLegacyCommunityNote(note) {
+        return /^(?:relato comunitário|relatos comunitários|comunidade reportou)\b/i.test(String(note || '').trim());
+    }
+
+    function legacyCommunityCategory(note) {
+        var text = norm(note);
+        if (/encerr|desativ|demolid|fechad|sem soro/.test(text)) return 'closed';
+        if (/transferid|endereco|unidade/.test(text)) return 'wrong_unit';
+        if (/pin|localiz/.test(text)) return 'pin_fix';
+        if (/telefone|contato/.test(text)) return 'contact_fix';
+        return 'other';
+    }
+
+    function legacyCommunitySummary(note) {
+        return String(note || '').trim()
+            .replace(/^(?:relato comunitário|relatos comunitários|comunidade reportou)(?:\s*\([^)]*\))?:\s*/i, '')
+            .replace(/\s*Confirme(?: por telefone)? antes de se deslocar\.?\s*$/i, '')
+            .trim();
+    }
+
+    function communityNotesForHospital(h) {
+        var notes = (h.community_notes || []).slice();
+        if (isLegacyCommunityNote(h.note)) {
+            notes.push({
+                category: legacyCommunityCategory(h.note),
+                reported_at: '',
+                public_summary: legacyCommunitySummary(h.note)
+            });
+        }
+        return notes;
+    }
+
+    function renderHospitalNote(note) {
+        if (!note || isLegacyCommunityNote(note)) return '';
+        return '<div class="hospital-note">' + formatHospitalNote(note) + '</div>';
     }
 
     function haversine(lat1, lon1, lat2, lon2) {
@@ -1400,10 +1435,10 @@
                 '<div><h3>' + escapeHtml(h.hospital_name) + '</h3>' +
                 '<div class="city">' + escapeHtml(h.city) + ', ' + escapeHtml(h.state) + '</div>' +
                 (h.address ? '<div class="address">' + escapeHtml(h.address) + '</div>' : '') +
-                (h.note ? '<div class="hospital-note">' + formatHospitalNote(h.note) + '</div>' : '') +
+                renderHospitalNote(h.note) +
                 '</div>' + distHtml +
             '</div>' +
-            renderCommunityRelatos(h.community_notes, reportUrl) +
+            renderCommunityRelatos(communityNotesForHospital(h), reportUrl) +
             tagsHtml +
             mapBlockHtml +
             '<div class="actions">' +
@@ -1653,8 +1688,8 @@
             var popup = '<strong>' + escapeHtml(h.hospital_name) + '</strong><br>' +
                 escapeHtml(h.city) + ', ' + escapeHtml(h.state) + distText + '<br>' +
                 popupEmojis +
-                (h.note ? '<em style="color:#B26A00">' + formatHospitalNote(h.note) + '</em><br>' : '') +
-                renderCommunityRelatos(h.community_notes, reportFormUrl(h)) +
+                (h.note && !isLegacyCommunityNote(h.note) ? '<em style="color:#B26A00">' + formatHospitalNote(h.note) + '</em><br>' : '') +
+                renderCommunityRelatos(communityNotesForHospital(h), reportFormUrl(h)) +
                 (phonesHtml ? phonesHtml + '<br>' : '') +
                 '<a href="https://www.google.com/maps/dir/?api=1&destination=' + h.lat + ',' + h.lng +
                 '" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Como Chegar</a>';
