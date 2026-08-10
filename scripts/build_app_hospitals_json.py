@@ -45,6 +45,7 @@ OUT_APP = ROOT / "app" / "hospitals.json"
 OUT_ROOT = ROOT / "hospitals.json"
 OVERRIDES = ROOT / "data" / "location_overrides.json"
 COMMUNITY_NOTES = ROOT / "data" / "community_notes.json"
+OFFICIAL_TEMPORARY_UNITS = ROOT / "data" / "official_temporary_units.json"
 SOURCE_DATES = ROOT / "data" / "source_dates.json"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -174,6 +175,63 @@ def load_community_notes() -> dict[str, list[dict]]:
     return notes
 
 
+def load_official_temporary_units(
+    path: Path = OFFICIAL_TEMPORARY_UNITS,
+) -> list[dict]:
+    """Load temporary units confirmed directly by a health authority.
+
+    This separate layer keeps newer operational routing traceable without
+    making a temporary destination look like a permanent source record.
+    """
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict) or not isinstance(data.get("units"), list):
+        raise ValueError(f"{path} must contain an object with a units array")
+    return data["units"]
+
+
+def build_official_temporary_record(unit: dict, index: int) -> dict:
+    ctx = f"official temporary unit {index}"
+    required = {
+        "state", "state_name", "city", "hospital_name", "address", "phones",
+        "cnes", "antivenoms", "source_date", "source_authority", "lat", "lng",
+        "geocode_tier", "note",
+    }
+    missing = sorted(key for key in required if unit.get(key) in (None, "", []))
+    if missing:
+        raise ValueError(f"{ctx} missing required field(s): {', '.join(missing)}")
+
+    cnes = str(unit["cnes"]).strip()
+    if not cnes.isdigit():
+        raise ValueError(f"{ctx} has invalid CNES {cnes!r}")
+    if not isinstance(unit["phones"], list):
+        raise ValueError(f"{ctx} phones must be an array")
+    if not isinstance(unit["antivenoms"], list):
+        raise ValueError(f"{ctx} antivenoms must be an array")
+
+    canon_result = canonicalize_list([str(value) for value in unit["antivenoms"]])
+    if canon_result.unknown or canon_result.leaks or canon_result.other_soros:
+        raise ValueError(f"{ctx} contains unsupported antivenom values")
+
+    return {
+        "state": str(unit["state"]).strip().upper(),
+        "state_name": str(unit["state_name"]).strip(),
+        "city": str(unit["city"]).strip(),
+        "hospital_name": str(unit["hospital_name"]).strip(),
+        "address": str(unit["address"]).strip(),
+        "note": str(unit["note"]).strip(),
+        "phones": [str(value).strip() for value in unit["phones"] if str(value).strip()],
+        "cnes": cnes,
+        "antivenoms": canon_result.canonical,
+        "source_antivenoms_raw": [str(value).strip() for value in unit["antivenoms"]],
+        "source_date": str(unit["source_date"]).strip(),
+        "lat": float(unit["lat"]),
+        "lng": float(unit["lng"]),
+        "geocode_tier": int(unit["geocode_tier"]),
+    }
+
+
 def _is_expired(note: dict, today: date) -> bool:
     expires = (note.get("expires_at") or "").strip()
     if not expires:
@@ -202,6 +260,7 @@ def main() -> int:
     pdf_dates = load_pdf_date_map()
     overrides = load_overrides()
     community_notes = load_community_notes()
+    official_temporary_units = load_official_temporary_units()
     today = date.today()
     overrides_applied: list[str] = []
     overrides_hidden: list[str] = []
@@ -313,6 +372,20 @@ def main() -> int:
             published_cnes.add(cnes)
         out_records.append(record)
 
+    temporary_units_added = 0
+    for index, unit in enumerate(official_temporary_units, start=1):
+        if not isinstance(unit, dict):
+            raise ValueError(f"official temporary unit {index} must be an object")
+        record = build_official_temporary_record(unit, index)
+        cnes = record["cnes"]
+        if cnes in published_cnes:
+            raise ValueError(
+                f"official temporary unit {index} duplicates published CNES {cnes}"
+            )
+        out_records.append(record)
+        published_cnes.add(cnes)
+        temporary_units_added += 1
+
     for cnes in overrides:
         if cnes not in published_cnes:
             overrides_unknown.append(cnes)
@@ -353,6 +426,7 @@ def main() -> int:
     print(f"Published (publish_policy == publish):   {len(rows):,}")
     print(f"Hidden (state-only / muni-mismatch / external-review): {hidden:,}")
     print(f"Overrides applied: {len(overrides_applied)}")
+    print(f"Official temporary units added: {temporary_units_added}")
     if overrides_hidden:
         print(f"Overrides hidden: {len(overrides_hidden)} ({', '.join(overrides_hidden)})")
     if overrides_unknown:

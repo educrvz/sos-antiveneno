@@ -11,6 +11,7 @@ on:
     paths:
       - "data/location_overrides.json"
       - "data/community_notes.json"
+      - "data/official_temporary_units.json"
   workflow_dispatch: {}
 
 permissions:

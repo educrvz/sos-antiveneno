@@ -547,6 +547,23 @@ re-publish, or set its `expires_at` to a past date.
 
 ---
 
+## Official temporary units (additive layer)
+
+Time-sensitive routing confirmed directly by a state or municipal health
+authority belongs in `data/official_temporary_units.json` when the destination
+is not yet present in the canonical Ministry/state workbook. This layer is for
+temporary operational arrangements only; it must not imply live stock or
+silently rewrite the canonical source extract.
+
+Each unit records the authority, evidence date, CNES, public contact details,
+the specifically confirmed antivenom types, manually checked coordinates and
+conservative public wording. `scripts/build_app_hospitals_json.py` appends the
+records to the generated public JSON and refuses duplicate CNES values. Remove
+the temporary record when the authority confirms that the arrangement ended or
+a newer canonical workbook incorporates the destination.
+
+---
+
 ## Appendix A — handling the review queue
 
 `build/review_queue_v1.csv` contains 684 rows today:

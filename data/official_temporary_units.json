@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-08-10",
+  "units": [
+    {
+      "state": "RS",
+      "state_name": "Rio Grande do Sul",
+      "city": "Canoas",
+      "hospital_name": "Hospital Nossa Senhora das Graças",
+      "address": "Av. Santos Ferreira, 1864, Marechal Rondon",
+      "phones": ["(51) 2102-1000"],
+      "cnes": "2232014",
+      "antivenoms": ["Escorpiônico"],
+      "source_date": "2026-08-07",
+      "source_authority": "Área Técnica da Vigilância dos Acidentes por Animais Peçonhentos / SES-RS",
+      "lat": -29.9271746,
+      "lng": -51.1615711,
+      "geocode_tier": 1,
+      "coordinate_source": "Hospital address matched to the OpenStreetMap hospital footprint and checked on 2026-08-10.",
+      "note": "Referência temporária informada pela SES-RS em 07/08/2026 enquanto o HPS Canoas permanece fechado para reforma. A unidade passará a receber soro antiescorpiônico; confirme a disponibilidade antes do deslocamento."
+    }
+  ]
+}

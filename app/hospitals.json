@@ -50469,13 +50469,7 @@
     "city": "Canoas",
     "hospital_name": "Hospital de Pronto Socorro de Canoas",
     "address": "Rua Caçapava, 100, Mathias Velho",
-    "community_notes": [
-      {
-        "category": "closed",
-        "reported_at": "2026-04-23",
-        "public_summary": "Relato da comunidade (2 relatos): confirmação de que o HPS continua fechado."
-      }
-    ],
+    "note": "Informação oficial da SES-RS (07/08/2026): o HPS Canoas está temporariamente fechado. Durante a reforma, os pacientes estão sendo atendidos no Hospital Nossa Senhora das Graças (CNES 2232014), que passará a receber soro antiescorpiônico. Confirme antes de se deslocar.",
     "phones": [
       "(51) 3415 4500"
     ],
@@ -63987,6 +63981,28 @@
     "source_date": "2026-07-03",
     "lat": -6.4132101,
     "lng": -48.5321256,
+    "geocode_tier": 1
+  },
+  {
+    "state": "RS",
+    "state_name": "Rio Grande do Sul",
+    "city": "Canoas",
+    "hospital_name": "Hospital Nossa Senhora das Graças",
+    "address": "Av. Santos Ferreira, 1864, Marechal Rondon",
+    "note": "Referência temporária informada pela SES-RS em 07/08/2026 enquanto o HPS Canoas permanece fechado para reforma. A unidade passará a receber soro antiescorpiônico; confirme a disponibilidade antes do deslocamento.",
+    "phones": [
+      "(51) 2102-1000"
+    ],
+    "cnes": "2232014",
+    "antivenoms": [
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Escorpiônico"
+    ],
+    "source_date": "2026-08-07",
+    "lat": -29.9271746,
+    "lng": -51.1615711,
     "geocode_tier": 1
   }
 ]
