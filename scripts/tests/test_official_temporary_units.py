@@ -29,6 +29,8 @@ def test_load_and_build_official_temporary_unit(tmp_path: Path):
                         "antivenoms": ["Escorpiônico"],
                         "source_date": "2026-08-07",
                         "source_authority": "SES-RS",
+                        "source_label": "SES-RS",
+                        "source_url": "https://saude.rs.gov.br/",
                         "lat": -29.9271746,
                         "lng": -51.1615711,
                         "geocode_tier": 1,
@@ -46,6 +48,8 @@ def test_load_and_build_official_temporary_unit(tmp_path: Path):
     assert record["cnes"] == "2232014"
     assert record["antivenoms"] == ["Escorpiônico"]
     assert record["source_date"] == "2026-08-07"
+    assert record["source_label"] == "SES-RS"
+    assert record["source_url"] == "https://saude.rs.gov.br/"
 
 
 def test_rejects_incomplete_official_temporary_unit():

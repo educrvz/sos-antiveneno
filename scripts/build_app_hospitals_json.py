@@ -195,8 +195,8 @@ def build_official_temporary_record(unit: dict, index: int) -> dict:
     ctx = f"official temporary unit {index}"
     required = {
         "state", "state_name", "city", "hospital_name", "address", "phones",
-        "cnes", "antivenoms", "source_date", "source_authority", "lat", "lng",
-        "geocode_tier", "note",
+        "cnes", "antivenoms", "source_date", "source_authority", "source_label",
+        "source_url", "lat", "lng", "geocode_tier", "note",
     }
     missing = sorted(key for key in required if unit.get(key) in (None, "", []))
     if missing:
@@ -226,6 +226,8 @@ def build_official_temporary_record(unit: dict, index: int) -> dict:
         "antivenoms": canon_result.canonical,
         "source_antivenoms_raw": [str(value).strip() for value in unit["antivenoms"]],
         "source_date": str(unit["source_date"]).strip(),
+        "source_label": str(unit["source_label"]).strip(),
+        "source_url": str(unit["source_url"]).strip(),
         "lat": float(unit["lat"]),
         "lng": float(unit["lng"]),
         "geocode_tier": int(unit["geocode_tier"]),
@@ -414,6 +416,10 @@ def main() -> int:
                 rebuilt["community_notes"] = rec["community_notes"]
             if k == "source_antivenoms_raw" and "other_soros" in rec:
                 rebuilt["other_soros"] = rec["other_soros"]
+            if k == "source_date":
+                for optional_key in ("source_label", "source_url"):
+                    if rec.get(optional_key):
+                        rebuilt[optional_key] = rec[optional_key]
         return rebuilt
     ordered = [_order(rec) for rec in out_records]
 
