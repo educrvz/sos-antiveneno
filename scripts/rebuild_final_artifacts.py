@@ -39,6 +39,7 @@ OUT_SHEETS_REVIEW = BUILD / "google_sheets_review_queue_v1.csv"
 OUT_APP = ROOT / "app" / "hospitals.json"
 OUT_ROOT = ROOT / "hospitals.json"
 OVERRIDES = DATA / "location_overrides.json"
+OFFICIAL_TEMPORARY_UNITS = DATA / "official_temporary_units.json"
 REPORT = REPORTS / "10_google_sheets_export_summary.md"
 
 REVIEW_STATUSES = {"watchlist", "retry_queue", "manual_review_pending_external"}
@@ -123,6 +124,14 @@ def load_hidden_override_cnes() -> set[str]:
     return {str(cnes) for cnes, value in data.items() if isinstance(value, dict) and value.get("hide")}
 
 
+def load_official_temporary_cnes() -> list[str]:
+    if not OFFICIAL_TEMPORARY_UNITS.exists():
+        return []
+    data = json.loads(OFFICIAL_TEMPORARY_UNITS.read_text(encoding="utf-8"))
+    units = data.get("units", []) if isinstance(data, dict) else []
+    return [str(unit.get("cnes", "")) for unit in units if isinstance(unit, dict)]
+
+
 def row_has_coords(row: dict[str, str]) -> bool:
     try:
         float(row.get("lat", ""))
@@ -173,16 +182,19 @@ def validate_artifacts(master_rows: list[dict[str, str]], include_app_json: bool
             and row_has_coords(r)
             and str(r.get("cnes", "")) not in hidden_cnes
         ]
-        if len(app_data) != len(expected_app_rows):
+        temporary_cnes = load_official_temporary_cnes()
+        if len(app_data) != len(expected_app_rows) + len(temporary_cnes):
             errors.append(
                 "app/hospitals.json row count does not match publish_policy=publish "
-                "minus hidden overrides"
+                "minus hidden overrides plus official temporary units"
             )
         app_cnes = Counter(str(row.get("cnes", "")) for row in app_data)
         expected_cnes = Counter(str(row.get("cnes", "")) for row in expected_app_rows)
+        expected_cnes.update(temporary_cnes)
         if app_cnes != expected_cnes:
             errors.append(
-                "app/hospitals.json CNES multiset does not match published master rows"
+                "app/hospitals.json CNES multiset does not match published master rows "
+                "plus official temporary units"
             )
 
     return errors

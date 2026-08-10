@@ -119,5 +119,10 @@
     "reason": "Hospital Municipal Gumercino Barbosa (Alto Paraíso de Goiás/GO) — relato comunitário (15/07/2026) informando que a unidade está sem soro em estoque no momento.",
     "verified_on": "2026-07-15",
     "note": "Relato comunitário (15/07/2026): no momento o hospital está sem soro em estoque. Confirme por telefone antes de se deslocar."
+  },
+  "3626245": {
+    "reason": "SES-RS confirmou em 07/08/2026 que o HPS Canoas está temporariamente fechado e que o atendimento ocorre no Hospital Nossa Senhora das Graças (CNES 2232014), que passará a receber soro antiescorpiônico até o fim da reforma.",
+    "verified_on": "2026-08-07",
+    "note": "Informação oficial da SES-RS (07/08/2026): o HPS Canoas está temporariamente fechado. Durante a reforma, os pacientes estão sendo atendidos no Hospital Nossa Senhora das Graças (CNES 2232014), que passará a receber soro antiescorpiônico. Confirme antes de se deslocar."
   }
 }
