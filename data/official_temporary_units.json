@@ -12,6 +12,8 @@
       "antivenoms": ["Escorpiônico"],
       "source_date": "2026-08-07",
       "source_authority": "Área Técnica da Vigilância dos Acidentes por Animais Peçonhentos / SES-RS",
+      "source_label": "SES-RS",
+      "source_url": "https://saude.rs.gov.br/",
       "lat": -29.9271746,
       "lng": -51.1615711,
       "geocode_tier": 1,

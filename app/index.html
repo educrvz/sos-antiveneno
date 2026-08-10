@@ -1421,8 +1421,10 @@
         var sourceHtml;
         if (h.source_date) {
             var dateFormatted = escapeHtml(h.source_date.split('-').reverse().join('/'));
+            var sourceLabel = escapeHtml(h.source_label || 'MS');
+            var sourceUrl = escapeHtml(h.source_url || 'https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia');
             sourceHtml = '<div class="source-date">Atualizado ' + dateFormatted +
-                ' — <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia" target="_blank" rel="noopener">Fonte: MS</a>' +
+                ' — <a href="' + sourceUrl + '" target="_blank" rel="noopener">Fonte: ' + sourceLabel + '</a>' +
                 reportLinkHtml +
                 '</div>';
         } else {
