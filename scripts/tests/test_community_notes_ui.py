@@ -24,7 +24,7 @@ def test_community_alert_precedes_directions_and_actions():
     html = app_html()
     card_render = html[html.index("function renderCard(") : html.index("// ===== RENDER LIST =====")]
 
-    alert_position = card_render.index("renderCommunityRelatos(communityNotesForHospital(h), reportUrl)")
+    alert_position = card_render.index("renderHospitalAlerts(h, reportUrl)")
     map_position = card_render.index("mapBlockHtml +")
     actions_position = card_render.index("'<div class=\"actions\">'")
 
@@ -35,7 +35,7 @@ def test_community_alert_precedes_map_popup_phone_and_directions():
     html = app_html()
     map_render = html[html.index("function renderMap()") : html.index("// ===== EVENT HANDLERS =====")]
 
-    alert_position = map_render.index("renderCommunityRelatos(communityNotesForHospital(h), reportFormUrl(h))")
+    alert_position = map_render.index("renderHospitalAlerts(h, reportFormUrl(h))")
     phone_position = map_render.index("phonesHtml ? phonesHtml")
     directions_position = map_render.index("www.google.com/maps/dir/")
 
@@ -66,8 +66,8 @@ def test_legacy_community_notes_use_the_same_always_visible_alert():
 
     assert "function isLegacyCommunityNote(note)" in html
     assert "function communityNotesForHospital(h)" in html
-    assert "renderCommunityRelatos(communityNotesForHospital(h), reportUrl)" in html
-    assert "renderCommunityRelatos(communityNotesForHospital(h), reportFormUrl(h))" in html
+    assert "renderHospitalAlerts(h, reportUrl)" in html
+    assert "renderHospitalAlerts(h, reportFormUrl(h))" in html
     assert "if (!note || isLegacyCommunityNote(note)) return '';" in html
     assert '<details class="community-alert' not in html
     assert '<summary class="community-alert' not in html
