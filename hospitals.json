@@ -16785,7 +16785,6 @@
     "city": "São Domingos",
     "hospital_name": "Hospital Municipal de São Domingos",
     "address": "Rua Pedro Matias dos Santos, Qd 10, Lt 01-04 - Setor São Sebastião",
-    "note": "Comunidade reportou (29/04/2026): possível encerramento. Confirme por telefone antes de se deslocar.",
     "phones": [
       "(62) 3425-1598"
     ],
@@ -16805,8 +16804,8 @@
       "Loxoscélico"
     ],
     "source_date": "2026-07-03",
-    "lat": -16.691849899999998,
-    "lng": -49.281811399999995,
+    "lat": -13.4101433,
+    "lng": -46.3018149,
     "geocode_tier": 1
   },
   {

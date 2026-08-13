@@ -47,9 +47,10 @@
     "note": "Relatos comunitários (29/04 e 03/05/2026): policlínica desativada; serviço transferido para UPA 24h Dr. Luiz de Souza Dias (Rua Vereador Alfredo Mafuz, 525; tel. (31) 3764-9892). Confirme antes de se deslocar."
   },
   "2569701": {
-    "reason": "Hospital Municipal de São Domingos (São Domingos/GO) — relato comunitário (29/04/2026) de possível encerramento; mantido visível com nota até confirmação oficial.",
-    "verified_on": "2026-04-29",
-    "note": "Comunidade reportou (29/04/2026): possível encerramento. Confirme por telefone antes de se deslocar."
+    "reason": "Correção de coordenadas do Hospital Municipal de São Domingos (São Domingos/GO). O pin anterior apontava para um hospital particular em Goiânia; localização confirmada pelo endereço oficial do CNES/MS e geocodificação rooftop.",
+    "verified_on": "2026-08-12",
+    "lat": -13.4101433,
+    "lng": -46.3018149
   },
   "6483089": {
     "reason": "Hosp. Macrorregional de Urgência e Emergência de Presidente Dutra/SOCORRÃO (MA) — relato comunitário (29/04/2026) de telefone correto.",
