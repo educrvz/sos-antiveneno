@@ -67,6 +67,10 @@ def validate(
         errors.append(f"{master_path}: no publishable CNES values found for reference checks")
 
     for raw_cnes, override in sorted(data.items()):
+        if raw_cnes == "_official_records":
+            if not isinstance(override, list):
+                errors.append("_official_records must be an array")
+            continue
         cnes = str(raw_cnes).strip()
         ctx = f"CNES {cnes or '?'}"
         if not cnes:

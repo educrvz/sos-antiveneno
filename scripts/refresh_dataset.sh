@@ -139,6 +139,9 @@ else
   done
 fi
 
+say "Stage 09g: apply authoritative records from verified correction layer"
+$PY scripts/apply_official_state_corrections.py
+
 say "Stage 10: rebuild final queues and google sheets exports"
 $PY scripts/rebuild_final_artifacts.py
 

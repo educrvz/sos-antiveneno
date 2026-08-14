@@ -58,6 +58,17 @@ jobs:
       - name: Validate location overrides
         run: python3 scripts/validate_location_overrides.py
 
+      - name: Validate official records in verified correction layer
+        run: python3 scripts/apply_official_state_corrections.py --check
+
+      - name: Validate final artifact invariants
+        run: python3 scripts/rebuild_final_artifacts.py --check
+
+      - name: Verify committed app contract is current
+        run: |
+          python3 scripts/build_app_hospitals_json.py
+          git diff --exit-code -- app/hospitals.json hospitals.json
+
       - name: Validate app/hospitals.json schema
         run: python3 scripts/validate_hospitals_json.py app/hospitals.json
 

@@ -53,6 +53,13 @@ from phone_utils import expand_phones  # noqa: E402
 from canonicalize_antivenoms import canonicalize_list  # noqa: E402
 
 PDF_DATE_RE = re.compile(r"[A-Z]{2}_(\d{4})(\d{2})(\d{2})\.pdf$", re.IGNORECASE)
+OFFICIAL_STATE_SOURCE_RE = re.compile(
+    r"^(?P<uf>[A-Z]{2})_(?P<authority>[A-Z0-9-]+)_(?P<date>\d{8})$",
+    re.IGNORECASE,
+)
+OFFICIAL_SOURCE_URLS = {
+    "SESAU-AL": "https://www.saude.al.gov.br/",
+}
 
 TIER_MAP = {
     "ROOFTOP": 1,
@@ -91,6 +98,21 @@ def load_pdf_date_map() -> dict[str, str]:
             if not existing or iso > existing:
                 out[uf] = iso
     return out
+
+
+def source_metadata(
+    row: dict, pdf_dates: dict[str, str]
+) -> tuple[str, str | None, str | None]:
+    """Return evidence date plus optional non-Ministry source label and URL."""
+    source_file = (row.get("source_state_file") or "").strip()
+    match = OFFICIAL_STATE_SOURCE_RE.match(source_file)
+    if match:
+        raw_date = match.group("date")
+        iso_date = f"{raw_date[:4]}-{raw_date[4:6]}-{raw_date[6:]}"
+        label = f"{match.group('authority').upper()}-{match.group('uf').upper()}"
+        return iso_date, label, OFFICIAL_SOURCE_URLS.get(label)
+    uf = (row.get("source_state_abbr") or "").strip().upper()
+    return pdf_dates.get(uf, ""), None, None
 
 
 def clean_phones(raw: str) -> list[str]:
@@ -144,7 +166,11 @@ def load_overrides() -> dict[str, dict]:
     if not isinstance(data, dict):
         sys.stderr.write(f"WARN: {OVERRIDES} is not a JSON object; ignoring.\n")
         return {}
-    return data
+    return {
+        str(cnes): value
+        for cnes, value in data.items()
+        if not str(cnes).startswith("_") and isinstance(value, dict)
+    }
 
 
 def load_community_notes() -> dict[str, list[dict]]:
@@ -292,7 +318,7 @@ def main() -> int:
 
         uf = (r.get("source_state_abbr") or "").strip().upper()
         state_name = title_case_state((r.get("state") or "").strip())
-        source_date = pdf_dates.get(uf, "")
+        source_date, source_label, source_url = source_metadata(r, pdf_dates)
 
         cnes = (r.get("cnes") or "").strip()
         raw_antivenoms = split_antivenoms(r.get("antivenoms_raw") or "")
@@ -316,6 +342,10 @@ def main() -> int:
             "lng": lng,
             "geocode_tier": TIER_MAP.get((r.get("location_type") or "").strip(), 3),
         }
+        if source_label:
+            record["source_label"] = source_label
+        if source_url:
+            record["source_url"] = source_url
 
         if canon_result.leaks:
             leaks_moved += 1
