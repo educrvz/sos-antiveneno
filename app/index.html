@@ -503,6 +503,53 @@
         .footer a:hover { text-decoration: underline; }
         .footer strong { color: var(--text-main); }
 
+        /* ===== Apoie o projeto ===== */
+        .support-card {
+            max-width: 560px; margin: 20px auto 24px; padding: 20px;
+            background: linear-gradient(145deg, rgba(16,185,129,0.12), var(--card-color));
+            border: 1px solid rgba(16,185,129,0.35); border-radius: 20px;
+            text-align: left; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .support-card h3 { color: var(--text-main); font-size: 18px; margin-bottom: 6px; }
+        .support-card p { color: var(--text-muted); font-size: 13px; line-height: 1.5; margin-bottom: 14px; }
+        .support-button {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%; padding: 13px 16px; border: 1px solid rgba(16,185,129,0.55);
+            border-radius: 12px; background: rgba(16,185,129,0.16); color: var(--text-main);
+            font: inherit; font-size: 14px; font-weight: 900; cursor: pointer;
+        }
+        .support-button:active { transform: scale(0.98); }
+        .support-button:focus-visible, .support-close:focus-visible, .pix-copy:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+        .support-modal-overlay {
+            position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center;
+            padding: 20px; background: var(--overlay-strong);
+        }
+        .support-modal {
+            position: relative; width: min(100%, 420px); padding: 28px 24px 24px;
+            background: var(--legal-modal-bg); border: 1px solid rgba(16,185,129,0.45);
+            border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .support-modal h2 { color: var(--text-main); font-size: 24px; margin-bottom: 8px; }
+        .support-modal > p { color: var(--text-muted); font-size: 14px; line-height: 1.55; margin-bottom: 16px; }
+        .pix-qr { display: block; width: min(100%, 220px); height: auto; margin: 4px auto 14px; border-radius: 10px; image-rendering: pixelated; }
+        .support-close {
+            position: absolute; top: 12px; right: 12px; width: 36px; height: 36px;
+            border: 1px solid var(--border-color); border-radius: 50%; background: var(--btn-ghost-bg);
+            color: var(--text-main); font-size: 20px; cursor: pointer;
+        }
+        .pix-label { display: block; color: var(--text-muted); font-size: 12px; font-weight: 800; margin-bottom: 6px; }
+        .pix-key-row { display: flex; gap: 8px; align-items: stretch; }
+        .pix-key {
+            min-width: 0; flex: 1; padding: 12px; border: 1px solid var(--border-color);
+            border-radius: 12px; background: var(--input-bg); color: var(--text-main);
+            font: 600 12px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere;
+        }
+        .pix-copy {
+            flex: 0 0 auto; padding: 0 14px; border: 0; border-radius: 12px;
+            background: var(--success); color: white; font: inherit; font-size: 13px; font-weight: 900; cursor: pointer;
+        }
+        .support-note { margin-top: 14px !important; margin-bottom: 0 !important; font-size: 12px !important; }
+
         /* ===== Mapa fullscreen ===== */
         #map-container { position: fixed; inset: 0; z-index: 1200; background: var(--bg-color); }
         #map { width: 100%; height: 100%; }
@@ -650,6 +697,22 @@
             <p>A <strong>maioria</strong> dos casos de acidentes não precisam de soro. Apenas 0,1% são fatais.</p>
             <p style="margin-bottom: 24px; font-weight: 600;">Em caso de emergência, ligue SEMPRE para o 192 (SAMU).</p>
             <button class="btn-accept-legal" onclick="acceptLegalTerms()">Estou Ciente e Quero Acessar</button>
+        </div>
+    </div>
+
+    <!-- Pix support modal -->
+    <div id="support-modal-overlay" class="support-modal-overlay hidden-modal" role="dialog" aria-modal="true" aria-labelledby="support-modal-title">
+        <div class="support-modal">
+            <button class="support-close" type="button" onclick="closeSupportModal()" aria-label="Fechar apoio via Pix">&times;</button>
+            <h2 id="support-modal-title">Apoie o SoroJá</h2>
+            <p>O SoroJá é mantido voluntariamente por Eduardo Cruz. Se esta ferramenta foi útil para você, sua contribuição ajuda com domínio, hospedagem e manutenção.</p>
+            <img class="pix-qr" src="pix-qr.png" alt="QR Code Pix para apoiar o SoroJá">
+            <span class="pix-label">Chave Pix aleatória</span>
+            <div class="pix-key-row">
+                <code class="pix-key" id="pix-key">58263116-e819-4db0-abcb-dbf52d0a503f</code>
+                <button class="pix-copy" type="button" onclick="copyPixKey()" id="pix-copy-button">Copiar</button>
+            </div>
+            <p class="support-note">Confira o nome do recebedor no seu banco antes de confirmar. Esta é uma contribuição voluntária ao mantenedor do projeto; o SoroJá não é um serviço do Ministério da Saúde.</p>
         </div>
     </div>
 
@@ -834,6 +897,11 @@
             <p style="margin-top:8px; font-size:12px; color:var(--footer-text);">Contato: <a href="mailto:contato.soroja@gmail.com" style="color:var(--footer-text);">contato.soroja@gmail.com</a></p>
             <p style="margin-top:8px; font-size:12px; color:var(--footer-text);"><a href="/privacy" style="color:var(--footer-text);">Política de Privacidade</a> · <a href="/terms" style="color:var(--footer-text);">Termos de Uso</a></p>
             <p style="margin-top:8px; font-size:12px; color:var(--footer-text);">Projeto de código aberto. Se quiser contribuir, fique à vontade — <a href="https://github.com/educrvz/sos-antiveneno" target="_blank" rel="noopener" style="color:var(--footer-text);">github.com/educrvz/sos-antiveneno</a>.</p>
+            <div class="support-card">
+                <h3>Gostou do SoroJá?</h3>
+                <p>Ajude a manter o projeto gratuito e atualizado com uma contribuição via Pix.</p>
+                <button class="support-button" type="button" onclick="openSupportModal()">💚 Apoiar via Pix</button>
+            </div>
         </div>
     </div>
 
@@ -2123,6 +2191,46 @@
         storageSet('soroja_accepted', 'true');
         document.getElementById('legal-modal-overlay').classList.add('hidden-modal');
     };
+
+    window.openSupportModal = function() {
+        var overlay = document.getElementById('support-modal-overlay');
+        if (!overlay) return;
+        overlay.classList.remove('hidden-modal');
+        var copyButton = document.getElementById('pix-copy-button');
+        if (copyButton) copyButton.focus();
+    };
+
+    window.closeSupportModal = function() {
+        var overlay = document.getElementById('support-modal-overlay');
+        if (overlay) overlay.classList.add('hidden-modal');
+    };
+
+    window.copyPixKey = function() {
+        var key = document.getElementById('pix-key').textContent.trim();
+        var button = document.getElementById('pix-copy-button');
+        function copied() {
+            if (!button) return;
+            button.textContent = 'Copiada';
+            window.setTimeout(function() { button.textContent = 'Copiar'; }, 1800);
+        }
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(key).then(copied).catch(function() {});
+            return;
+        }
+        var helper = document.createElement('textarea');
+        helper.value = key; helper.setAttribute('readonly', ''); helper.style.position = 'fixed'; helper.style.opacity = '0';
+        document.body.appendChild(helper); helper.select();
+        try { if (document.execCommand('copy')) copied(); } catch (e) {}
+        document.body.removeChild(helper);
+    };
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') closeSupportModal();
+    });
+
+    document.getElementById('support-modal-overlay').addEventListener('click', function(event) {
+        if (event.target === this) closeSupportModal();
+    });
 
     // PWA: production/previews get the service worker; localhost stays cache-free
     // by default to avoid stale app shells during development. Add ?sw=1 locally
