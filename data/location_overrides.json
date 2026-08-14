@@ -13,12 +13,6 @@
     "address": "R. Bernardino de Campos, 1000 - Centro, Ribeirão Preto - SP, 14015-130, Brasil",
     "note": "*Campus universitário não atende; endereço correto é a Unidade de Emergência"
   },
-  "4156714": {
-    "reason": "Correção de coordenadas via reporte do usuário (UPA Galba Novaes, Maceió/AL).",
-    "verified_on": "2026-04-25",
-    "lat": -9.573292802841062,
-    "lng": -35.773553246390996
-  },
   "2086271": {
     "reason": "Pin apontava para hospital errado; correção via reporte do usuário (Maternidade Municipal Zoraide Eva das Dores, Itapecerica da Serra/SP).",
     "verified_on": "2026-04-26",
@@ -125,5 +119,101 @@
     "reason": "SES-RS confirmou em 07/08/2026 que o HPS Canoas está temporariamente fechado e que o atendimento ocorre no Hospital Nossa Senhora das Graças (CNES 2232014), que passará a receber soro antiescorpiônico até o fim da reforma.",
     "verified_on": "2026-08-07",
     "note": "Informação oficial da SES-RS (07/08/2026): o HPS Canoas está temporariamente fechado. Durante a reforma, os pacientes estão sendo atendidos no Hospital Nossa Senhora das Graças (CNES 2232014), que passará a receber soro antiescorpiônico. Confirme antes de se deslocar."
-  }
+  },
+  "_official_records": [
+    {
+      "id": "al-sesau-2026-08-piranhas-hospital",
+      "action": "replace",
+      "match_cnes": "2704544",
+      "base_cnes": "2721643",
+      "source": {
+        "authority": "SESAU-AL",
+        "evidence_date": "2026-08-13",
+        "reference": "Planilha estadual recebida em 2026-08-03; CNES corrigidos pela Assessoria Técnica em 2026-08-13; cadastro CNES/DATASUS consultado."
+      },
+      "fields": {
+        "source_state_file": "AL_SESAU_20260813",
+        "source_state_abbr": "AL",
+        "state": "ALAGOAS",
+        "municipality": "Piranhas",
+        "health_unit_name": "Hospital Unidade Mista Senador Afonso Farias de Melo",
+        "address": "Av. Alagoas, 225 - Xingó, Piranhas - AL, 57460-000",
+        "phones_raw": "(82) 3686-1072",
+        "cnes": "2721643",
+        "antivenoms_raw": "Escorpiônico|Botrópico|Crotálico|Laquético|Elapídico|Aracnídico|Lonômico",
+        "source_notes": "SESAU-AL: ponto de atendimento e armazenamento; planilha recebida em 2026-08-03 e CNES corrigido por resposta oficial em 2026-08-13.",
+        "formatted_address": "Av. Alagoas, 225 - Xingó, Piranhas - AL, 57460-000",
+        "lat": "-9.5971588",
+        "lng": "-37.7703455",
+        "location_type": "ROOFTOP",
+        "geocode_provider": "official_cnes_v1",
+        "repair_applied": "true",
+        "repair_source": "SESAU-AL 2026-08-13 + CNES/DATASUS",
+        "repair_outcome": "official_state_correction",
+        "final_status": "publish_ready",
+        "publish_policy": "publish"
+      }
+    },
+    {
+      "id": "al-sesau-2026-08-piranhas-upa",
+      "action": "add",
+      "base_cnes": "9486496",
+      "source": {
+        "authority": "SESAU-AL",
+        "evidence_date": "2026-08-13",
+        "reference": "Planilha estadual recebida em 2026-08-03; CNES corrigidos pela Assessoria Técnica em 2026-08-13; cadastro CNES/DATASUS consultado."
+      },
+      "fields": {
+        "row_id": "AL_OFFICIAL_9486496",
+        "source_state_file": "AL_SESAU_20260813",
+        "source_state_abbr": "AL",
+        "state": "ALAGOAS",
+        "municipality": "Piranhas",
+        "health_unit_name": "UPA Pedro José dos Santos",
+        "address": "Av. Bernardo Soares de Souza, s/n - Povoado Piau, Piranhas - AL, 57460-000",
+        "phones_raw": "(82) 3686-1113",
+        "cnes": "9486496",
+        "antivenoms_raw": "Escorpiônico|Botrópico|Crotálico|Laquético|Elapídico|Aracnídico|Lonômico",
+        "source_notes": "SESAU-AL: ponto de atendimento; planilha recebida em 2026-08-03 e CNES corrigido por resposta oficial em 2026-08-13.",
+        "formatted_address": "Av. Bernardo Soares de Souza, s/n - Povoado Piau, Piranhas - AL, 57460-000",
+        "lat": "-9.48072",
+        "lng": "-37.67173",
+        "location_type": "ROOFTOP",
+        "geocode_provider": "official_cnes_v1",
+        "repair_applied": "true",
+        "repair_source": "SESAU-AL 2026-08-13 + CNES/DATASUS",
+        "repair_outcome": "official_state_addition",
+        "final_status": "publish_ready",
+        "publish_policy": "publish"
+      }
+    },
+    {
+      "id": "al-sesau-2026-08-galba-novaes",
+      "action": "update",
+      "match_cnes": "4156714",
+      "base_cnes": "4156714",
+      "source": {
+        "authority": "SESAU-AL",
+        "evidence_date": "2026-08-13",
+        "reference": "Planilha estadual recebida em 2026-08-03; Assessoria Técnica confirmou em 2026-08-13 que somente o telefone está desativado; cadastro CNES/DATASUS consultado."
+      },
+      "fields": {
+        "source_state_file": "AL_SESAU_20260813",
+        "source_state_abbr": "AL",
+        "address": "Av. Durval de Góes Monteiro, 350 - Tabuleiro do Martins, Maceió - AL, 57061-000",
+        "phones_raw": "",
+        "source_notes": "SESAU-AL: unidade ativa como ponto antiescorpiônico; somente o telefone informado está desativado, conforme resposta oficial de 2026-08-13.",
+        "formatted_address": "Av. Durval de Góes Monteiro, 350 - Tabuleiro do Martins, Maceió - AL, 57061-000",
+        "lat": "-9.6006322",
+        "lng": "-35.748585",
+        "location_type": "ROOFTOP",
+        "geocode_provider": "official_cnes_v1",
+        "repair_applied": "true",
+        "repair_source": "SESAU-AL 2026-08-13 + CNES/DATASUS",
+        "repair_outcome": "official_state_correction",
+        "final_status": "publish_ready",
+        "publish_policy": "publish"
+      }
+    }
+  ]
 }

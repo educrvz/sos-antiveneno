@@ -651,37 +651,36 @@
     "state": "AL",
     "state_name": "Alagoas",
     "city": "Piranhas",
-    "hospital_name": "Unid. Senador Afonso Farias de Melo",
-    "address": "Avenida Maceió, s/n - Xingó",
+    "hospital_name": "Hospital Unidade Mista Senador Afonso Farias de Melo",
+    "address": "Av. Alagoas, 225 - Xingó, Piranhas - AL, 57460-000",
     "phones": [
-      "(82) 3686-1972",
-      "(82) 3686-1195"
+      "(82) 3686-1072"
     ],
-    "cnes": "2704544",
+    "cnes": "2721643",
     "antivenoms": [
+      "Escorpiônico",
       "Botrópico",
       "Crotálico",
       "Laquético",
       "Elapídico",
-      "Escorpiônico",
-      "Fonêutrico",
-      "Lonômico",
-      "Loxoscélico"
+      "Aracnídico",
+      "Lonômico"
     ],
     "source_antivenoms_raw": [
+      "Escorpiônico",
       "Botrópico",
       "Crotálico",
       "Laquético",
       "Elapídico",
-      "Escorpiônico",
-      "Fonêutrico",
-      "Lonômico",
-      "Loxoscélico"
+      "Aracnídico",
+      "Lonômico"
     ],
-    "source_date": "2026-07-03",
-    "lat": -9.6035415,
-    "lng": -37.7713749,
-    "geocode_tier": 3
+    "source_date": "2026-08-13",
+    "source_label": "SESAU-AL",
+    "source_url": "https://www.saude.al.gov.br/",
+    "lat": -9.5971588,
+    "lng": -37.7703455,
+    "geocode_tier": 1
   },
   {
     "state": "AL",
@@ -780,10 +779,8 @@
     "state_name": "Alagoas",
     "city": "Maceió",
     "hospital_name": "UPA Galba Novaes",
-    "address": "Av. Maceió, 341 - Tabuleiro do Martins, Maceió - AL, 57061-110",
-    "phones": [
-      "(82) 3315-3504"
-    ],
+    "address": "Av. Durval de Góes Monteiro, 350 - Tabuleiro do Martins, Maceió - AL, 57061-000",
+    "phones": [],
     "cnes": "4156714",
     "antivenoms": [
       "Escorpiônico"
@@ -791,9 +788,11 @@
     "source_antivenoms_raw": [
       "Escorpiônico"
     ],
-    "source_date": "2026-07-03",
-    "lat": -9.573292802841062,
-    "lng": -35.773553246390996,
+    "source_date": "2026-08-13",
+    "source_label": "SESAU-AL",
+    "source_url": "https://www.saude.al.gov.br/",
+    "lat": -9.6006322,
+    "lng": -35.748585,
     "geocode_tier": 1
   },
   {
@@ -63987,6 +63986,41 @@
     "source_date": "2026-07-03",
     "lat": -6.4132101,
     "lng": -48.5321256,
+    "geocode_tier": 1
+  },
+  {
+    "state": "AL",
+    "state_name": "Alagoas",
+    "city": "Piranhas",
+    "hospital_name": "UPA Pedro José dos Santos",
+    "address": "Av. Bernardo Soares de Souza, s/n - Povoado Piau, Piranhas - AL, 57460-000",
+    "phones": [
+      "(82) 3686-1113"
+    ],
+    "cnes": "9486496",
+    "antivenoms": [
+      "Escorpiônico",
+      "Botrópico",
+      "Crotálico",
+      "Laquético",
+      "Elapídico",
+      "Aracnídico",
+      "Lonômico"
+    ],
+    "source_antivenoms_raw": [
+      "Escorpiônico",
+      "Botrópico",
+      "Crotálico",
+      "Laquético",
+      "Elapídico",
+      "Aracnídico",
+      "Lonômico"
+    ],
+    "source_date": "2026-08-13",
+    "source_label": "SESAU-AL",
+    "source_url": "https://www.saude.al.gov.br/",
+    "lat": -9.48072,
+    "lng": -37.67173,
     "geocode_tier": 1
   },
   {

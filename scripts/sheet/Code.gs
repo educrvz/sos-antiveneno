@@ -288,9 +288,14 @@ function publishOverrides() {
   );
   if (confirm !== ui.Button.YES) return;
 
+  const snapshot = getFileSnapshot_(repo, OVERRIDES_PATH, token);
+  if (Array.isArray(snapshot.json._official_records)) {
+    payload._official_records = snapshot.json._official_records;
+  }
   const json = JSON.stringify(payload, null, 2) + '\n';
   const result = putFile_(repo, OVERRIDES_PATH, json, token,
-    `Update location overrides (${count} entr${count === 1 ? 'y' : 'ies'}) via sheet`
+    `Update location overrides (${count} entr${count === 1 ? 'y' : 'ies'}) via sheet`,
+    snapshot.sha
   );
 
   // Mark rows as published.
@@ -448,7 +453,7 @@ function publishCommunityNotes() {
 // GitHub API helpers
 // ---------------------------------------------------------------------------
 
-function putFile_(repo, path, content, token, message) {
+function putFile_(repo, path, content, token, message, expectedSha) {
   const apiBase = `https://api.github.com/repos/${repo}/contents/${path}`;
   const headers = {
     'Authorization': `token ${token}`,
@@ -456,12 +461,15 @@ function putFile_(repo, path, content, token, message) {
   };
 
   // GET current sha (may 404 on first publish — then no sha needed).
-  let sha = null;
-  const getResp = UrlFetchApp.fetch(apiBase, { headers, muteHttpExceptions: true });
-  if (getResp.getResponseCode() === 200) {
-    sha = JSON.parse(getResp.getContentText()).sha;
-  } else if (getResp.getResponseCode() !== 404) {
-    throw new Error(`GitHub GET failed: HTTP ${getResp.getResponseCode()} — ${getResp.getContentText()}`);
+  let sha = expectedSha;
+  if (expectedSha === undefined) {
+    sha = null;
+    const getResp = UrlFetchApp.fetch(apiBase, { headers, muteHttpExceptions: true });
+    if (getResp.getResponseCode() === 200) {
+      sha = JSON.parse(getResp.getContentText()).sha;
+    } else if (getResp.getResponseCode() !== 404) {
+      throw new Error(`GitHub GET failed: HTTP ${getResp.getResponseCode()} — ${getResp.getContentText()}`);
+    }
   }
 
   const body = {
@@ -478,10 +486,34 @@ function putFile_(repo, path, content, token, message) {
     payload: JSON.stringify(body),
     muteHttpExceptions: true,
   });
+  if (putResp.getResponseCode() === 409) {
+    throw new Error('GitHub rejected the update because location overrides changed. Reload and publish again.');
+  }
   if (putResp.getResponseCode() >= 300) {
     throw new Error(`GitHub PUT failed: HTTP ${putResp.getResponseCode()} — ${putResp.getContentText()}`);
   }
   return JSON.parse(putResp.getContentText());
+}
+
+
+function getFileSnapshot_(repo, path, token) {
+  const url = `https://api.github.com/repos/${repo}/contents/${path}`;
+  const resp = UrlFetchApp.fetch(url, {
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+json',
+    },
+    muteHttpExceptions: true,
+  });
+  if (resp.getResponseCode() === 404) return { json: {}, sha: null };
+  if (resp.getResponseCode() !== 200) {
+    throw new Error(`GitHub GET failed: HTTP ${resp.getResponseCode()} — ${resp.getContentText()}`);
+  }
+  const body = JSON.parse(resp.getContentText());
+  return {
+    json: JSON.parse(Utilities.newBlob(Utilities.base64Decode(body.content)).getDataAsString()),
+    sha: body.sha,
+  };
 }
 
 

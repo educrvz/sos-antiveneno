@@ -1,4 +1,4 @@
-var CACHE_NAME = 'soroja-v28';
+var CACHE_NAME = 'soroja-v29';
 
 // Same-origin assets only. Cross-origin (Leaflet, Google Fonts, OSM) is
 // handled at runtime so the browser stores responses with the right CORS mode.

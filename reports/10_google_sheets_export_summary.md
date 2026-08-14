@@ -6,8 +6,8 @@ Generated from the final patched master after committed manual-triage decisions.
 
 | Tab | CSV path | Rows |
 |-----|----------|-----:|
-| `publish_ready` | [`build/google_sheets_publish_ready_v1.csv`](../build/google_sheets_publish_ready_v1.csv) | 1,595 |
-| `review_queue`  | [`build/google_sheets_review_queue_v1.csv`](../build/google_sheets_review_queue_v1.csv)   | 683 |
+| `publish_ready` | [`build/google_sheets_publish_ready_v1.csv`](../build/google_sheets_publish_ready_v1.csv) | 1,597 |
+| `review_queue`  | [`build/google_sheets_review_queue_v1.csv`](../build/google_sheets_review_queue_v1.csv)   | 682 |
 
 Both files:
 - UTF-8 encoded, CRLF line endings via Python's `csv` module.
@@ -25,7 +25,7 @@ Both files:
 
 | final_status | Rows |
 |--------------|-----:|
-| `retry_queue` | 654 |
+| `retry_queue` | 653 |
 | `watchlist` | 29 |
 | `manual_review_pending_external` | 0 |
-| **Total** | **683** |
+| **Total** | **682** |

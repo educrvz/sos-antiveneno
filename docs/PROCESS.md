@@ -242,6 +242,29 @@ Sunday check will (correctly) shout "drift detected".
 
 Then continue with the rest of the pipeline (§4 onward).
 
+### Official records in the verified correction layer
+
+When a state health authority provides a later or more precise official
+correction than the Ministry PDF, record it in the reserved
+`_official_records` array in
+[`data/location_overrides.json`](../data/location_overrides.json). This remains
+part of the settled verified correction layer. It is for substantive official
+evidence only — not community reports, routing acknowledgements, or claims
+about real-time stock. The Sheet publisher preserves this reserved array.
+
+Stage 09g applies these records to the final geocoded master after manual
+triage. It supports `update`, `replace`, and `add`, requires an authority,
+evidence date, and audit reference, and is idempotent. CI runs the same script
+with `--check` so a refreshed master cannot silently omit an accepted official
+state correction.
+
+Every confirmed difference from the Ministry source must also be appended as a
+new row in the Control Sheet tab `Error Reports Summary V2` (spreadsheet
+`1_E3JXNCHytx5v5hkgaW-d7P6GXxl_FSk8T8KLmsyym4`, gid `115697106`). Never edit
+an earlier row to absorb a new response: this tab is the shareable discrepancy
+ledger intended for the Ministry. Use one row per distinct change, classify the
+evidence, record the outcome, and omit reporter PII unless strictly necessary.
+
 If you decide to **retire an override** (MS now matches it, or hospital
 deactivated), remove the entry from `data/location_overrides.json` in a
 separate commit before running `refresh_dataset.sh`. The build script
@@ -421,6 +444,8 @@ Field mapping:
 | `antivenoms`    | `antivenoms_raw`    | split on `\|`, drop blanks → string array                                                                                             |
 | `phones`        | `phones_raw`        | split on `/` or `,`; drop placeholders (`não disponível`, `sem contato`, `****`, `-`, <4 chars) → string array                        |
 | `source_date`   | `source_state_file` | ISO `YYYY-MM-DD` parsed from `Docs Estado/{UF}_YYYYMMDD.pdf`                                                                          |
+| `source_label`  | `source_state_file` | Optional state-authority label such as `SESAU-AL`; ordinary Ministry rows omit it.                                                    |
+| `source_url`    | authority mapping   | Optional official source URL paired with `source_label`.                                                                              |
 | `cnes`          | `cnes`              | string                                                                                                                                |
 | `geocode_tier`  | `location_type`     | `ROOFTOP`→1, `RANGE_INTERPOLATED`→2, `GEOMETRIC_CENTER`→3, `APPROXIMATE`→3; the app renders tier 3 with a leading `~` on the distance |
 
