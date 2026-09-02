@@ -25,3 +25,12 @@ def test_ministry_source_metadata_uses_uf_date_without_authority():
         None,
         None,
     )
+
+
+def test_pernambuco_state_source_metadata_uses_public_authority_url():
+    row = {"source_state_file": "PE_SES_20260901", "source_state_abbr": "PE"}
+    assert module.source_metadata(row, {"PE": "2026-07-03"}) == (
+        "2026-09-01",
+        "SES-PE",
+        "https://portal.saude.pe.gov.br/",
+    )

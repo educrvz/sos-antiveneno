@@ -214,6 +214,109 @@
         "final_status": "publish_ready",
         "publish_policy": "publish"
       }
+    },
+    {
+      "id": "pe-ses-2026-09-dom-moura-antivenoms",
+      "action": "update",
+      "match_cnes": "2702983",
+      "base_cnes": "2702983",
+      "source": {
+        "authority": "SES-PE",
+        "evidence_date": "2026-09-01",
+        "reference": "Recurso de 1ª instância Ouve.PE nº 2026108606, resposta conclusiva da SES-PE em 2026-09-01."
+      },
+      "fields": {
+        "source_state_file": "PE_SES_20260901",
+        "source_state_abbr": "PE",
+        "antivenoms_raw": "Botrópico|Crotálico|Elapídico|Escorpiônico|Fonêutrico|Loxoscélico",
+        "source_notes": "SES-PE confirmou os seis tipos de soros antivenenos na unidade em resposta conclusiva de 2026-09-01."
+      }
+    },
+    {
+      "id": "pe-ses-2026-09-hu-univasf-antivenoms",
+      "action": "update",
+      "match_cnes": "6042414",
+      "base_cnes": "6042414",
+      "source": {
+        "authority": "SES-PE",
+        "evidence_date": "2026-09-01",
+        "reference": "Recurso de 1ª instância Ouve.PE nº 2026108606, resposta conclusiva da SES-PE em 2026-09-01."
+      },
+      "fields": {
+        "source_state_file": "PE_SES_20260901",
+        "source_state_abbr": "PE",
+        "antivenoms_raw": "Botrópico|Crotálico|Elapídico|Fonêutrico|Loxoscélico",
+        "source_notes": "SES-PE confirmou que o soro antiescorpiônico em Petrolina fica no Hospital Dom Malan, não no HU-UNIVASF, em resposta conclusiva de 2026-09-01."
+      }
+    },
+    {
+      "id": "pe-ses-2026-09-hospital-geral-areias",
+      "action": "add",
+      "base_cnes": "2711974",
+      "source": {
+        "authority": "SES-PE",
+        "evidence_date": "2026-09-01",
+        "reference": "Recurso de 1ª instância Ouve.PE nº 2026108606, resposta conclusiva da SES-PE em 2026-09-01; identidade e CNES conferidos no CNES/DATASUS."
+      },
+      "fields": {
+        "row_id": "PE_OFFICIAL_2711974",
+        "source_state_file": "PE_SES_20260901",
+        "source_state_abbr": "PE",
+        "state": "PERNAMBUCO",
+        "municipality": "Recife",
+        "health_unit_name": "Hospital Geral de Areias (Pediatria)",
+        "address": "Avenida Recife, 810 - Estância, Recife - PE, 50781-000",
+        "phones_raw": "(81) 3182-3053",
+        "cnes": "2711974",
+        "antivenoms_raw": "Escorpiônico",
+        "source_notes": "SES-PE confirmou o atendimento pediátrico com soro antiescorpiônico e que a unidade é distinta do Hospital da Restauração; CNES 2711974 conferido no CNES/DATASUS.",
+        "formatted_address": "Avenida Recife, 810 - Estância, Recife - PE, 50781-000",
+        "lat": "-8.1001627",
+        "lng": "-34.9256068",
+        "location_type": "GEOMETRIC_CENTER",
+        "geocode_provider": "nominatim_osm_v1",
+        "repair_applied": "true",
+        "repair_source": "SES-PE 2026-09-01 + CNES/DATASUS + OpenStreetMap",
+        "repair_outcome": "official_state_addition",
+        "final_status": "publish_ready",
+        "publish_policy": "publish"
+      }
+    },
+    {
+      "id": "pe-ses-2026-09-mestre-vitalino-address",
+      "action": "update",
+      "match_cnes": "7498810",
+      "base_cnes": "7498810",
+      "source": {
+        "authority": "SES-PE",
+        "evidence_date": "2026-09-01",
+        "reference": "Recurso de 1ª instância Ouve.PE nº 2026108606, resposta conclusiva da SES-PE em 2026-09-01."
+      },
+      "fields": {
+        "source_state_file": "PE_SES_20260901",
+        "source_state_abbr": "PE",
+        "address": "Rodovia BR-104, 756 - Luiz Gonzaga, Caruaru - PE, 55015-901",
+        "formatted_address": "Rodovia BR-104, 756 - Luiz Gonzaga, Caruaru - PE, 55015-901",
+        "source_notes": "Endereço confirmado pela SES-PE em resposta conclusiva de 2026-09-01."
+      }
+    },
+    {
+      "id": "pe-ses-2026-09-agamenon-address",
+      "action": "update",
+      "match_cnes": "2348489",
+      "base_cnes": "2348489",
+      "source": {
+        "authority": "SES-PE",
+        "evidence_date": "2026-09-01",
+        "reference": "Recurso de 1ª instância Ouve.PE nº 2026108606, resposta conclusiva da SES-PE em 2026-09-01."
+      },
+      "fields": {
+        "source_state_file": "PE_SES_20260901",
+        "source_state_abbr": "PE",
+        "address": "Rua Manoel Pereira da Silva, 871 - Nossa Senhora da Penha, Serra Talhada - PE, 56903-490",
+        "formatted_address": "Rua Manoel Pereira da Silva, 871 - Nossa Senhora da Penha, Serra Talhada - PE, 56903-490",
+        "source_notes": "Endereço confirmado pela SES-PE em resposta conclusiva de 2026-09-01."
+      }
     }
   ]
 }
