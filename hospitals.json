@@ -39936,7 +39936,7 @@
     "state_name": "Pernambuco",
     "city": "Caruaru",
     "hospital_name": "Hospital Mestre Vitalino",
-    "address": "Avenida Amazonas, 175 - Bairro Universitário",
+    "address": "Rodovia BR-104, 756 - Luiz Gonzaga, Caruaru - PE, 55015-901",
     "phones": [
       "(81)3725-7750"
     ],
@@ -39957,7 +39957,9 @@
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-07-03",
+    "source_date": "2026-09-01",
+    "source_label": "SES-PE",
+    "source_url": "https://portal.saude.pe.gov.br/",
     "lat": -8.2453414,
     "lng": -35.974224,
     "geocode_tier": 1
@@ -39973,12 +39975,24 @@
     ],
     "cnes": "2702983",
     "antivenoms": [
-      "Escorpiônico"
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico",
+      "Fonêutrico",
+      "Loxoscélico"
     ],
     "source_antivenoms_raw": [
-      "Escorpiônico"
+      "Botrópico",
+      "Crotálico",
+      "Elapídico",
+      "Escorpiônico",
+      "Fonêutrico",
+      "Loxoscélico"
     ],
-    "source_date": "2026-07-03",
+    "source_date": "2026-09-01",
+    "source_label": "SES-PE",
+    "source_url": "https://portal.saude.pe.gov.br/",
     "lat": -8.881486299999999,
     "lng": -36.4764264,
     "geocode_tier": 3
@@ -40123,7 +40137,6 @@
       "Botrópico",
       "Crotálico",
       "Elapídico",
-      "Escorpiônico",
       "Fonêutrico",
       "Loxoscélico"
     ],
@@ -40131,11 +40144,12 @@
       "Botrópico",
       "Crotálico",
       "Elapídico",
-      "Escorpiônico",
       "Fonêutrico",
       "Loxoscélico"
     ],
-    "source_date": "2026-07-03",
+    "source_date": "2026-09-01",
+    "source_label": "SES-PE",
+    "source_url": "https://portal.saude.pe.gov.br/",
     "lat": -9.3924142,
     "lng": -40.4965301,
     "geocode_tier": 1
@@ -40241,7 +40255,7 @@
     "state_name": "Pernambuco",
     "city": "Serra Talhada",
     "hospital_name": "Hospital Regional Professor Agamenon Magalhães",
-    "address": "Rua Comandante Superior, 955 - Nossa Senhora da Penha",
+    "address": "Rua Manoel Pereira da Silva, 871 - Nossa Senhora da Penha, Serra Talhada - PE, 56903-490",
     "phones": [
       "(87) 3831-9600"
     ],
@@ -40264,7 +40278,9 @@
       "Laquético",
       "Botrópico"
     ],
-    "source_date": "2026-07-03",
+    "source_date": "2026-09-01",
+    "source_label": "SES-PE",
+    "source_url": "https://portal.saude.pe.gov.br/",
     "lat": -7.988514899999999,
     "lng": -38.2987273,
     "geocode_tier": 1
@@ -64022,6 +64038,29 @@
     "lat": -9.48072,
     "lng": -37.67173,
     "geocode_tier": 1
+  },
+  {
+    "state": "PE",
+    "state_name": "Pernambuco",
+    "city": "Recife",
+    "hospital_name": "Hospital Geral de Areias (Pediatria)",
+    "address": "Avenida Recife, 810 - Estância, Recife - PE, 50781-000",
+    "phones": [
+      "(81) 3182-3053"
+    ],
+    "cnes": "2711974",
+    "antivenoms": [
+      "Escorpiônico"
+    ],
+    "source_antivenoms_raw": [
+      "Escorpiônico"
+    ],
+    "source_date": "2026-09-01",
+    "source_label": "SES-PE",
+    "source_url": "https://portal.saude.pe.gov.br/",
+    "lat": -8.1001627,
+    "lng": -34.9256068,
+    "geocode_tier": 3
   },
   {
     "state": "RS",
