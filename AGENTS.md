@@ -1,4 +1,4 @@
-# Repository Instructions for Codex
+# Repository Instructions for AI Agents
 
 ## Project Snapshot
 
@@ -11,6 +11,30 @@ artifacts live in `build/`, `reports/`, `app/hospitals.json`, and
 Keep the app static-first and offline-capable. Browser geolocation must stay on
 the user's device; do not send, log, store, or add analytics around precise user
 location.
+
+This file is the single repository instruction file for every AI agent (Codex,
+Claude, others). Project strategy and decisions live in the SoroJá Notion hub;
+a local, gitignored `CLAUDE.md` may only point here and hold non-public
+operational IDs.
+
+## Non-Negotiables
+
+- Product name is SoroJá; repo name is `sos-antiveneno`. Do not rename either.
+- The repository stays public and open source (decision 2026-08-03). Do not add
+  a root `LICENSE` file without asking; the footer carries the open-source
+  statement by design.
+- Public contact is `contato.soroja@gmail.com`. Never restore personal WhatsApp
+  links.
+- Preserve the footer tribute to Bernardo de Lima Mendes verbatim; flag any PR
+  that removes or rewords it.
+- Never publish reporter names, phone numbers or raw report text (LGPD-minimal).
+- Do not key overrides by CNES when the CNES is shared by several facilities
+  (e.g. `2115786`, three MG units); fix those in the source extract instead.
+- Bump `CACHE_NAME` in `app/sw.js` whenever any precached app file changes.
+- Gate every state promotion with `scripts/refresh_diff.py`; pdfplumber table
+  extraction silently drops rows, so cross-check against raw PDF text.
+- Verify production with a cache-busted request to `https://soroja.com.br`,
+  not `raw.githubusercontent.com`.
 
 ## Read First
 
