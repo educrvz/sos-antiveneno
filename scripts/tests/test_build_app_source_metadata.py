@@ -34,3 +34,12 @@ def test_pernambuco_state_source_metadata_uses_public_authority_url():
         "SES-PE",
         "https://portal.saude.pe.gov.br/",
     )
+
+
+def test_parana_state_source_metadata_uses_public_authority_url():
+    row = {"source_state_file": "PR_SESA_20260701", "source_state_abbr": "PR"}
+    assert module.source_metadata(row, {"PR": "2026-07-03"}) == (
+        "2026-07-01",
+        "SESA-PR",
+        "https://www.saude.pr.gov.br/Pagina/Acidentes-por-animais-peconhentos",
+    )

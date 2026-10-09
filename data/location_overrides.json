@@ -120,6 +120,12 @@
     "verified_on": "2026-08-07",
     "note": "Informação oficial da SES-RS (07/08/2026): o HPS Canoas está temporariamente fechado. Durante a reforma, os pacientes estão sendo atendidos no Hospital Nossa Senhora das Graças (CNES 2232014), que passará a receber soro antiescorpiônico. Confirme antes de se deslocar."
   },
+  "6053858": {
+    "reason": "Complexo Hospitalar Prefeito Edivaldo Orsi (Campinas/SP) — coordenadas corrigidas e verificadas pelo mantenedor após relato de pin incorreto.",
+    "verified_on": "2026-07-31",
+    "lat": -22.963037876867084,
+    "lng": -47.13587245896223
+  },
   "_official_records": [
     {
       "id": "al-sesau-2026-08-piranhas-hospital",
@@ -316,6 +322,23 @@
         "address": "Rua Manoel Pereira da Silva, 871 - Nossa Senhora da Penha, Serra Talhada - PE, 56903-490",
         "formatted_address": "Rua Manoel Pereira da Silva, 871 - Nossa Senhora da Penha, Serra Talhada - PE, 56903-490",
         "source_notes": "Endereço confirmado pela SES-PE em resposta conclusiva de 2026-09-01."
+      }
+    },
+    {
+      "id": "pr-sesa-2026-07-carolina-lupion-phone",
+      "action": "update",
+      "match_cnes": "2687038",
+      "base_cnes": "2687038",
+      "source": {
+        "authority": "SESA-PR",
+        "evidence_date": "2026-07-01",
+        "reference": "Planilha oficial SESA-PR de locais de aplicação de soro, modificada em 2026-07-01; telefone corroborado por relato comunitário recebido em 2026-10-06."
+      },
+      "fields": {
+        "source_state_file": "PR_SESA_20260701",
+        "source_state_abbr": "PR",
+        "phones_raw": "(43) 3535-9440",
+        "source_notes": "Telefone publicado pela SESA-PR em sua relação estadual e corroborado por relato comunitário em 2026-10-06."
       }
     }
   ]

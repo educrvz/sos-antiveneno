@@ -43788,7 +43788,7 @@
     "hospital_name": "Hospital Municipal Carolina Lupion",
     "address": "Rua Sebastião Xavier Sobrinho, 592 - Cidade Alta",
     "phones": [
-      "(43) 3535-5070"
+      "(43) 3535-9440"
     ],
     "cnes": "2687038",
     "antivenoms": [
@@ -43809,7 +43809,9 @@
       "Loxoscélico",
       "Lonômico"
     ],
-    "source_date": "2026-07-03",
+    "source_date": "2026-07-01",
+    "source_label": "SESA-PR",
+    "source_url": "https://www.saude.pr.gov.br/Pagina/Acidentes-por-animais-peconhentos",
     "lat": -24.2500571,
     "lng": -49.70510789999999,
     "geocode_tier": 1
@@ -57164,8 +57166,8 @@
       "Escorpiônico"
     ],
     "source_date": "2026-07-03",
-    "lat": -22.9594525,
-    "lng": -47.1254296,
+    "lat": -22.963037876867084,
+    "lng": -47.13587245896223,
     "geocode_tier": 1
   },
   {

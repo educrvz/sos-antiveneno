@@ -60,6 +60,7 @@ OFFICIAL_STATE_SOURCE_RE = re.compile(
 OFFICIAL_SOURCE_URLS = {
     "SESAU-AL": "https://www.saude.al.gov.br/",
     "SES-PE": "https://portal.saude.pe.gov.br/",
+    "SESA-PR": "https://www.saude.pr.gov.br/Pagina/Acidentes-por-animais-peconhentos",
 }
 
 TIER_MAP = {
