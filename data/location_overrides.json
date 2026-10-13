@@ -341,5 +341,11 @@
         "source_notes": "Telefone publicado pela SESA-PR em sua relação estadual e corroborado por relato comunitário em 2026-10-06."
       }
     }
-  ]
+  ],
+  "2285150": {
+    "reason": "Hospital Municipal Prefeito Armando da Silva de Carvalho, Araruama/RJ: coordenadas exatas fornecidas e aprovadas pelo mantenedor em 2026-10-13 para corrigir o destino de navegação. Localização do hospital; entrada de emergência e estoque atual não verificados. Endereço textual preservado. Registro: https://app.notion.com/p/344eeae1044a80f99629fdf16343c926",
+    "verified_on": "2026-10-13",
+    "lat": -22.72264959281326,
+    "lng": -42.25463248433092
+  }
 }
