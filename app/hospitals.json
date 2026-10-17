@@ -27996,6 +27996,13 @@
     "city": "Rio Paranaíba",
     "hospital_name": "Hospital Municipal Dona Maria Conceição Frantino Valério",
     "address": "Av. Trajano José Da Silva, 98",
+    "community_notes": [
+      {
+        "category": "other",
+        "reported_at": "2026-10-16",
+        "public_summary": "Em contato telefônico, foi informado que esta unidade não atende acidentes com animais peçonhentos. Informação ainda não confirmada oficialmente. Ligue e confirme o atendimento antes de se deslocar: (34) 3855-1228."
+      }
+    ],
     "phones": [
       "(34) 3855-1228"
     ],
