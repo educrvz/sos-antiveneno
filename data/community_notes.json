@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10",
+  "generated_at": "2026-10-16",
   "notes": {
     "2585367": [
       {
@@ -69,6 +69,13 @@
         "category": "contact_fix",
         "reported_at": "2026-06-18",
         "public_summary": "Relato da comunidade: telefone atualizado para (66) 98146-0216."
+      }
+    ],
+    "2184680": [
+      {
+        "category": "other",
+        "reported_at": "2026-10-16",
+        "public_summary": "Em contato telefônico, foi informado que esta unidade não atende acidentes com animais peçonhentos. Informação ainda não confirmada oficialmente. Ligue e confirme o atendimento antes de se deslocar: (34) 3855-1228."
       }
     ]
   }
