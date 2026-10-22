@@ -245,3 +245,28 @@ footer {
     padding: 18px;
   }
 }
+
+.phone-label {
+  margin: 12px 0 5px;
+  font-size: 0.85rem;
+  font-weight: 750;
+}
+.phone-note,
+.phone-source {
+  margin: 6px 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+.phone-source {
+  display: inline-block;
+  padding: 5px 0;
+}
+.phone-link.unavailable {
+  background: #e9eef2;
+  color: #68462b;
+}
+@media (max-width: 420px) {
+  .phones {
+    margin-left: 0;
+  }
+}

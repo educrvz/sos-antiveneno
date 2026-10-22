@@ -18,6 +18,15 @@ window.SOROJA_CALLS = [
     cnes: "2417456",
     phones: "(73) 3266-2276",
     region: "Nordeste",
+    alternatives: [
+      {
+        number: "(73) 2662145",
+        label: "CNES — cadastro incompleto",
+        url: "https://cnes2.datasus.gov.br/Mod_Ambulatorial.asp?VCo_Unidade=2916802417456",
+        note: "Número publicado com apenas sete dígitos locais. Não completar por suposição.",
+        checked: "2026-10-22",
+      },
+    ],
   },
   {
     number: 3,
@@ -28,6 +37,15 @@ window.SOROJA_CALLS = [
     cnes: "2493330",
     phones: "(71) 3655-1121",
     region: "Nordeste",
+    alternatives: [
+      {
+        number: "(71) 3655-8010",
+        label: "Apontador — alternativa não confirmada",
+        url: "https://www.apontador.com.br/local/ba/sao_sebastiao_do_passe/hospitais_e_postos_de_saude/LX5AQR68/hospital_dr_albino_leitao.html",
+        note: "Diretório comercial; confirmar unidade e cidade ao atender.",
+        checked: "2026-10-22",
+      },
+    ],
   },
   {
     number: 4,
@@ -38,6 +56,15 @@ window.SOROJA_CALLS = [
     cnes: "4023463",
     phones: "(74) 3636-2212",
     region: "Nordeste",
+    alternatives: [
+      {
+        number: "(74) 3636-2012",
+        label: "Prefeitura de Caém — contato administrativo",
+        url: "https://mail.caem.ba.gov.br/secretaria_noticias.php?m=3&sec=4",
+        note: "Contato da prefeitura, não da recepção. Pedir o telefone público atualizado do hospital.",
+        checked: "2026-10-22",
+      },
+    ],
   },
   {
     number: 5,
@@ -48,6 +75,22 @@ window.SOROJA_CALLS = [
     cnes: "2333880",
     phones: "(88) 3583-22726",
     region: "Nordeste",
+    alternatives: [
+      {
+        number: "(88) 3583-1724",
+        label: "Instituto Vital Brazil — lista histórica",
+        url: "https://www.rj.gov.br/vitalbrazil/sites/default/files/arquivos_pagina_basica/ceara.pdf",
+        note: "Alternativa de lista antiga, sem confirmação telefônica. A fonte publica 3583-1724/3127.",
+        checked: "2026-10-22",
+      },
+      {
+        number: "(88) 3583-3127",
+        label: "Instituto Vital Brazil — lista histórica",
+        url: "https://www.rj.gov.br/vitalbrazil/sites/default/files/arquivos_pagina_basica/ceara.pdf",
+        note: "Alternativa de lista antiga, sem confirmação telefônica. A fonte publica 3583-1724/3127.",
+        checked: "2026-10-22",
+      },
+    ],
   },
   {
     number: 6,
@@ -58,6 +101,15 @@ window.SOROJA_CALLS = [
     cnes: "2802015",
     phones: "(73) 3270-3164",
     region: "Nordeste",
+    alternatives: [
+      {
+        number: "(73) 3270-2433",
+        label: "TodosNegócios — alternativa não confirmada",
+        url: "https://br.todosnegocios.com/pt/hospital-frei-ricardo_1I-73-3270-2433",
+        note: "Diretório comercial; confirmar unidade e cidade ao atender.",
+        checked: "2026-10-22",
+      },
+    ],
   },
   {
     number: 7,
@@ -68,6 +120,23 @@ window.SOROJA_CALLS = [
     cnes: "2726688",
     phones: "(98) 98118 9452",
     region: "Nordeste",
+    alternatives: [
+      {
+        number: "(98) 3385-1795",
+        label: "Prefeitura de Bequimão — contato administrativo",
+        url: "https://www.bequimao.ma.gov.br/Noticia/hospital-lidia-martins-passa-a-contar-com-seis-ambulancias-para-atendimento-de-emergencia",
+        note: "Telefone do rodapé da prefeitura; pedir contato da recepção. Não é confirmação do telefone do hospital.",
+        checked: "2026-10-22",
+      },
+      {
+        number: "(98) 98194-1481",
+        label: "Prefeitura — WhatsApp de ambulâncias",
+        url: "https://www.bequimao.ma.gov.br/Noticia/hospital-lidia-martins-passa-a-contar-com-seis-ambulancias-para-atendimento-de-emergencia",
+        note: "Publicado em 10/07/2025 para acionar ambulâncias por WhatsApp. Não usar para testes de cadastro; não é recepção.",
+        checked: "2026-10-22",
+        referenceOnly: true,
+      },
+    ],
   },
   {
     number: 8,
@@ -78,6 +147,22 @@ window.SOROJA_CALLS = [
     cnes: "2460580",
     phones: "(99) 98213 5211",
     region: "Nordeste",
+    alternatives: [
+      {
+        number: "(98) 5651224",
+        label: "CNES — cadastro incompleto",
+        url: "https://cnes2.datasus.gov.br/Mod_Conjunto.asp?VCo_Unidade=2104092460580",
+        note: "Número com sete dígitos locais e DDD divergente. Não completar por suposição.",
+        checked: "2026-10-22",
+      },
+      {
+        number: "(99) 98565-1224",
+        label: "CEBES — alternativa não confirmada",
+        url: "https://cebes.com.br/unidade-mista-de-saude-otavio-lima-de-arruda-2460580/",
+        note: "Diretório comercial; diverge do CNES consultado. Confirmar identidade da unidade.",
+        checked: "2026-10-22",
+      },
+    ],
   },
   {
     number: 9,

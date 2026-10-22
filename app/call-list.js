@@ -13,7 +13,7 @@
     var option = document.createElement("option");
     option.value = hospital.number;
     option.textContent = "Chamada #" + hospital.number + " — " + hospital.unit;
-    if (hospital.number === 5) option.selected = true;
+    if (hospital.number === 1) option.selected = true;
     jumpNumber.appendChild(option);
   });
 
@@ -44,13 +44,13 @@
         };
       })
       .filter(function (part) {
-        return part.digits.length >= 10;
+        return part.digits.length > 0;
       });
   }
 
   calls.forEach(function (hospital) {
     var card = document.createElement("article");
-    card.className = "call" + (hospital.number === 5 ? " current" : "");
+    card.className = "call" + (hospital.number === 1 ? " current" : "");
     card.id = "call-" + hospital.number;
 
     var head = document.createElement("div");
@@ -59,8 +59,8 @@
     addText(head, "h2", "call-title", hospital.unit);
     card.appendChild(head);
 
-    if (hospital.number === 5) {
-      addText(card, "p", "current-label", "Próxima chamada");
+    if (hospital.number === 1) {
+      addText(card, "p", "current-label", "Revisão das chamadas #1–#10");
     }
 
     var details = document.createElement("p");
@@ -71,37 +71,88 @@
 
     var phoneList = document.createElement("div");
     phoneList.className = "phones";
-    phoneParts(hospital.phones).forEach(function (phone) {
-      var link = document.createElement("a");
-      link.className = "phone-link";
-      link.href = "tel:" + carrierCode + phone.digits;
-      link.setAttribute(
-        "aria-label",
-        "Ligar pela " +
-          carrierName +
-          " para " +
-          hospital.unit +
-          ", " +
-          phone.display,
+    var phones = phoneParts(hospital.phones).map(function (phone) {
+      phone.label = "Número da amostra original";
+      return phone;
+    });
+    (hospital.alternatives || []).forEach(function (alternative) {
+      phoneParts(alternative.number).forEach(function (phone) {
+        Object.assign(phone, alternative);
+        phones.push(phone);
+      });
+    });
+    var seen = new Set();
+    phones.forEach(function (phone) {
+      var key = phone.digits + ":" + phone.extension;
+      if (seen.has(key)) return;
+      seen.add(key);
+      var item = document.createElement("div");
+      item.className = "phone-option";
+      addText(item, "p", "phone-label", phone.label);
+      var valid = /^\d{2}(?:[2-5]\d{7}|9\d{8})$/.test(phone.digits);
+      var link = document.createElement(
+        valid && !phone.referenceOnly ? "a" : "div",
       );
-      addText(link, "span", "", phone.display);
-      addText(link, "small", "", "Ligar");
-      phoneList.appendChild(link);
-      if (phone.extension) {
-        addText(
-          card,
-          "p",
-          "bad-number",
-          "Ramal " + phone.extension + ": digite após a chamada conectar.",
+      link.className =
+        "phone-link" + (valid && !phone.referenceOnly ? "" : " unavailable");
+      if (valid && !phone.referenceOnly) {
+        link.href = "tel:" + carrierCode + phone.digits;
+        link.setAttribute(
+          "aria-label",
+          "Ligar pela " +
+            carrierName +
+            " para " +
+            phone.display +
+            ", " +
+            phone.label,
         );
       }
+      addText(link, "span", "", phone.display);
+      addText(
+        link,
+        "small",
+        "",
+        !valid
+          ? "Revisar formato"
+          : phone.referenceOnly
+            ? "Referência"
+            : "Ligar",
+      );
+      item.appendChild(link);
+      if (!valid)
+        addText(
+          item,
+          "p",
+          "phone-note",
+          "Formato inválido ou incompleto na fonte; sem discagem automática.",
+        );
+      if (phone.extension)
+        addText(
+          item,
+          "p",
+          "phone-note",
+          "Ramal " + phone.extension + ": digite após a chamada conectar.",
+        );
+      if (phone.note) addText(item, "p", "phone-note", phone.note);
+      if (phone.url) {
+        var source = addText(
+          item,
+          "a",
+          "phone-source",
+          "Ver fonte · consultada em 22/10/2026",
+        );
+        source.href = phone.url;
+        source.target = "_blank";
+        source.rel = "noopener noreferrer";
+      }
+      phoneList.appendChild(item);
     });
     card.appendChild(phoneList);
 
     if (hospital.sampleOrder !== hospital.number) {
       card.dataset.originalOrder = hospital.sampleOrder;
     }
-    if (hospital.sampleOrder === 5) {
+    if (hospital.sampleOrder === 1) {
       card.dataset.currentCall = "true";
     }
     if (hospital.phones === "(88) 3583-22726") {
@@ -110,6 +161,14 @@
         "p",
         "bad-number",
         "Amostra sinaliza formato possivelmente incorreto no número fixo; registre exatamente o que ocorreu.",
+      );
+    }
+    if (hospital.number <= 10 && !hospital.alternatives) {
+      addText(
+        card,
+        "p",
+        "phone-note",
+        "Nenhum número adicional utilizável localizado nesta revisão.",
       );
     }
     container.appendChild(card);

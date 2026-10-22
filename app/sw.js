@@ -1,4 +1,4 @@
-var CACHE_NAME = 'soroja-v33';
+var CACHE_NAME = 'soroja-v34';
 
 // Same-origin assets only. Cross-origin (Leaflet, Google Fonts, OSM) is
 // handled at runtime so the browser stores responses with the right CORS mode.
@@ -14,6 +14,9 @@ var ASSETS = [
     './call-list.css',
     './call-list-data.js',
     './call-list.js',
+    './call-list.css?v=20261022-2',
+    './call-list-data.js?v=20261022-2',
+    './call-list.js?v=20261022-2',
     './icons/icon-192.svg',
     './icons/icon-512.svg',
     './og-image.png'
