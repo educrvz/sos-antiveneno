@@ -1,6 +1,6 @@
 # Política de Privacidade — SoroJá
 
-**Última atualização:** 5 de outubro de 2026
+**Última atualização:** 22 de outubro de 2026
 
 O SoroJá é uma ferramenta gratuita, de código aberto e sem fins lucrativos que ajuda pessoas a localizar os hospitais de referência do SUS mais próximos, que mantêm soro antiveneno contra acidentes por animais peçonhentos. Esta Política explica, em linguagem simples, o que acontece com seus dados quando você usa o site.
 
@@ -27,6 +27,7 @@ Como qualquer site moderno, o SoroJá carrega alguns recursos técnicos de servi
 - **Biblioteca de mapa (Leaflet, via unpkg.com):** o código do mapa é carregado do CDN unpkg.com (CloudFlare), que registra logs técnicos de acesso contendo seu IP.
 - **Estatísticas de acesso (GoatCounter):** em cada visita, o navegador envia ao GoatCounter a página acessada, o site de origem, informações gerais do navegador, sistema, idioma e largura da tela. O serviço usa o endereço IP apenas temporariamente para estimar o país e a região (estado) e para agrupar visitas repetidas em uma sessão de até 8 horas, sem armazenar o IP, identificadores persistentes ou dados da sua localização GPS. O GoatCounter guarda um registro de cada visita com esses dados técnicos (página, data e hora, origem, navegador, sistema, tamanho de tela, idioma, país e região), sem nome, e-mail, IP ou localização exata. O SoroJá consulta apenas totais agregados nesse painel privado. Os dados são processados em servidores na União Europeia. Consulte a [Política de Privacidade do GoatCounter](https://www.goatcounter.com/help/privacy).
 - **"Como chegar" (Google Maps):** ao clicar em **Como Chegar**, seu navegador abre o Google Maps com o endereço do hospital destino. O Google recebe essa informação e aplica a sua [Política de Privacidade](https://policies.google.com/privacy) e os Termos do Google Maps.
+- **Lista de chamadas:** ao tocar em um telefone nas páginas de validação, o navegador abre o discador do aparelho com o número escolhido. A operadora recebe os dados necessários para completar a chamada; o SoroJá não recebe o áudio nem o resultado da ligação. Essas páginas não carregam estatísticas de acesso.
 - **Compartilhar (WhatsApp, Facebook, X, Instagram):** só quando você clica nos botões de compartilhamento, você é redirecionado para a plataforma correspondente, que passa a aplicar a política de privacidade dela.
 
 O SoroJá não utiliza Google Analytics, Meta Pixel, Hotjar, publicidade comportamental, gravação de sessão nem rastreamento entre sites. O GoatCounter é usado somente para estatísticas de acesso, consultadas de forma agregada.

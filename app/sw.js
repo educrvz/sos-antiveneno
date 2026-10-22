@@ -1,4 +1,4 @@
-var CACHE_NAME = 'soroja-v32';
+var CACHE_NAME = 'soroja-v33';
 
 // Same-origin assets only. Cross-origin (Leaflet, Google Fonts, OSM) is
 // handled at runtime so the browser stores responses with the right CORS mode.
@@ -9,6 +9,11 @@ var ASSETS = [
     './manifest.json',
     './privacy.html',
     './terms.html',
+    './ligacoes-claro.html',
+    './ligacoes-vivo.html',
+    './call-list.css',
+    './call-list-data.js',
+    './call-list.js',
     './icons/icon-192.svg',
     './icons/icon-512.svg',
     './og-image.png'
@@ -36,6 +41,12 @@ function fallbackFor(request) {
     }
     if (url.pathname.endsWith('/terms') || url.pathname.endsWith('/terms.html')) {
         return caches.match('./terms.html');
+    }
+    if (url.pathname.endsWith('/ligacoes-claro') || url.pathname.endsWith('/ligacoes-claro.html')) {
+        return caches.match('./ligacoes-claro.html');
+    }
+    if (url.pathname.endsWith('/ligacoes-vivo') || url.pathname.endsWith('/ligacoes-vivo.html')) {
+        return caches.match('./ligacoes-vivo.html');
     }
     if (request.mode === 'navigate' || url.pathname.endsWith('/index.html')) {
         return caches.match('./index.html');

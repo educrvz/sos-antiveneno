@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0066CC" />
+    <meta
+      name="description"
+      content="Lista de chamadas de validação do SoroJá com discagem pela Claro."
+    />
+    <link rel="stylesheet" href="call-list.css" />
+    <title>Ligações pela Claro — SoroJá</title>
+  </head>
+  <body data-carrier="claro">
+    <main class="page">
+      <header class="top">
+        <a class="back" href="./">← SoroJá</a>
+        <p class="eyebrow">Validação telefônica · amostra aleatória</p>
+        <h1>Ligar pela Claro</h1>
+        <p class="lead">
+          Toque no telefone para abrir o discador com o código da Claro (21) e o
+          DDD.
+        </p>
+        <nav class="carrier-nav" aria-label="Escolher operadora">
+          <a class="selected" aria-current="page" href="ligacoes-claro.html"
+            >Claro · 21</a
+          >
+          <a href="ligacoes-vivo.html">Vivo · 15</a>
+        </nav>
+      </header>
+
+      <section class="script" aria-labelledby="questions-title">
+        <h2 id="questions-title">Perguntas para cada unidade</h2>
+        <ol>
+          <li>
+            É do(a) <strong>[nome da unidade]</strong>, em
+            <strong>[cidade]</strong>?
+          </li>
+          <li>
+            Vocês atendem casos de picada de cobra, escorpião ou aranha aí?
+          </li>
+          <li>
+            Esse é o melhor número para alguém que precisa de atendimento ligar?
+            Tem outro número ou WhatsApp?
+          </li>
+        </ol>
+        <p><strong>Não pergunte sobre estoque de soro.</strong></p>
+      </section>
+
+      <form class="jump" id="jump-form">
+        <label for="jump-number">Ir para a chamada</label>
+        <select id="jump-number" name="number"></select>
+        <button type="submit">Abrir</button>
+      </form>
+      <p class="list-note">
+        50 unidades · ordem sorteada preservada · chamada #5 destacada
+      </p>
+      <div id="calls" class="calls" aria-live="polite"></div>
+      <footer>
+        Ferramenta de validação do projeto SoroJá. Em uma emergência, ligue 192
+        (SAMU) ou 193 (Bombeiros).
+      </footer>
+    </main>
+    <script src="call-list-data.js"></script>
+    <script src="call-list.js"></script>
+  </body>
+</html>

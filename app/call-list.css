@@ -1,0 +1,247 @@
+:root {
+  color-scheme: light;
+  --ink: #18212b;
+  --muted: #5e6b78;
+  --line: #dce3e9;
+  --panel: #ffffff;
+  --page: #f2f5f7;
+  --brand: #116a48;
+  --brand-dark: #0b5237;
+  --focus: #ffcc4d;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font:
+    16px/1.5 system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+a {
+  color: inherit;
+}
+.page {
+  width: min(100% - 28px, 720px);
+  margin: 0 auto;
+  padding: 18px 0 36px;
+}
+.top {
+  padding: 8px 4px 18px;
+}
+.back {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-weight: 650;
+  text-decoration: none;
+}
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 8vw, 2.45rem);
+  line-height: 1.1;
+}
+.lead {
+  max-width: 42rem;
+  margin: 10px 0 18px;
+  color: var(--muted);
+}
+.carrier-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.carrier-nav a {
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  font-weight: 750;
+  text-decoration: none;
+}
+.carrier-nav .selected {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+.script {
+  margin: 6px 0 18px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+}
+.script h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+.script ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+.script li {
+  margin: 7px 0;
+}
+.script p {
+  margin: 12px 0 0;
+  color: #8a2f1d;
+}
+.jump {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 15px;
+}
+.jump label {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.jump select,
+.jump button {
+  min-height: 46px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+}
+.jump button {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+  font-weight: 800;
+}
+.list-note {
+  margin: 0 4px 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.calls {
+  display: grid;
+  gap: 10px;
+}
+.call {
+  scroll-margin-top: 12px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: 0 2px 8px rgb(18 39 56 / 5%);
+}
+.call.current {
+  border: 2px solid #e2a900;
+  background: #fff9e7;
+}
+.call-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.call-number {
+  flex: 0 0 auto;
+  min-width: 42px;
+  padding: 4px 7px;
+  border-radius: 9px;
+  background: #e9eef2;
+  color: #344454;
+  text-align: center;
+  font-size: 0.83rem;
+  font-weight: 850;
+}
+.current .call-number {
+  background: #ffe08a;
+  color: #523c00;
+}
+.call-title {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.current-label {
+  display: inline-block;
+  margin: 8px 0 0 52px;
+  color: #654b00;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.details {
+  margin: 9px 0 13px 52px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.details span {
+  display: block;
+}
+.phones {
+  display: grid;
+  gap: 8px;
+  margin-left: 52px;
+}
+.phone-link {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--brand);
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.phone-link:active {
+  background: var(--brand-dark);
+}
+.phone-link:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.phone-link small {
+  flex: 0 0 auto;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.bad-number {
+  margin: 8px 0 0 52px;
+  color: #8a2f1d;
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+footer {
+  margin: 22px 4px 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+@media (min-width: 600px) {
+  .page {
+    padding-top: 30px;
+  }
+  .call {
+    padding: 18px;
+  }
+}
